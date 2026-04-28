@@ -1,0 +1,69 @@
+# Tiny Tapeout project information
+project:
+  title:        "sky130 Bandgap Reference"      # Project title
+  author:       "Guruprasad"      # Your name
+  discord:      ""      # Your discord username
+  description:  "Bandgap reference (~0.9V) with analog VREF output"
+  language:     "Verilog" 
+  clock_hz:     0
+
+  # How many  tiles your design occupies? 
+  tiles: "1x2"          # Valid values for analog projects: 1x2, 2x2
+
+  # How many analog pins does your project use?
+  analog_pins: 1        # Valid values: 0 to 6
+  uses_3v3: false       # Set to true if your project uses 3.3V 
+
+  # Your top module name must start with "tt_um_".
+  top_module:  "tt_um_bgr"
+
+  # List your project's source files here.
+  source_files:        
+    - "project.v"
+
+# The pinout of your project.
+analog:
+  outputs:
+    - ua[0]
+
+pinout:
+  # Inputs
+  ui[0]: "unused"
+  ui[1]: "unused"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+  # Analog pins
+  ua[0]: "VREF (0.9 Analog output)"
+  ua[1]: ""
+  ua[2]: ""
+  ua[3]: ""
+  ua[4]: ""
+  ua[5]: ""
+
+# Do not change!
+yaml_version: 6
