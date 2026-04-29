@@ -266,14 +266,14 @@ MACRO tt_um_c4m_spsram_direct
     END
   END uio_oe[7]
   PIN VGND
-    USE GROUND
+    USE GROUND ;
     PORT
       LAYER met4 ;
         RECT 69.300 2.000 80.300 109.520 ;
     END
   END VGND
   PIN VDPWR
-    USE POWER
+    USE POWER ;
     PORT
       LAYER met4 ;
         RECT 80.700 2.000 91.700 109.520 ;
