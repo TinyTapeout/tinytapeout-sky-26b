@@ -1,0 +1,60 @@
+# Tiny Tapeout project information
+project:
+  title:        "Bomberman" # Project title
+  author:       "Sylvia Ker" # Your name
+  discord:      "squiggly.salmon" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "2 Player Mini Bomberman" # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25000000  # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_sker"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_sker.v"
+    - "ChipInterface.sv"
+    - "Bomberman.sv"
+    - "VGA.sv"
+    - "Display.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "btn_up1"
+  ui[1]: "btn_down1"
+  ui[2]: "btn_left1"
+  ui[3]: "btn_right1"
+  ui[4]: "btn_up2"
+  ui[5]: "btn_down2"
+  ui[6]: "btn_left2"
+  ui[7]: "btn_right2"
+
+  # Outputs
+  uo[0]: "red[0]"
+  uo[1]: "red[1]"
+  uo[2]: "green[0]"
+  uo[3]: "green[1]"
+  uo[4]: "blue[0]"
+  uo[5]: "blue[1]"
+  uo[6]: "VS"
+  uo[7]: "HS"
+
+  # Bidirectional pins
+  uio[0]: "btn_bomb1"
+  uio[1]: "btn_bomb2"
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
