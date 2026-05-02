@@ -1,0 +1,60 @@
+# Tiny Tapeout project information
+project:
+  title:        "Tiny Rainbow Snake Game"      # Project title
+  author:       "Lilly Das"                    # Your name
+  discord:      "lunarfishie"                  # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "The snake game you know and love, but tiny and rainbow."      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25000000        # Clock frequency in Hz (or 0 if not applicable)
+  wokwi_id:     0
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_sillylad_top"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_sillylad_snake_project.v"
+    - "ChipInterface.sv"
+    - "snake.sv"
+    - "vga.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "START_GAME_BTN"
+  ui[1]: "UP_BTN"
+  ui[2]: "DOWN_BTN"
+  ui[3]: "LEFT_BTN"
+  ui[4]: "RIGHT_BTN"
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "R1"
+  uo[1]: "G1"
+  uo[2]: "B1"
+  uo[3]: "VGA_VS"
+  uo[4]: "R0"
+  uo[5]: "G0"
+  uo[6]: "B0"
+  uo[7]: "VGA_HS"
+
+  # Bidirectional pins (all outputs for this design)
+  uio[0]: "LED0"
+  uio[1]: "LED1"
+  uio[2]: "LED2"
+  uio[3]: "LED3"
+  uio[4]: "LED4"
+  uio[5]: "LED5"
+  uio[6]: "LED6"
+  uio[7]: "VGA_BLANK"
+
+# Do not change!
+yaml_version: 6
