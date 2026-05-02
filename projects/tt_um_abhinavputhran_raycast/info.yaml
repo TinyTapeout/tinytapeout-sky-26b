@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "raycaster"
+  author:       "Abhinav Puthran"
+  discord:      ""
+  description:  "Wolfenstein-style raycaster 3D maze rendering in 640x480 VGA at 25MH"
+  language:     "SystemVerilog"
+  clock_hz:     25175000
+  tiles:        "2x2"
+  top_module:   "tt_um_abhinavputhran_raycast"
+  source_files:
+    - "tt_um_abhi_raycast.sv"
+    - "top_bare.sv"
+    - "vga.sv"
+    - "wall_tracer.sv"
+    - "recip.sv"
+    - "map.sv"
+    - "row_renderer.sv"
+    - "pov_ctrl.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "btn_fwd"
+  ui[1]: "btn_back"
+  ui[2]: "btn_left"
+  ui[3]: "btn_right"
+  ui[4]: "btn_demo"
+  ui[5]: "wall_color_sel[0]"
+  ui[6]: "wall_color_sel[1]"
+  ui[7]: ""
+  # Outputs
+  uo[0]: "R1"
+  uo[1]: "G1"
+  uo[2]: "B1"
+  uo[3]: "vsync_n"
+  uo[4]: "R0"
+  uo[5]: "G0"
+  uo[6]: "B0"
+  uo[7]: "hsync_n" 
+  # Bidirectional pins
+  uio[0]: "angle_idx[0]"
+  uio[1]: "angle_idx[1]"
+  uio[2]: "angle_idx[2]"
+  uio[3]: "angle_idx[3]"
+  uio[4]: "angle_idx[4]"
+  uio[5]: "angle_idx[5]"
+  uio[6]: "dbg_pos_x"
+  uio[7]: "dbg_pos_y"
+
+# Do not change!
+yaml_version: 6
+
+
