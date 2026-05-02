@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Keypad Calculator"      # Project title
+  author:       "Vidisha Chopra"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A TinyTapeout keypad calculator that scans a 4x4 keypad and outputs the 8-bit calculation result."      # One line description of what your project does
+  language:     "System Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_vidishac2004_calc"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "keypad row inputs"
+  ui[1]: "keypad row inputs"
+  ui[2]: "keypad row inputs"
+  ui[3]: "keypad row inputs"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs
+  uo[0]: "8-bit calculator result"
+  uo[1]: "8-bit calculator result"
+  uo[2]: "8-bit calculator result"
+  uo[3]: "8-bit calculator result"
+  uo[4]: "8-bit calculator result"
+  uo[5]: "8-bit calculator result"
+  uo[6]: "8-bit calculator result"
+  uo[7]: "8-bit calculator result"
+
+  # Bidirectional pins
+  uio[0]: "keypad column outputs"
+  uio[1]: "keypad column outputs"
+  uio[2]: "keypad column outputs"
+  uio[3]: "keypad column outputs"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
+
+# Do not change!
+yaml_version: 6
