@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "TinyDMA-2C"      # Project title
+  author:       "Andrew Kim"      # Your name
+  discord:      "kima2503"        # Your discord username
+  description:  "Two-channel byte DMA engine using external SPI PSRAM"
+  language:     "SystemVerilog"
+  clock_hz:     50000000
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"
+
+  # Your top module name must start with "tt_um_".
+  top_module:  "tt_um_akim_tinydma"
+
+  # Source files must be in ./src and listed one per line.
+  # Also update PROJECT_SOURCES in test/Makefile.
+  source_files:
+    - "tt_um_akim_tinydma.v"
+    - "dma_pkg.sv"
+    - "spi_master.sv"
+    - "spi_psram_ctrl.sv"
+    - "cfg_reg.sv"
+    - "dma_scheduler.sv"
+    - "dma_controller.sv"
+    - "tinydma_top.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names.
+pinout:
+  # Inputs
+  ui[0]: "cfg_data[0]"
+  ui[1]: "cfg_data[1]"
+  ui[2]: "cfg_data[2]"
+  ui[3]: "cfg_data[3]"
+  ui[4]: "cfg_data[4]"
+  ui[5]: "cfg_data[5]"
+  ui[6]: "cfg_data[6]"
+  ui[7]: "cfg_data[7]"
+
+  # Outputs
+  uo[0]: "dma_active"
+  uo[1]: "done_pulse"
+  uo[2]: "ch0_done"
+  uo[3]: "ch1_done"
+  uo[4]: "ch0_active"
+  uo[5]: "ch1_active"
+  uo[6]: "cfg_pending"
+  uo[7]: "cfg_error"
+
+  # Bidirectional pins
+  uio[0]: "cfg_valid"
+  uio[1]: "start"
+  uio[2]: "spi_miso"
+  uio[3]: "spi_cs_n"
+  uio[4]: "spi_clk"
+  uio[5]: "spi_mosi"
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
