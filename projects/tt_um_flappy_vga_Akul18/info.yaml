@@ -43,14 +43,15 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "VGA_R0"
-  uo[1]: "VGA_R1"
-  uo[2]: "VGA_G0"
-  uo[3]: "VGA_G1"
-  uo[4]: "VGA_B0"
-  uo[5]: "VGA_B1"
-  uo[6]: "VGA_HSYNC"
-  uo[7]: "VGA_VSYNC"
+  uo[0]: "VGA_R1"  
+  uo[1]: "VGA_G1"  
+  uo[2]: "VGA_B1"  
+  uo[3]: "VGA_VSYNC" 
+
+  uo[4]: "VGA_R0" 
+  uo[5]: "VGA_G0"  
+  uo[6]: "VGA_B0"
+  uo[7]: "VGA_HSYNC"
 
   # Bidirectional pins
   uio[0]: ""
