@@ -1,0 +1,69 @@
+# Tiny Tapeout project information
+project:
+  title:        "TinyPomodoro"      # Project title
+  author:       "Amelia Lobo"       # Your name
+  discord:      ""                  # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Pomodoro Timer and Date & Time Clock"      # One line description of what your project does
+  language:     "SystemVerilog"     # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000            # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_aelobo"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_aelobo.sv"
+    - "ChipInterface.sv"
+    - "clk_divider.sv" 
+    - "sec_counter.sv" 
+    - "min_counter.sv" 
+    - "hour_counter.sv"
+    - "day_counter.sv" 
+    - "month_counter.sv" 
+    - "rollover.sv" 
+    - "clock_chain_top.sv" 
+    - "main_mode_fsm.sv" 
+    - "setup_field_fsm.sv" 
+    - "pomodoro_fms_top.sv" 
+    - "max7219.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "btn_left  - Enter/exit setup mode"
+  ui[1]: "btn_right - Cycle mode (outside setup) / cycle field (inside setup)"
+  ui[2]: "btn_up    - Increment field / start or pause pomodoro"
+  ui[3]: "btn_down  - Decrement field / reset pomodoro"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "led[0] - display_mode bit 0 (00=CLOCK 01=DATE 10=POMODORO)"
+  uo[1]: "led[1] - display_mode bit 1"
+  uo[2]: "led[2] - in_setup indicator"
+  uo[3]: "led[3] - led_work (pomodoro work phase active)"
+  uo[4]: "led[4] - led_break (pomodoro break phase active)"
+  uo[5]: "led[5] - buzzer_en (pomodoro alarm active)"
+  uo[6]: "led[6] - field_sel bit 0"
+  uo[7]: "led[7] - field_sel bit 1"
+
+  # Bidirectional pins
+  uio[0]: "spi_din  - MAX7219 DIN (output)"
+  uio[1]: "spi_cs   - MAX7219 CS  (output)"
+  uio[2]: "spi_clk  - MAX7219 CLK (output)"
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
