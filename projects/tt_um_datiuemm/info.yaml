@@ -1,8 +1,8 @@
 # Tiny Tapeout project information
 project:
-  title:        "mbist-ecc-8x32"      # Project title
-  author:       "datiuemm"      # Your name
-  discord:      "none"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  title:        "IEEE MBIST & ECC for RAM 8x32"      # Project title
+  author:       "Dat Dinh Trong"      # Your name
+  discord:      "datiuemm"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "This is MBIST and ECC on 8x32 data RAM"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
