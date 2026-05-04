@@ -1,0 +1,60 @@
+# Tiny Tapeout project information
+project:
+  title:        "IEEE Configurable WDT"      # Project title
+  author:       "Dat Dinh Trong"      # Your name
+  discord:      "datiuemm"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A configurable WDT 32 bit "      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     64000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_CFG_WDT"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "WDT32_core.v"
+    - "clk_div.v"
+    - "time_setting.v"
+    - "check_access.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "WDTEN - Enable Watchdog Timer"
+  ui[1]: "PWD_SEL[0] - Password mode select bit 0"
+  ui[2]: "PWD_SEL[1] - Password mode select bit 1"
+  ui[3]: "TIME_SEL[0] - Timeout selection bit 0"
+  ui[4]: "TIME_SEL[1] - Timeout selection bit 1"
+  ui[5]: "TIME_SEL[2] - Timeout selection bit 2"
+  ui[6]: "DIV[0] - Clock divider select bit 0"
+  ui[7]: "DIV[1] - Clock divider select bit 1"
+
+  # Outputs
+  uo[0]: "WDTEN status (mirrored input)"
+  uo[1]: "OE - Timeout event (Watchdog expired)"
+  uo[2]: "AE - Access error (wrong password)"
+  uo[3]: "OE OR AE - Combined error flag"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins (used as inputs only)
+  uio[0]: "FEED - Feed watchdog signal"
+  uio[1]: "PWD[0] - Password bit 0"
+  uio[2]: "PWD[1] - Password bit 1"
+  uio[3]: "PWD[2] - Password bit 2"
+  uio[4]: "PWD[3] - Password bit 3"
+  uio[5]: "PWD[4] - Password bit 4"
+  uio[6]: "PWD[5] - Password bit 5"
+  uio[7]: "PWD[6] - Password bit 6"
+
+# Do not change!
+yaml_version: 6
