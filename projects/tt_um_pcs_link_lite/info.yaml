@@ -1,0 +1,60 @@
+# Tiny Tapeout project information
+project:
+  title:        "PCS Lite: Asynchronous 8b10b SerDes"
+  author:       "Jolyan Ye"
+  discord:      ""      # Add your discord handle here if you want the role
+  description:  "A Physical Coding Sublayer (PCS) with 8b10b encoding and CDC FIFOs between 66MHz (link) and 10MHz (system) domains."
+  language:     "Verilog" 
+  clock_hz:     66000000   # The primary clock (clk) is 66 MHz
+
+  # A SerDes with two FIFOs and 8b10b logic usually fits in 1x1.
+  tiles: "1x1"          
+
+  # This MUST match the module name in your tt_um_pcs_link_lite.v
+  top_module:  "tt_um_pcs_link_lite"
+
+  # List every source file. Order does not strictly matter, but top-level first is standard.
+  source_files:
+    - "tt_um_pcs_link_lite.v"
+    - "pcs_link_ctrl_top.v"
+    - "ltssm_arbiter.v"
+    - "encoder_8b10b.v"
+    - "decoder_8b10b.v"
+    - "cdc_fifo.v"
+    - "serializer_10b.v"
+    - "deserializer_10b.v"
+
+# descriptive names for the datasheet.
+pinout:
+  # Inputs
+  ui[0]: "clk_sys (10MHz)"
+  ui[1]: "serial_in"
+  ui[2]: "rx_req"
+  ui[3]: "tx_valid"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "serial_out"
+  uo[1]: "rx_ack"
+  uo[2]: "link_lock_out"
+  uo[3]: "occupied"
+  uo[4]: "rx_valid"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "data_bus[0]"
+  uio[1]: "data_bus[1]"
+  uio[2]: "data_bus[2]"
+  uio[3]: "data_bus[3]"
+  uio[4]: "data_bus[4]"
+  uio[5]: "data_bus[5]"
+  uio[6]: "data_bus[6]"
+  uio[7]: "data_bus[7]"
+
+# Do not change!
+yaml_version: 6
