@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_rog_helio_
+MACRO tt_um_floating_bulk_test_2
   CLASS BLOCK ;
-  FOREIGN tt_um_rog_helio_ ;
+  FOREIGN tt_um_floating_bulk_test_2 ;
   ORIGIN 0.000 0.000 ;
   SIZE 161.000 BY 225.760 ;
   PIN clk
@@ -438,22 +438,22 @@ MACRO tt_um_rog_helio_
   END VGND
   OBS
       LAYER nwell ;
-        RECT 112.010 7.820 119.060 19.180 ;
+        RECT 109.910 3.920 116.960 15.280 ;
       LAYER li1 ;
-        RECT 112.290 7.645 118.790 18.910 ;
+        RECT 110.190 3.745 116.690 15.010 ;
       LAYER met1 ;
-        RECT 96.150 5.250 130.800 21.750 ;
+        RECT 82.950 1.150 144.450 17.950 ;
       LAYER met2 ;
-        RECT 74.650 2.250 145.450 21.800 ;
+        RECT 74.750 1.150 152.600 17.950 ;
       LAYER met3 ;
-        RECT 74.650 2.000 152.600 21.800 ;
+        RECT 74.750 1.150 152.600 17.950 ;
       LAYER met4 ;
-        RECT 74.650 1.400 152.600 5.500 ;
+        RECT 74.750 1.400 152.600 7.650 ;
         RECT 75.830 1.000 93.450 1.400 ;
         RECT 95.150 1.000 112.770 1.400 ;
         RECT 114.470 1.000 132.090 1.400 ;
         RECT 133.790 1.000 151.410 1.400 ;
   END
-END tt_um_rog_helio_
+END tt_um_floating_bulk_test_2
 END LIBRARY
 
