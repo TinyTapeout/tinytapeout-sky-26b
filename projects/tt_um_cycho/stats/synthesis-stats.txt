@@ -1,0 +1,57 @@
+130. Printing statistics.
+
+=== tt_um_cycho ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      776        - wires
+      811        - wire bits
+      241        - public wires
+      276        - public wire bits
+        8        - ports
+       43        - port bits
+      792 1.06E+04 cells
+        1    10.01   sky130_fd_sc_hd__a21bo_2
+        9   78.826   sky130_fd_sc_hd__a21o_2
+        3   26.275   sky130_fd_sc_hd__a21oi_2
+       15  168.912   sky130_fd_sc_hd__a221o_2
+       94  940.902   sky130_fd_sc_hd__a22o_2
+        1   11.261   sky130_fd_sc_hd__a2bb2o_2
+        2   17.517   sky130_fd_sc_hd__a31o_2
+        8   90.086   sky130_fd_sc_hd__a32o_2
+       28  210.202   sky130_fd_sc_hd__and2_2
+        8   70.067   sky130_fd_sc_hd__and2b_2
+       15  112.608   sky130_fd_sc_hd__and3_2
+        2   20.019   sky130_fd_sc_hd__and4_2
+        3   15.014   sky130_fd_sc_hd__buf_2
+       13   48.797   sky130_fd_sc_hd__conb_1
+       94 2.47E+03   sky130_fd_sc_hd__dfrtp_2
+        1   26.275   sky130_fd_sc_hd__dfstp_2
+      134 2.85E+03   sky130_fd_sc_hd__dfxtp_2
+       27  101.347   sky130_fd_sc_hd__inv_2
+      178    2E+03   sky130_fd_sc_hd__mux2_1
+       29  181.424   sky130_fd_sc_hd__nand2_2
+       15  131.376   sky130_fd_sc_hd__nand2b_2
+        1    10.01   sky130_fd_sc_hd__nand3_2
+        1   11.261   sky130_fd_sc_hd__nand3b_2
+       33  206.448   sky130_fd_sc_hd__nor2_2
+        2   20.019   sky130_fd_sc_hd__nor3_2
+       15  150.144   sky130_fd_sc_hd__o211a_2
+        2   17.517   sky130_fd_sc_hd__o21a_2
+       17  170.163   sky130_fd_sc_hd__o21ba_2
+        1   11.261   sky130_fd_sc_hd__o21bai_2
+        8   90.086   sky130_fd_sc_hd__o221a_2
+        1    10.01   sky130_fd_sc_hd__o31a_2
+        1   12.512   sky130_fd_sc_hd__o31ai_2
+       14   87.584   sky130_fd_sc_hd__or2_2
+        2   15.014   sky130_fd_sc_hd__or3_2
+        1    8.758   sky130_fd_sc_hd__or3b_2
+        4   35.034   sky130_fd_sc_hd__or4_2
+        2   20.019   sky130_fd_sc_hd__or4b_2
+        4   65.062   sky130_fd_sc_hd__xnor2_2
+        3   48.797   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_cycho': 10575.142400
+     of which used for sequential elements: 5346.377600 (50.56%)
+
