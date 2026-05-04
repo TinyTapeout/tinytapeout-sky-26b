@@ -1,0 +1,34 @@
+117. Printing statistics.
+
+=== tt_um_garage_project ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       36        - wires
+       71        - wire bits
+       18        - public wires
+       53        - public wire bits
+        8        - ports
+       43        - port bits
+       52  495.475 cells
+        1    8.758   sky130_fd_sc_hd__a21o_2
+        1    8.758   sky130_fd_sc_hd__a21oi_2
+        1    10.01   sky130_fd_sc_hd__a22o_2
+        1    8.758   sky130_fd_sc_hd__a31o_2
+        1   11.261   sky130_fd_sc_hd__a32o_2
+        2   15.014   sky130_fd_sc_hd__and2_2
+        1    8.758   sky130_fd_sc_hd__and2b_2
+        2    10.01   sky130_fd_sc_hd__buf_2
+       22   82.579   sky130_fd_sc_hd__conb_1
+        8  210.202   sky130_fd_sc_hd__dfrtp_2
+        2    52.55   sky130_fd_sc_hd__dfstp_2
+        4   15.014   sky130_fd_sc_hd__inv_2
+        1   11.261   sky130_fd_sc_hd__mux2_1
+        1    6.256   sky130_fd_sc_hd__nor2_2
+        3   26.275   sky130_fd_sc_hd__o21a_2
+        1    10.01   sky130_fd_sc_hd__or4b_2
+
+   Chip area for module '\tt_um_garage_project': 495.475200
+     of which used for sequential elements: 262.752000 (53.03%)
+
