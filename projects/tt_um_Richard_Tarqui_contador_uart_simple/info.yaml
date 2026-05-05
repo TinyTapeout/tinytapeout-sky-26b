@@ -1,0 +1,52 @@
+# Tiny Tapeout project information
+project:
+  title:        "UART - Controlled Frecuency Meter &  Timer - IEEE"
+  author:       "Richard Alfredo Tarqui Mamani & Gustavo Ismael Chavez Mamani"
+  discord:      ""
+  description:  "Frequency meter, pulse counter, and programmable timer controlled via UART at 115200 baud."
+  language:     "Verilog"
+  clock_hz:     50000000
+  tiles:        "1x1"     
+  top_module:   "tt_um_Richard_Tarqui_contador_uart_simple"
+  source_files:
+    - "tt_um_Richard_Tarqui_contador_uart_simple.v"
+    - "uart_rx.v"
+    - "uart_tx.v"
+    - "uart_parser.v"
+    - "temporizador_programable.v"
+    - "frecuencimetro.v"
+    - "contador_pulsos.v"
+    - "uart_trama_sender.v"
+
+
+pinout:
+  # Inputs
+  ui[0]: "UART RX (ASCII Commands)"
+  ui[1]: "External Signal Input"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+  # Outputs
+  uo[0]: "UART TX (Telemetry Frame)"
+  uo[1]: "Frame OK (Pulse on completion)"
+  uo[2]: "Active (HIGH during measurement)"
+  uo[3]: "unused"
+  uo[4]: "unused"
+  uo[5]: "unused"
+  uo[6]: "unused"
+  uo[7]: "unused"
+  # Bidirectional pins
+  uio[0]: "unused"
+  uio[1]: "unused"
+  uio[2]: "unused"
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
+
+# Do not change!
+yaml_version: 6
