@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:       "16-bit MIPS Single Cycle Processor"
+  author:      "Dimosthenis Papathanasiou , Andreas Skoufakis , Christoforos Marinopoulos"                    
+  #discord:     ""                      # Your Discord handle (optional)
+  description: "A complete 16-bit MIPS single-cycle processor that loads 16-bit instructions through the existing 8-bit Tiny Tapeout input pins" 
+  language:    "Verilog"                              # Language used
+  clock_hz:    10000000                               # Clock frequency in Hz (10 MHz)
+
+  # Tile usage (single tile of about 160 x 100 um)
+  tiles: "1x1"                                       # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 8x2
+
+  # Top module (must start with "tt_um_")
+  top_module: "tt_um_top_module_16_mips"
+
+  # Source files in ./src directory
+  source_files:
+    - project.v
+
+# Pinout configuration
+pinout:
+  # Inputs (mode/address control on ui)
+  ui[0]: "Instruction address bit 0 during load mode"
+  ui[1]: "Instruction address bit 1 during load mode"
+  ui[2]: "Instruction address bit 2 during load mode"
+  ui[3]: "Unused"
+  ui[4]: "Unused"
+  ui[5]: "Unused"
+  ui[6]: "Byte select: 0=low byte, 1=high byte"
+  ui[7]: "Mode select: 0=load, 1=run"
+
+  # Outputs (lower 8 bits of ALU result)
+  uo[0]: "ALU_out[0] - Result bit 0"
+  uo[1]: "ALU_out[1] - Result bit 1"
+  uo[2]: "ALU_out[2] - Result bit 2"
+  uo[3]: "ALU_out[3] - Result bit 3"
+  uo[4]: "ALU_out[4] - Result bit 4"
+  uo[5]: "ALU_out[5] - Result bit 5"
+  uo[6]: "ALU_out[6] - Result bit 6"
+  uo[7]: "ALU_out[7] - Result bit 7"
+
+  # Bidirectional pins (instruction byte input in load mode, ALU[15:8] output in run mode)
+  uio[0]: "Load input byte bit 0 / ALU_out[8] in run mode"
+  uio[1]: "Load input byte bit 1 / ALU_out[9] in run mode"
+  uio[2]: "Load input byte bit 2 / ALU_out[10] in run mode"
+  uio[3]: "Load input byte bit 3 / ALU_out[11] in run mode"
+  uio[4]: "Load input byte bit 4 / ALU_out[12] in run mode"
+  uio[5]: "Load input byte bit 5 / ALU_out[13] in run mode"
+  uio[6]: "Load input byte bit 6 / ALU_out[14] in run mode"
+  uio[7]: "Load input byte bit 7 / ALU_out[15] in run mode"
+
+# Do not change this version number!
+yaml_version: 6
