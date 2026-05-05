@@ -1,0 +1,39 @@
+107. Printing statistics.
+
+=== tt_um_IEEE_perceptron ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       34        - wires
+       69        - wire bits
+        9        - public wires
+       44        - public wire bits
+        8        - ports
+       43        - port bits
+       50  367.853 cells
+        1    8.758   sky130_fd_sc_hd__a21o_2
+        1    8.758   sky130_fd_sc_hd__a21oi_2
+        4   40.038   sky130_fd_sc_hd__a22o_2
+        1   12.512   sky130_fd_sc_hd__a22oi_2
+        2   17.517   sky130_fd_sc_hd__a31o_2
+        1    7.507   sky130_fd_sc_hd__and2_2
+        1    8.758   sky130_fd_sc_hd__and2b_2
+        1    7.507   sky130_fd_sc_hd__and3_2
+        2   20.019   sky130_fd_sc_hd__and4_2
+        1    5.005   sky130_fd_sc_hd__buf_2
+       19   71.318   sky130_fd_sc_hd__conb_1
+        2    7.507   sky130_fd_sc_hd__inv_2
+        2   12.512   sky130_fd_sc_hd__nand2_2
+        1    10.01   sky130_fd_sc_hd__nand3_2
+        3   37.536   sky130_fd_sc_hd__nand4_2
+        1    6.256   sky130_fd_sc_hd__nor2_2
+        1   15.014   sky130_fd_sc_hd__o2111ai_2
+        1    8.758   sky130_fd_sc_hd__o21a_2
+        1    6.256   sky130_fd_sc_hd__or2_2
+        1    7.507   sky130_fd_sc_hd__or3_2
+        3   48.797   sky130_fd_sc_hd__xnor2_2
+
+   Chip area for module '\tt_um_IEEE_perceptron': 367.852800
+     of which used for sequential elements: 0.000000 (0.00%)
+
