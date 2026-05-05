@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "authQV RISC-V CPU"      # Project title
+  author:       "ktsoupos"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "QSPI flash/RAM memory controller for the authQV RISC-V CPU. The CPU itself runs on a companion FPGA; this die exposes the mem_ctrl interface over a 16-phase 8-bit parallel bus."
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_authQV"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "tt_mem_bridge.v"
+    - "mem_ctrl.v"
+    - "qspi_ctrl.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs: 8-bit parallel bus FROM FPGA (mem_ctrl request channel)
+  ui[0]: "bus_in[0] (FPGA->TT parallel bus)"
+  ui[1]: "bus_in[1] (FPGA->TT parallel bus)"
+  ui[2]: "bus_in[2] (FPGA->TT parallel bus)"
+  ui[3]: "bus_in[3] (FPGA->TT parallel bus)"
+  ui[4]: "bus_in[4] (FPGA->TT parallel bus)"
+  ui[5]: "bus_in[5] (FPGA->TT parallel bus)"
+  ui[6]: "bus_in[6] (FPGA->TT parallel bus)"
+  ui[7]: "bus_in[7] (FPGA->TT parallel bus)"
+
+  # Outputs: 8-bit parallel bus TO FPGA (mem_ctrl response channel)
+  uo[0]: "bus_out[0] (TT->FPGA parallel bus)"
+  uo[1]: "bus_out[1] (TT->FPGA parallel bus)"
+  uo[2]: "bus_out[2] (TT->FPGA parallel bus)"
+  uo[3]: "bus_out[3] (TT->FPGA parallel bus)"
+  uo[4]: "bus_out[4] (TT->FPGA parallel bus)"
+  uo[5]: "bus_out[5] (TT->FPGA parallel bus)"
+  uo[6]: "bus_out[6] (TT->FPGA parallel bus)"
+  uo[7]: "bus_out[7] (TT->FPGA parallel bus)"
+
+  # Bidirectional pins
+  uio[0]: "Flash CS (active low, output)"
+  uio[1]: "QSPI SD0 / MOSI"
+  uio[2]: "QSPI SD1 / MISO"
+  uio[3]: "QSPI SCK (output)"
+  uio[4]: "QSPI SD2"
+  uio[5]: "QSPI SD3"
+  uio[6]: "RAM A CS (active low, output)"
+  uio[7]: "RAM B CS (active low, output)"
+
+# Do not change!
+yaml_version: 6
