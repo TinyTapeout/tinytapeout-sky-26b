@@ -1,0 +1,45 @@
+# Tiny Tapeout project information
+project:
+  title:        "3x3 Hardware Neural Network (Programmable TPU)"
+  author:       "Vasilis Zoidis and Savvas Tzanetis"
+  discord:      ""
+  description:  "A programmable sequential 3-neuron hardware NN with 3 inputs and ReLU using a shared MAC unit."
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  tiles: "1x1"
+
+  top_module:  "tt_um_nn_3x3"
+
+  source_files:
+    - "tt_um_nn_3x3.v"
+
+pinout:
+  ui[0]: "Data In[0]"
+  ui[1]: "Data In[1]"
+  ui[2]: "Data In[2]"
+  ui[3]: "Data In[3]"
+  ui[4]: "Data In[4]"
+  ui[5]: "Data In[5]"
+  ui[6]: "Data In[6]"
+  ui[7]: "Data In[7]"
+
+  uo[0]: "Data Out[0]"
+  uo[1]: "Data Out[1]"
+  uo[2]: "Data Out[2]"
+  uo[3]: "Data Out[3]"
+  uo[4]: "Data Out[4]"
+  uo[5]: "Data Out[5]"
+  uo[6]: "Data Out[6]"
+  uo[7]: "Data Out[7]"
+
+  uio[0]: "io_addr[0]"
+  uio[1]: "io_addr[1]"
+  uio[2]: "io_addr[2]"
+  uio[3]: "io_addr[3]"
+  uio[4]: "io_write (1=Write)"
+  uio[5]: "io_read (1=Read)"
+  uio[6]: ""
+  uio[7]: ""
+
+yaml_version: 6
