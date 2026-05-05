@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Tiny Crypto Core"
+  author:       "Bartu Abdioglu"
+  discord:      "bartuabd"
+  description:  "Lightweight 64-bit symmetric encryption/decryption demo core"
+  language:     "Verilog"
+  clock_hz:     1000000
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_bartu_kripto"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "data_in[0]"
+  ui[1]: "data_in[1]"
+  ui[2]: "data_in[2]"
+  ui[3]: "data_in[3]"
+  ui[4]: "data_in[4]"
+  ui[5]: "data_in[5]"
+  ui[6]: "data_in[6]"
+  ui[7]: "data_in[7]"
+
+  # Outputs
+  uo[0]: "busy / data_out[0]"
+  uo[1]: "done / data_out[1]"
+  uo[2]: "data_out[2]"
+  uo[3]: "data_out[3]"
+  uo[4]: "data_out[4]"
+  uo[5]: "data_out[5]"
+  uo[6]: "data_out[6]"
+  uo[7]: "data_out[7]"
+
+  # Bidirectional pins
+  uio[0]: "addr[0]"
+  uio[1]: "addr[1]"
+  uio[2]: "addr[2]"
+  uio[3]: "load_data"
+  uio[4]: "load_key"
+  uio[5]: "start"
+  uio[6]: "mode"
+  uio[7]: "read_select"
+
+# Do not change!
+yaml_version: 6
