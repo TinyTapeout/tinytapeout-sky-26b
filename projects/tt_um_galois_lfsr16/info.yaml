@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:        "16 bit Galois LFSR based Random number generator-IEEE"      # Project title
+  author:       "Subir Maity, Jitendra Kr. Das"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Random no generator using LFSR with user selectable 32 different polynomial"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_galois_lfsr16"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "galois_lfsr.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "Enable"
+  ui[1]: "Shift Direction"
+  ui[2]: "poly[0]"
+  ui[3]: "poly[1]"
+  ui[4]: "poly[2]"
+  ui[5]: "poly[3]"
+  ui[6]: "poly[4]"
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "y[0]"
+  uo[1]: "y[1]"
+  uo[2]: "y[2]"
+  uo[3]: "y[3]"
+  uo[4]: "y[4]"
+  uo[5]: "y[5]"
+  uo[6]: "y[6]"
+  uo[7]: "y[7]"
+
+  # Bidirectional pins
+  uio[0]: "y[8]"
+  uio[1]: "y[9]"
+  uio[2]: "y[10]"
+  uio[3]: "y[11]"
+  uio[4]: "y[12]"
+  uio[5]: "y[13]"
+  uio[6]: "y[14]"
+  uio[7]: "y[16]"
+
+# Do not change!
+yaml_version: 6
