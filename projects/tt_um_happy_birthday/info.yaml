@@ -1,0 +1,48 @@
+# Tiny Tapeout project information
+project:
+  title:       "IEEE Happy Birthday Detector"
+  author:      "Team Kanyarashi"
+  discord:     ""
+  description: "Transmits a serial bit stream and detects a 9-bit birthday pattern (March 7), counting and displaying hits per second on a 7-segment display"
+  language:    "Verilog"
+  clock_hz:    10000
+
+  tiles: "1x1"
+  top_module: "tt_um_happy_birthday"
+  source_files:
+    - "project.v"
+
+# ── Pin Descriptions ──────────────────────────────────────
+pinout:
+  # Inputs
+  ui[0]: "TX_ENA_N - Active-low transmit enable (0=transmitting, 1=off)"
+  ui[1]: "unused"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs — units digit of hit count (7-segment, active low, gfedcba)
+  uo[0]: "SEG_A - units digit segment a (active low)"
+  uo[1]: "SEG_B - units digit segment b (active low)"
+  uo[2]: "SEG_C - units digit segment c (active low)"
+  uo[3]: "SEG_D - units digit segment d (active low)"
+  uo[4]: "SEG_E - units digit segment e (active low)"
+  uo[5]: "SEG_F - units digit segment f (active low)"
+  uo[6]: "SEG_G - units digit segment g (active low)"
+  uo[7]: "HIT_COUNT_VALID - pulses high each second with new count"
+
+  # Bidirectional — tens digit of hit count (7-segment, active low, gfedcba)
+  uio[0]: "SEG_A - tens digit segment a (active low)"
+  uio[1]: "SEG_B - tens digit segment b (active low)"
+  uio[2]: "SEG_C - tens digit segment c (active low)"
+  uio[3]: "SEG_D - tens digit segment d (active low)"
+  uio[4]: "SEG_E - tens digit segment e (active low)"
+  uio[5]: "SEG_F - tens digit segment f (active low)"
+  uio[6]: "SEG_G - tens digit segment g (active low)"
+  uio[7]: "unused (input)"
+
+# Do not change!
+yaml_version: 6
