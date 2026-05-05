@@ -1,0 +1,49 @@
+project:
+  title: "DDS Waveform Generator - IEEE"
+  author: "Daniel Roberto Garcia Miranda"
+  discord: "dani_318"
+
+  description: "Programmable DDS waveform generator with multiple waveforms, frequency and amplitude control"
+
+  language: "Verilog"
+  clock_hz: 50000000
+
+  tiles: "1x1"
+
+  top_module: "tt_um_gen_onda"
+
+  source_files:
+    - "tt_um_gen_onda.v"
+
+pinout:
+  # Inputs
+  ui[0]: "func_sel[0]"
+  ui[1]: "func_sel[1]"
+  ui[2]: "func_sel[2]"
+  ui[3]: "amp_ctrl[0]"
+  ui[4]: "amp_ctrl[1]"
+  ui[5]: "amp_ctrl[2]"
+  ui[6]: "freq_ctrl[0]"
+  ui[7]: "freq_ctrl[1]"
+
+  # Outputs
+  uo[0]: "out[0]"
+  uo[1]: "out[1]"
+  uo[2]: "out[2]"
+  uo[3]: "out[3]"
+  uo[4]: "out[4]"
+  uo[5]: "out[5]"
+  uo[6]: "out[6]"
+  uo[7]: "out[7]"
+
+  # Dont use 
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+yaml_version: 6
