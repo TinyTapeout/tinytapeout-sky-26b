@@ -1,0 +1,49 @@
+yaml_version: 6
+
+project:
+  title: "IEEE Multi-Mode Procedural VGA Graphics Engine"
+  author: "Kannan S J"
+  description: "Procedural VGA graphics engine with multiple real-time modes using arithmetic-only rendering."
+
+  language: "Verilog"
+  clock_hz: 25175000
+  tiles: "1x1"
+
+  top_module: "tt_um_vga"
+
+  source_files:
+  - project.v
+  - hvsync_generator.v
+
+pinout:
+  ui[0]: "Unused"
+  ui[1]: "Unused"
+  ui[2]: "Unused"
+  ui[3]: "Unused"
+  ui[4]: "Unused"
+  ui[5]: "Unused"
+  ui[6]: "Unused"
+  ui[7]: "Unused"
+
+  uo[0]: "VGA Red MSB"
+  uo[1]: "VGA Green MSB"
+  uo[2]: "VGA Blue MSB"
+  uo[3]: "VGA Vsync"
+  uo[4]: "VGA Red LSB"
+  uo[5]: "VGA Green LSB"
+  uo[6]: "VGA Blue LSB"
+  uo[7]: "VGA Hsync"
+
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+tags:
+  - vga
+  - graphics
+  - procedural
