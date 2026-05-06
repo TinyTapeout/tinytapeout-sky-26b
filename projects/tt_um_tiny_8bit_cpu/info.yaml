@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+project:
+  title:        "IEEE Tiny 8bit CPU"      # Project title
+  author: "Korichi Aymene, Bouyahiaoui Hadjer, Boubraa Nadjib"
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A tiny compact 8-bit 4 general register  CPU with 16 instructions"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_tiny_8bit_cpu"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "alu.v"
+    - "control_fsm.v"
+    - "control_unit.v"
+    - "registers.v"
+    - "memory.v"
+    - "datapath.v"
+    - "cpu_top.v"
+    - "tt_um_tiny_8bit_cpu.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "instr_bit0"
+  ui[1]: "instr_bit1"
+  ui[2]: "instr_bit2"
+  ui[3]: "instr_bit3"
+  ui[4]: "instr_bit4"
+  ui[5]: "instr_bit5"
+  ui[6]: "instr_bit6"
+  ui[7]: "instr_bit7"
+
+  # Outputs
+  uo[0]: "rd_bit0"
+  uo[1]: "rd_bit1"
+  uo[2]: "rd_bit2"
+  uo[3]: "rd_bit3"
+  uo[4]: "rd_bit4"
+  uo[5]: "rd_bit5"
+  uo[6]: "rd_bit6"
+  uo[7]: "rd_bit7"
+
+  # Bidirectional pins
+  uio[0]: "pc_bit0_debug"
+  uio[1]: "pc_bit1_debug"
+  uio[2]: "pc_bit2_debug"
+  uio[3]: "pc_bit3_debug"
+  uio[4]: "pc_bit4_debug"
+  uio[5]: "zero_flag_debug"
+  uio[6]: "carry_flag_debug"
+  uio[7]: "fetch_phase_debug"
+
+# Do not change!
+yaml_version: 6
