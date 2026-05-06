@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "IEEE Mitchell-s_Approximation_based_EML"
+  author:  "Boussaa Youcef, Korichi Aymene, Bouyahiaoui Hadjer"
+  discord:      "" 
+  description:  "Multiplier-less EML gate using Mitchell’s approximation for energy-efficient transcendental processing in ASICs."
+  language:     "Verilog"
+  clock_hz:     16000000   # 16 MHz as per your design specs
+
+  # How many tiles your design occupies?
+  tiles: "1x1"          
+
+  # Your top module name:
+  top_module:  "tt_um_Mitchell_s_Approximation_based_EML"
+
+  # List your project's source files here (one per line).
+  source_files:
+    - "project.v"
+    - "mitchell_log2.v"
+    - "mitchell_exp2.v"
+    - "eml_tile.v"
+    - "eml_spi_wrapper.v"
+    - "eml_feedback_cell.v"
+
+# Pinout mapping
+pinout:
+  # Inputs (ui) - Not used in your current wrapper
+  ui[0]: "unused"
+  ui[1]: "unused"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs (uo) - Not used in your current wrapper
+  uo[0]: "unused"
+  uo[1]: "unused"
+  uo[2]: "unused"
+  uo[3]: "unused"
+  uo[4]: "unused"
+  uo[5]: "unused"
+  uo[6]: "unused"
+  uo[7]: "unused"
+
+  # Bidirectional pins (uio) - Used for SPI interface
+  uio[0]: "spi_mosi"   # Input
+  uio[1]: "spi_sck"    # Input
+  uio[2]: "spi_cs_n"   # Input
+  uio[3]: "spi_miso"   # Output
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
+
+# Do not change!
+yaml_version: 6
