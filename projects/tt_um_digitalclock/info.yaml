@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "Digital Clock!"      # Project title
+  author:       "Alexander Co Abad"      # Your name
+  discord:      "alexandercoabad_25756"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Digital Clock"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25175000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_digitalclock"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "project.v"
+    - "hvsync_generator.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs: Retro Digital Clock & Date Display [0]=12h/24h, [7]=Hold for Date Clock Mode: [1,2]=Hour +/-, [3,4]=Min +/-, [5]=Sec Sync Date Mode:  [1,2]=Month +/-, [3,4]=Day +/-, [5,6]=Year +/-
+  ui[0]: "12h/24h"
+  ui[1]: "+ Hour"
+  ui[2]: "- Hour"
+  ui[3]: "+ Min"
+  ui[4]: "- Min"
+  ui[5]: "Sec sync for clock mode or + Year"
+  ui[6]: "- Year"
+  ui[7]: "Hold for Date"
+
+  # Outputs
+  uo[0]: "R1"
+  uo[1]: "G1"
+  uo[2]: "B1"
+  uo[3]: "VSync"
+  uo[4]: "R0"
+  uo[5]: "G0"
+  uo[6]: "B0"
+  uo[7]: "HSync"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
