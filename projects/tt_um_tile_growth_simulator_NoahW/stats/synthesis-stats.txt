@@ -1,0 +1,87 @@
+145. Printing statistics.
+
+=== tt_um_tile_growth_simulator_NoahW ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     3911        - wires
+     3946        - wire bits
+      736        - public wires
+      771        - public wire bits
+        8        - ports
+       43        - port bits
+     3927 4.83E+04 cells
+       24  300.288   sky130_fd_sc_hd__a2111o_2
+       72  720.691   sky130_fd_sc_hd__a211o_2
+        5    62.56   sky130_fd_sc_hd__a211oi_2
+        6   60.058   sky130_fd_sc_hd__a21bo_2
+        3   33.782   sky130_fd_sc_hd__a21boi_2
+       31   271.51   sky130_fd_sc_hd__a21o_2
+       41  359.094   sky130_fd_sc_hd__a21oi_2
+      206 2.32E+03   sky130_fd_sc_hd__a221o_2
+        3   45.043   sky130_fd_sc_hd__a221oi_2
+      721 7.22E+03   sky130_fd_sc_hd__a22o_2
+       19  237.728   sky130_fd_sc_hd__a22oi_2
+       23  258.998   sky130_fd_sc_hd__a2bb2o_2
+        1   11.261   sky130_fd_sc_hd__a311o_2
+       39  341.578   sky130_fd_sc_hd__a31o_2
+        3   37.536   sky130_fd_sc_hd__a31oi_2
+       27  304.042   sky130_fd_sc_hd__a32o_2
+        3   48.797   sky130_fd_sc_hd__a32oi_2
+        3   33.782   sky130_fd_sc_hd__a41o_2
+       46  345.331   sky130_fd_sc_hd__and2_2
+       17  148.893   sky130_fd_sc_hd__and2b_2
+       78  585.562   sky130_fd_sc_hd__and3_2
+       19  190.182   sky130_fd_sc_hd__and3b_2
+       24   240.23   sky130_fd_sc_hd__and4_2
+       29  326.563   sky130_fd_sc_hd__and4b_2
+       19  237.728   sky130_fd_sc_hd__and4bb_2
+        1    5.005   sky130_fd_sc_hd__buf_2
+       23   86.333   sky130_fd_sc_hd__conb_1
+      703 1.85E+04   sky130_fd_sc_hd__dfrtp_2
+       22  578.054   sky130_fd_sc_hd__dfstp_2
+       54  202.694   sky130_fd_sc_hd__inv_2
+       50   563.04   sky130_fd_sc_hd__mux2_1
+        1   22.522   sky130_fd_sc_hd__mux4_2
+      197 1.23E+03   sky130_fd_sc_hd__nand2_2
+        5   43.792   sky130_fd_sc_hd__nand2b_2
+        6   60.058   sky130_fd_sc_hd__nand3_2
+        3   33.782   sky130_fd_sc_hd__nand3b_2
+        3   37.536   sky130_fd_sc_hd__nand4_2
+        3   45.043   sky130_fd_sc_hd__nand4b_2
+      388 2.43E+03   sky130_fd_sc_hd__nor2_2
+        8   80.077   sky130_fd_sc_hd__nor3_2
+        4   50.048   sky130_fd_sc_hd__nor3b_2
+        9  112.608   sky130_fd_sc_hd__nor4_2
+        9   135.13   sky130_fd_sc_hd__nor4b_2
+       17  212.704   sky130_fd_sc_hd__o2111a_2
+        2   30.029   sky130_fd_sc_hd__o2111ai_2
+       40  400.384   sky130_fd_sc_hd__o211a_2
+        1   12.512   sky130_fd_sc_hd__o211ai_2
+       29  253.994   sky130_fd_sc_hd__o21a_2
+       31   271.51   sky130_fd_sc_hd__o21ai_2
+        3   30.029   sky130_fd_sc_hd__o21ba_2
+        1   11.261   sky130_fd_sc_hd__o21bai_2
+      110 1.24E+03   sky130_fd_sc_hd__o221a_2
+        3   45.043   sky130_fd_sc_hd__o221ai_2
+      198 1.98E+03   sky130_fd_sc_hd__o22a_2
+       24  300.288   sky130_fd_sc_hd__o22ai_2
+       25   281.52   sky130_fd_sc_hd__o2bb2a_2
+       10  112.608   sky130_fd_sc_hd__o311a_2
+        9   90.086   sky130_fd_sc_hd__o31a_2
+        1   12.512   sky130_fd_sc_hd__o31ai_2
+       10  112.608   sky130_fd_sc_hd__o32a_2
+        2   25.024   sky130_fd_sc_hd__o41a_2
+      220  1376.32   sky130_fd_sc_hd__or2_2
+       59  442.925   sky130_fd_sc_hd__or3_2
+       21  183.926   sky130_fd_sc_hd__or3b_2
+       64  560.538   sky130_fd_sc_hd__or4_2
+       20  200.192   sky130_fd_sc_hd__or4b_2
+       10   125.12   sky130_fd_sc_hd__or4bb_2
+       34   553.03   sky130_fd_sc_hd__xnor2_2
+       32  520.499   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_tile_growth_simulator_NoahW': 48310.083200
+     of which used for sequential elements: 19049.520000 (39.43%)
+
