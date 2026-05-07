@@ -3,49 +3,50 @@ yaml_version: 6
 project:
   title: "UART Smart I/O Hub"
   author: "NAVEEN KUMAAR S"
-  description: "UART-controlled 16-channel PWM hub with timers and sequencer"
+  description: "IEEE SNK_UART-controlled 64-channel PWM hub with banked outputs, internal modulation engine, ALU datapath, and sequencer."
+
   language: "Verilog"
   clock_hz: 50000000
-
   tiles: "1x2"
 
   top_module: "tt_um_snk_smart_io_hub"
 
   source_files:
-    - uart_rx.v
-    - pwm_bank.v
-    - timer_bank.v
-    - tt_um_snk_smart_io_hub.v
+    - "uart_rx.v"
+    - "pwm_bank.v"
+    - "tt_um_snk_smart_io_hub.v"
 
 pinout:
   ui[0]: "UART RX"
-  ui[1]: "Enable"
-  ui[2]: "Seq Gate"
-  ui[3]: "Clear"
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[1]: "Command enable"
+  ui[2]: "Sequencer enable"
+  ui[3]: "Clear registers"
+  ui[4]: "PWM bank select bit 0"
+  ui[5]: "PWM bank select bit 1"
+  ui[6]: "PWM bank select bit 2"
+  ui[7]: "Debug/status page enable"
 
-  uo[0]: "PWM0"
-  uo[1]: "PWM1"
-  uo[2]: "PWM2"
-  uo[3]: "PWM3"
-  uo[4]: "PWM4"
-  uo[5]: "PWM5"
-  uo[6]: "PWM6"
-  uo[7]: "PWM7"
+  uo[0]: "PWM output bit 0"
+  uo[1]: "PWM output bit 1"
+  uo[2]: "PWM output bit 2"
+  uo[3]: "PWM output bit 3"
+  uo[4]: "PWM output bit 4"
+  uo[5]: "PWM output bit 5"
+  uo[6]: "PWM output bit 6"
+  uo[7]: "PWM output bit 7"
 
-  uio[0]: "PWM8"
-  uio[1]: "PWM9"
-  uio[2]: "PWM10"
-  uio[3]: "PWM11"
-  uio[4]: "PWM12"
-  uio[5]: "PWM13"
-  uio[6]: "PWM14"
-  uio[7]: "PWM15"
+  uio[0]: "Secondary PWM/status bit 0"
+  uio[1]: "Secondary PWM/status bit 1"
+  uio[2]: "Secondary PWM/status bit 2"
+  uio[3]: "Secondary PWM/status bit 3"
+  uio[4]: "Secondary PWM/status bit 4"
+  uio[5]: "Secondary PWM/status bit 5"
+  uio[6]: "Secondary PWM/status bit 6"
+  uio[7]: "Secondary PWM/status bit 7"
 
 tags:
-  - uart
-  - pwm
-  - timer
+  - "uart"
+  - "pwm"
+  - "sequencer"
+  - "alu"
+  - "digital-design"
