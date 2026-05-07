@@ -3,7 +3,7 @@
 # Shuttle: SKY26a  |  PDK: sky130A  |
 
 project:
-  title:       "7-bit ALU - Serial Input / Parallel Output"
+  title:       "IEEE 7-bit ALU - Serial Input / Parallel Output"
   author:      "Sharif Obando"
   discord:     "sharif_g230"
   description: >
