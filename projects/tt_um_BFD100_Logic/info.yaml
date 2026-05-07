@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "BDF1000 Line folower"      # Project title
+  author:       "Belkacem BENADDA"      # Your name
+  discord:      "belkacem"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "a logic circuit and PI controler for the BFD1000 Line follower sensor dedicated to tinytapout SKY26a"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_BFD100_Logic"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "S1"
+  ui[1]: "S2"
+  ui[2]: "S3"
+  ui[3]: "S4"
+  ui[4]: "S5"
+  ui[5]: "Clip_Near"
+  ui[6]: "PWM"
+  ui[7]: "sel"
+
+  # Outputs
+  uo[0]: "EnL"
+  uo[1]: "DirL"
+  uo[2]: "Out1L"
+  uo[3]: "Out2L"
+  uo[4]: "EnR"
+  uo[5]: "DirR"
+  uo[6]: "Out1R"
+  uo[7]: "Out2R"
+
+  # Bidirectional pins
+  uio[0]: "Kp[0]"
+  uio[1]: "Kp[1]"
+  uio[2]: "Kp[2]"
+  uio[3]: "Kp[3]"
+  uio[4]: "Ki[0]"
+  uio[5]: "Ki[1]"
+  uio[6]: "Ki[2]"
+  uio[7]: "S_Ki"
+  
+# Do not change!
+yaml_version: 6
