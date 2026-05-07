@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "coffee_chip"      # Project title
+  author:       "Juan Pablo Tabares Cardona"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "El Coffee Chip es un sistema de clasificación de granos de café implementado directamente en silicio (ASIC) mediante el proceso de fabricación TinyTapeout (Sky130). El diseño utiliza lógica digital de alta velocidad para procesar señales de frecuencia provenientes de un sensor de color (como el TCS3200), permitiendo categorizar granos en tres estados: Inmaduro, Óptimo y Pasado."      # One line description of what your project does      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_coffee_chip"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_coffee_chip.v"
+    - "coffee_chip.v"
+    - "uart_rx_core.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "sensor_in"   # Frequency pulse from color sensor (TCS3200)
+  ui[1]: "uart_rx"     # UART reception for calibration data
+  ui[2]: "s0_config"   # Physical frequency scaling config S0
+  ui[3]: "s1_config"   # Physical frequency scaling config S1
+  ui[4]: "cfg_sel"     # Config selector (0: Physical pins, 1: UART)
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "sensor_s0"   # Sensor filter control S0
+  uo[1]: "sensor_s1"   # Sensor filter control S1
+  uo[2]: "sensor_s2"   # Sensor filter control S2
+  uo[3]: "sensor_s3"   # Sensor filter control S3
+  uo[4]: "led_unripe"  # Indicator: Unripe (Green dominant)
+  uo[5]: "led_optimal" # Indicator: Optimal (Red present, Green low)
+  uo[6]: "led_overripe" # Indicator: Overripe (Low total reflection)
+  uo[7]: "debug_ready" # Pulse signaling classification cycle complete
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
