@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "coffee_chip"      # Project title
+  title:        "IEEEcoffee_chip"      # Project title
   author:       "Juan Pablo Tabares Cardona"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "El Coffee Chip es un sistema de clasificación de granos de café implementado directamente en silicio (ASIC) mediante el proceso de fabricación TinyTapeout (Sky130). El diseño utiliza lógica digital de alta velocidad para procesar señales de frecuencia provenientes de un sensor de color (como el TCS3200), permitiendo categorizar granos en tres estados: Inmaduro, Óptimo y Pasado."      # One line description of what your project does      # One line description of what your project does
