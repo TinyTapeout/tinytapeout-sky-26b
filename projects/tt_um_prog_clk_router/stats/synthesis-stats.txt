@@ -1,0 +1,43 @@
+107. Printing statistics.
+
+=== tt_um_prog_clk_router ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      208        - wires
+      243        - wire bits
+       57        - public wires
+       92        - public wire bits
+        8        - ports
+       43        - port bits
+      224 3.21E+03 cells
+        1    8.758   sky130_fd_sc_hd__a21o_2
+        8   80.077   sky130_fd_sc_hd__a22o_2
+        4   35.034   sky130_fd_sc_hd__a31o_2
+        5   37.536   sky130_fd_sc_hd__and2_2
+        4   35.034   sky130_fd_sc_hd__and2b_2
+        5   37.536   sky130_fd_sc_hd__and3_2
+        2   20.019   sky130_fd_sc_hd__and3b_2
+        4   40.038   sky130_fd_sc_hd__and4_2
+       16   60.058   sky130_fd_sc_hd__conb_1
+       37  972.182   sky130_fd_sc_hd__dfrtp_2
+       12  315.302   sky130_fd_sc_hd__dfstp_2
+       19   71.318   sky130_fd_sc_hd__inv_2
+       40  450.432   sky130_fd_sc_hd__mux2_1
+       32  720.691   sky130_fd_sc_hd__mux4_2
+        2   12.512   sky130_fd_sc_hd__nand2_2
+        1   11.261   sky130_fd_sc_hd__nand3b_2
+        2   12.512   sky130_fd_sc_hd__nor2_2
+        1    10.01   sky130_fd_sc_hd__nor3_2
+        8   70.067   sky130_fd_sc_hd__o21a_2
+        1    10.01   sky130_fd_sc_hd__o21ba_2
+        9   56.304   sky130_fd_sc_hd__or2_2
+        1    7.507   sky130_fd_sc_hd__or3_2
+        3   26.275   sky130_fd_sc_hd__or3b_2
+        2   32.531   sky130_fd_sc_hd__xnor2_2
+        5   81.328   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_prog_clk_router': 3214.332800
+     of which used for sequential elements: 1287.484800 (40.05%)
+
