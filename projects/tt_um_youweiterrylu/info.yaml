@@ -1,0 +1,67 @@
+# Tiny Tapeout project information
+project:
+  title:        "DMA"      # Project title
+  author:       "Terry Lu"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Direct Memory Access module"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_youweiterrylu"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "dma_pkg.sv"
+    - "fifo.sv"
+    - "spi_csr.sv"
+    - "IRQ.sv"
+    - "descriptor_fetcher.sv"
+    - "data_mover.sv"
+    - "ring_manager.sv"
+    - "movement_top.sv"
+    - "dma_top.sv"
+    - "project.sv"
+
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "SPI_SCLK"
+  ui[1]: "SPI_MOSI"
+  ui[2]: "SPI_CSN"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "SPI_MISO"
+  uo[1]: "IRQ"
+  uo[2]: "PROBE_FETCH_REQ_VALID"
+  uo[3]: "PROBE_DF_IN_WR_EN"
+  uo[4]: "PROBE_DM_WR_EN"
+  uo[5]: "PROBE_DM_INSTR_RW"
+  uo[6]: "PROBE_RING_EMPTY"
+  uo[7]: "PROBE_BUSY"
+
+  # Bidirectional pins (all outputs: probe_rm_df_addr_lo[7:0])
+  uio[0]: "PROBE_RM_DF_ADDR_LO[0]"
+  uio[1]: "PROBE_RM_DF_ADDR_LO[1]"
+  uio[2]: "PROBE_RM_DF_ADDR_LO[2]"
+  uio[3]: "PROBE_RM_DF_ADDR_LO[3]"
+  uio[4]: "PROBE_RM_DF_ADDR_LO[4]"
+  uio[5]: "PROBE_RM_DF_ADDR_LO[5]"
+  uio[6]: "PROBE_RM_DF_ADDR_LO[6]"
+  uio[7]: "PROBE_RM_DF_ADDR_LO[7]"
+
+# Do not change!
+yaml_version: 6
