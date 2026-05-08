@@ -1,0 +1,63 @@
+128. Printing statistics.
+
+=== tt_um_sobel ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      885        - wires
+      920        - wire bits
+      158        - public wires
+      193        - public wire bits
+        8        - ports
+       43        - port bits
+      901 1.13E+04 cells
+        1   12.512   sky130_fd_sc_hd__a2111o_2
+        4   40.038   sky130_fd_sc_hd__a211o_2
+        1   12.512   sky130_fd_sc_hd__a211oi_2
+        9   90.086   sky130_fd_sc_hd__a21bo_2
+        3   33.782   sky130_fd_sc_hd__a21boi_2
+       29  253.994   sky130_fd_sc_hd__a21o_2
+       19   166.41   sky130_fd_sc_hd__a21oi_2
+       14  157.651   sky130_fd_sc_hd__a221o_2
+       74   740.71   sky130_fd_sc_hd__a22o_2
+        1   12.512   sky130_fd_sc_hd__a22oi_2
+        2   22.522   sky130_fd_sc_hd__a311o_2
+        4   35.034   sky130_fd_sc_hd__a31o_2
+        1   12.512   sky130_fd_sc_hd__a31oi_2
+       43   322.81   sky130_fd_sc_hd__and2_2
+       35  306.544   sky130_fd_sc_hd__and2b_2
+       11   82.579   sky130_fd_sc_hd__and3_2
+        4   40.038   sky130_fd_sc_hd__and3b_2
+       16   60.058   sky130_fd_sc_hd__conb_1
+      158 4.15E+03   sky130_fd_sc_hd__dfrtp_2
+       10   37.536   sky130_fd_sc_hd__inv_2
+      101 1.14E+03   sky130_fd_sc_hd__mux2_1
+       81  506.736   sky130_fd_sc_hd__nand2_2
+        9   78.826   sky130_fd_sc_hd__nand2b_2
+        1    10.01   sky130_fd_sc_hd__nand3_2
+       34  212.704   sky130_fd_sc_hd__nor2_2
+        4   40.038   sky130_fd_sc_hd__nor3_2
+        3   37.536   sky130_fd_sc_hd__nor3b_2
+        1   12.512   sky130_fd_sc_hd__nor4_2
+        1   12.512   sky130_fd_sc_hd__o211ai_2
+       10   87.584   sky130_fd_sc_hd__o21a_2
+       21  183.926   sky130_fd_sc_hd__o21ai_2
+        5   50.048   sky130_fd_sc_hd__o21ba_2
+        1   11.261   sky130_fd_sc_hd__o221a_2
+       10  100.096   sky130_fd_sc_hd__o22a_2
+        1   12.512   sky130_fd_sc_hd__o22ai_2
+        1   11.261   sky130_fd_sc_hd__o311a_2
+        1    10.01   sky130_fd_sc_hd__o31a_2
+        1   12.512   sky130_fd_sc_hd__o31ai_2
+        5    62.56   sky130_fd_sc_hd__o41a_2
+       54  337.824   sky130_fd_sc_hd__or2_2
+        7    52.55   sky130_fd_sc_hd__or3_2
+        1    8.758   sky130_fd_sc_hd__or3b_2
+        1    8.758   sky130_fd_sc_hd__or4_2
+       70 1.14E+03   sky130_fd_sc_hd__xnor2_2
+       38  618.093   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_sobel': 11345.881600
+     of which used for sequential elements: 4151.481600 (36.59%)
+
