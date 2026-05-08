@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "dma_multi_channel"      # Project title
+  author:       "Sharanya"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Design of a Tiny DMA controller for memory to memory copy"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_dma_multi_channel"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs (Configuration Bus)
+  ui[0]: "cfg[0] - Transfer Mode (0=single, 1=burst)"
+  ui[1]: "cfg[1] - Destination Address Bit 0"
+  ui[2]: "cfg[2] - Destination Address Bit 1"
+  ui[3]: "cfg[3] - Destination Address Bit 2"
+  ui[4]: "cfg[4] - Source Address Bit 0"
+  ui[5]: "cfg[5] - Source Address Bit 1"
+  ui[6]: "cfg[6] - Source Address Bit 2"
+  ui[7]: "cfg[7] - Start Signal (pulse high to initiate transfer)"
+
+  # Outputs (Data + Status - FULL 8 BITS PRESERVED)
+  uo[0]: "data[0] - Output Data Bit 0 (LSB)"
+  uo[1]: "data[1] - Output Data Bit 1"
+  uo[2]: "data[2] - Output Data Bit 2"
+  uo[3]: "data[3] - Output Data Bit 3"
+  uo[4]: "data[4] - Output Data Bit 4"
+  uo[5]: "data[5] - Output Data Bit 5"
+  uo[6]: "data[6] - Output Data Bit 6 (MSB)"
+  uo[7]: "dma_done - Transfer Complete Pulse"
+
+  # Bidirectional pins (Configured as INPUTS ONLY for this design)
+  uio[0]: "ch_sel - Channel Select (0=CH0, 1=CH1)"
+  uio[1]: "width[0] - Word Width Selector Bit 0"
+  uio[2]: "width[1] - Word Width Selector Bit 1"
+  uio[3]: "err[0] - Source Boundary Error (OUTPUT)"
+  uio[4]: "err[1] - Destination Boundary Error (OUTPUT)"
+  uio[5]: "err[2] - Address Mismatch Error (OUTPUT)"
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
