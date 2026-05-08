@@ -1,0 +1,46 @@
+109. Printing statistics.
+
+=== tt_um_pmendoza_ieee_tinyscan ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       89        - wires
+      124        - wire bits
+       16        - public wires
+       51        - public wire bits
+        8        - ports
+       43        - port bits
+      105  985.946 cells
+        5   50.048   sky130_fd_sc_hd__a211o_2
+        2   20.019   sky130_fd_sc_hd__a21bo_2
+        2   17.517   sky130_fd_sc_hd__a21oi_2
+        8   90.086   sky130_fd_sc_hd__a221o_2
+        2   20.019   sky130_fd_sc_hd__a22o_2
+        2   17.517   sky130_fd_sc_hd__a31o_2
+        2   22.522   sky130_fd_sc_hd__a32o_2
+        2   15.014   sky130_fd_sc_hd__and2_2
+        1    8.758   sky130_fd_sc_hd__and2b_2
+        2   15.014   sky130_fd_sc_hd__and3_2
+        2   20.019   sky130_fd_sc_hd__and3b_2
+        1   11.261   sky130_fd_sc_hd__and4b_2
+        1   12.512   sky130_fd_sc_hd__and4bb_2
+       10   50.048   sky130_fd_sc_hd__buf_2
+       14    52.55   sky130_fd_sc_hd__conb_1
+        8  170.163   sky130_fd_sc_hd__dfxtp_2
+        3   11.261   sky130_fd_sc_hd__inv_2
+        3   33.782   sky130_fd_sc_hd__mux2_1
+        2   12.512   sky130_fd_sc_hd__nand2_2
+        4   45.043   sky130_fd_sc_hd__nand3b_2
+        2   25.024   sky130_fd_sc_hd__nand4_2
+        4   25.024   sky130_fd_sc_hd__nor2_2
+        3   30.029   sky130_fd_sc_hd__o211a_2
+        3   26.275   sky130_fd_sc_hd__o21a_2
+        2   22.522   sky130_fd_sc_hd__o32a_2
+        6   37.536   sky130_fd_sc_hd__or2_2
+        3   26.275   sky130_fd_sc_hd__or3b_2
+        6   97.594   sky130_fd_sc_hd__xnor2_2
+
+   Chip area for module '\tt_um_pmendoza_ieee_tinyscan': 985.945600
+     of which used for sequential elements: 170.163200 (17.26%)
+
