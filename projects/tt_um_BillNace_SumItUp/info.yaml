@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:        "SumItUp Hardware Thread (18-341)"      # Project title
+  author:       "Bill Nace"      # Your name
+  discord:      "bill_nace"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Implementation of the SumItUp thread from CMU's 18-341 course."      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1000       # Clock frequency in Hz (or 0 if not applicable)
+                # Any frequency will do
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_BillNace_SumItUp"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "sumitup.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "inA[0]"
+  ui[1]: "inA[1]"
+  ui[2]: "inA[2]"
+  ui[3]: "inA[3]"
+  ui[4]: "inA[4]"
+  ui[5]: "inA[5]"
+  ui[6]: "inA[6]"
+  ui[7]: "inA[7]"
+
+  # Outputs
+  uo[0]: "sum[0]"
+  uo[1]: "sum[1]"
+  uo[2]: "sum[2]"
+  uo[3]: "sum[3]"
+  uo[4]: "sum[4]"
+  uo[5]: "sum[5]"
+  uo[6]: "sum[6]"
+  uo[7]: "sum[7]"
+
+  # Bidirectional pins
+  uio[0]: "go_l"
+  uio[1]: "done"
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
