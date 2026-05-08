@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "SUBLEQ CPU"      # Project title
+  title:        "SUBLEQ CPU IEEE"      # Project title
   author:       "Touka Szulc"      # Your name
   discord:      "forthcore"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A type of OISC (One Instruction Set Computer)."      # One line description of what your project does
