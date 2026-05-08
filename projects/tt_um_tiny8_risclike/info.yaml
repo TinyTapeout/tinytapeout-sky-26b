@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title: "Tiny8 CPU with SPI program load and internal execution"
+  title: "IEEE_CPU with SPI program load and internal execution"
   author: "Luis Javier"
   discord: ""
   description: "8-bit CPU that loads 16-bit instructions over SPI into internal program memory and then executes them autonomously. Final stable version uses 10 instruction slots and an enriched ISA."
