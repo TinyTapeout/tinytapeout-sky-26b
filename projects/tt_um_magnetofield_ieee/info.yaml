@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Hs3 logo VGA"      # Project title
+  title:        "Hackerspace logo IEEE"      # Project title
   author:       "Jakub Rachoń"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Hs3 logo displayed via VGA port on 640x480"      # One line description of what your project does
