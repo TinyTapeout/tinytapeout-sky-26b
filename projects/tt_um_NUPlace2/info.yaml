@@ -1,0 +1,59 @@
+# Tiny Tapeout project information
+project:
+  title:        "VAK FSM"      # Project title
+  author:       "Sam Weber"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "The FSM for the VAK lab at Northwestern"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     16000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_NUPlace2"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_NUPlace2.sv"
+    - "spi_master_mode0.sv"
+    - "FSM.sv"
+    - "top.sv"
+pl_target_density: 0.65
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "rst"          # Maps to logic rst
+  ui[1]: "wakeup"       # Maps to logic wakeup
+  ui[2]: "adc_EOC"      # End of Conversion
+  ui[3]: "MISO"         # SPI Master In Slave Out
+  ui[4]: "adc_data[0]"  # Low bits of ADC
+  ui[5]: "adc_data[1]"
+  ui[6]: "adc_data[2]"
+  ui[7]: "adc_data[3]"
+
+  # Outputs: Map your SPI and power control signals
+  uo[0]: "spi_clk"      # SPI Clock
+  uo[1]: "MOSI"         # SPI Master Out Slave In
+  uo[2]: "FRAM_cs"      # SPI Chip Select 1
+  uo[3]: "LoRA_cs"      # SPI Chip Select 2
+  uo[4]: "adc_conv_start" # Start Conversion
+  uo[5]: "en_sensor_vcc" # Power Enable
+  uo[6]: "en_radio_vcc"  # Power Enable
+  uo[7]: "ana_ctrl[0]"   # Analog Control
+
+  # Bidirectional: Use these for the remaining ADC bits or extra control
+  uio[0]: "adc_data[4]"
+  uio[1]: "adc_data[5]"
+  uio[2]: "adc_data[6]"
+  uio[3]: "adc_data[7]"
+  uio[4]: "adc_data[8]"
+  uio[5]: "adc_data[9]"
+  uio[6]: "adc_data[10]"
+  uio[7]: "adc_data[11]"
+
+# Do not change!
+yaml_version: 6
