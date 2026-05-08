@@ -39,10 +39,22 @@ completion.
 
 ## How to test
 
-For simulation test an integer system model and dADC model are added in the tb.v so that the feedback
-is provided and a system level test is performed. The test is truncated as much as possible (ie cap precharged and early exit after burnthrough) and still takes about 400sec for the (icarsu) simualtion to complete (150ms). I have not tested with gate level sims yet.
+The device has BIST. 
 
-For electrical testing I use am FPGA board with the same system and ADC models incorporated, and run a full test. The FPGA also has a full capture of the entire operation into hyperram and includes HDMI display of the operation with controls for pan/zoom to allow validation of correct operation.
+BIST is started by asserting ui_in[7] = 0 at reset (just set all ui_in = 0 ). 
+An integer system simulation model and model of the ADC serial interface are employed.
+During the 65ms after reset a truncated full system simulation is performed.
+During this time the uo_out counts from 0 to a passing value of uo_out==8'hC0. 
+It will stop at lower values if any test asserts are violated.
+
+So test operation is:
+
+    clk on
+    ui_in = 8'h00
+    reset deasserted
+    wait >65ms (65*48000 cycles)
+    read uo_out
+    pass 8'hc0 
 
 ## External hardware
 
