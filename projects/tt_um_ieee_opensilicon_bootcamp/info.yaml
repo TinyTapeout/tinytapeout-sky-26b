@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Guess the Number Game - IEEE OpenSilicon Bootcamp"
+  author:       "Maria Emilia Cueva"
+  discord:      ""
+  description:  "Guessing game with 3 attempts and hints."
+  language:     "Verilog"
+  clock_hz:     1000000
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ieee_opensilicon_bootcamp"
+
+  # List your project's source files here.
+  source_files:
+    - "project.v"
+    - "guess_number.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "guess[0]"
+  ui[1]: "guess[1]"
+  ui[2]: "guess[2]"
+  ui[3]: "guess[3]"
+  ui[4]: "verify"
+  ui[5]: "new_game"
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "hint_lower"
+  uo[1]: "hint_higher"
+  uo[2]: "hint_correct"
+  uo[3]: "correct_led"
+  uo[4]: "attempts_left[0]"
+  uo[5]: "attempts_left[1]"
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins (not used)
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
