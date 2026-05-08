@@ -17,9 +17,10 @@ Outpace your opponents and don't fall out of the track!
 
 ## How to test
 
-Connect to VGA. Reset to start a new race. Use Input pins 0..3 to control motobikes.
+Connect to VGA. Use Input pins 0..3 to control motobikes and Input pin 4 to reset gameplay.
 
 ## External hardware
 
 - VGA output PMOD
-- 4 input signals from physical switches (active 1) on Input[3:0]
+- Gameplay reset signal on Input[4]
+- 4 input signals from player controls (active 1) on Input[3:0]

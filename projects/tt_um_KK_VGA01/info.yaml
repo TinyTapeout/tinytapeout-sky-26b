@@ -29,7 +29,7 @@ pinout:
   ui[1]: "Player2_In"
   ui[2]: "Player3_In"
   ui[3]: "Player4_In"
-  ui[4]: ""
+  ui[4]: "Game_Reset"
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
@@ -45,10 +45,10 @@ pinout:
   uo[7]: "HSync"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
+  uio[0]: "Game_Track[0]"
+  uio[1]: "Game_Track[1]"
+  uio[2]: "Game_Speed[0]"
+  uio[3]: "Game_Speed[1]"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
