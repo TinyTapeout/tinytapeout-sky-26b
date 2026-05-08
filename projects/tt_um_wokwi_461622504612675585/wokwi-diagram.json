@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "author": "Sadeeptha",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-dip-switch-8",
+      "id": "sw1",
+      "top": -176.5,
+      "left": -171.3,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-clock-generator",
+      "id": "clock1",
+      "top": -355.2,
+      "left": -115.2,
+      "attrs": { "frequency": "10000" }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw2",
+      "top": -370,
+      "left": -35.3,
+      "attrs": { "value": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -349,
+      "left": 19.2,
+      "attrs": { "color": "grey", "label": "STEP", "bounce": "0", "key": "s" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -301,
+      "left": -134.4,
+      "attrs": { "color": "grey", "label": "RESET_N", "bounce": "0", "key": "r" }
+    },
+    {
+      "type": "board-tt-block-input",
+      "id": "ttin",
+      "top": -228.13,
+      "left": 43.2,
+      "attrs": { "verilogRole": "input" }
+    },
+    { "type": "wokwi-vcc", "id": "pwr1", "top": -229.64, "left": -192, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "pwr3", "top": -373.64, "left": 105.6, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "pwr5", "top": -325.64, "left": -230.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -259.2, "left": -163.8, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -293.65,
+      "left": -211.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -432,
+      "left": -240,
+      "attrs": { "text": "1. Run simulation" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": -268.8,
+      "left": -528,
+      "attrs": { "text": "Passcode inputs: sw1-1..sw1-4" }
+    },
+    { "type": "wokwi-gate-not", "id": "notB", "top": -153.6, "left": 230.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "notD", "top": -84, "left": 220, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and1", "top": -230.4, "left": 364.8, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and2", "top": -230.4, "left": 508.8, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and3", "top": -220, "left": 660, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "notCorrect", "top": -120, "left": 840, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and4", "top": 0, "left": 360, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and5", "top": 9.6, "left": 508.8, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and6", "top": 19.2, "left": 662.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "notAlarm", "top": 76.8, "left": 825.6, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and10", "top": -28.8, "left": 969.6, "attrs": {} },
+    {
+      "type": "board-tt-block-output",
+      "id": "ttout",
+      "top": -151.33,
+      "left": 1195.2,
+      "attrs": { "verilogRole": "output" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -349.2,
+      "left": 1395.8,
+      "attrs": { "color": "green", "label": "UNLOCK" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -349.2,
+      "left": 1463,
+      "attrs": { "color": "yellow", "label": "WRONG" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -349.2,
+      "left": 1530.2,
+      "attrs": { "color": "red", "label": "ALARM" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzz1",
+      "top": 40.8,
+      "left": 1413,
+      "attrs": { "volume": "0.2" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": -268.8, "left": 1381.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": -278.4, "left": 1449, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd4", "top": -268.8, "left": 1516.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd5", "top": 144, "left": 1429.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "pwr1:VCC", "sw1:1a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:2a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:3a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:4a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:5a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:6a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:7a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
+    [ "sw1:1b", "ttin:EXTIN0", "green", [ "h0" ] ],
+    [ "sw1:2b", "ttin:EXTIN1", "green", [ "h0" ] ],
+    [ "sw1:3b", "ttin:EXTIN2", "green", [ "h0" ] ],
+    [ "sw1:4b", "ttin:EXTIN3", "green", [ "h0" ] ],
+    [ "sw1:5b", "ttin:EXTIN4", "green", [ "h0" ] ],
+    [ "sw1:6b", "ttin:EXTIN5", "green", [ "h0" ] ],
+    [ "sw1:7b", "ttin:EXTIN6", "green", [ "h0" ] ],
+    [ "sw1:8b", "ttin:EXTIN7", "green", [ "h0" ] ],
+    [ "sw2:1", "clock1:CLK", "blue", [ "h-19.2", "v-57.6" ] ],
+    [ "sw2:2", "ttin:EXTCLK", "blue", [ "v0" ] ],
+    [ "btn1:1.l", "sw2:3", "blue", [ "h0" ] ],
+    [ "pwr3:VCC", "btn1:2.r", "red", [ "v0" ] ],
+    [ "btn2:2.l", "gnd1:GND", "black", [ "h0" ] ],
+    [ "ttin:EXTRST_N", "btn2:1.r", "orange", [ "h-38.4", "v-96" ] ],
+    [ "btn2:1.l", "r2:2", "green", [ "h0" ] ],
+    [ "pwr5:VCC", "r2:1", "red", [ "v0" ] ],
+    [ "ttin:IN1", "notB:IN", "blue", [ "h86.4", "v28.8" ] ],
+    [ "ttin:IN3", "notD:IN", "orange", [ "h67.2", "v134.4" ] ],
+    [ "ttin:IN0", "and1:A", "green", [ "h144", "v0" ] ],
+    [ "notB:OUT", "and1:B", "blue", [ "h38.4", "v-9.6" ] ],
+    [ "and1:OUT", "and2:A", "green", [ "h48" ] ],
+    [ "ttin:IN2", "and2:B", "green", [ "h364.8", "v-28" ] ],
+    [ "and2:OUT", "and3:A", "green", [ "h48" ] ],
+    [ "notD:OUT", "and3:B", "orange", [ "h326.4", "v-67.2" ] ],
+    [ "and3:OUT", "ttout:OUT0", "green", [ "h345.6", "v28.8" ] ],
+    [ "and3:OUT", "notCorrect:IN", "green", [ "h52.8", "v105.6" ] ],
+    [ "ttin:IN0", "and4:A", "green", [ "h192", "v220.8" ] ],
+    [ "ttin:IN1", "and4:B", "green", [ "h182.4", "v240" ] ],
+    [ "and4:OUT", "and5:A", "green", [ "h48" ] ],
+    [ "ttin:IN2", "and5:B", "green", [ "h345.6", "v192" ] ],
+    [ "and5:OUT", "and6:A", "green", [ "h48" ] ],
+    [ "ttin:IN3", "and6:B", "green", [ "h480", "v182.4" ] ],
+    [ "and6:OUT", "ttout:OUT2", "yellow", [ "h326.4", "v-19.2" ] ],
+    [ "and6:OUT", "notAlarm:IN", "yellow", [ "h52.8", "v76.8" ] ],
+    [ "notCorrect:OUT", "and10:A", "blue", [ "h24", "v81.6" ] ],
+    [ "notAlarm:OUT", "and10:B", "orange", [ "h33.6", "v-109.2" ] ],
+    [ "and10:OUT", "ttout:OUT1", "red", [ "h20.8", "v-28.8", "h110.4" ] ],
+    [ "ttout:EXTOUT0", "led1:A", "green", [ "h96", "v-57.6", "h86.4" ] ],
+    [ "led1:C", "gnd2:GND", "black", [ "h0" ] ],
+    [ "ttout:EXTOUT1", "led2:A", "green", [ "h105.6", "h121.6" ] ],
+    [ "led2:C", "gnd3:GND", "black", [ "h0" ] ],
+    [ "ttout:EXTOUT2", "led3:A", "green", [ "h217.6", "v19.2", "h76.8" ] ],
+    [ "led3:C", "gnd4:GND", "black", [ "h0" ] ],
+    [
+      "ttout:EXTOUT2",
+      "buzz1:2",
+      "green",
+      [ "h131.2", "v19.2", "h3.2", "v57.6", "h102.4", "v153.6" ]
+    ],
+    [ "buzz1:1", "gnd5:GND", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
