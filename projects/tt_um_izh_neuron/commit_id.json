@@ -1,0 +1,9 @@
+{
+  "app": "custom_gds action",
+  "repo": "https://github.com/Abiaselli/SKY130-Spiking-Neuron",
+  "commit": "18e05b7871bc58265e5c5b4faf307e6d782c5c5d",
+  "workflow_url": "https://github.com/Abiaselli/SKY130-Spiking-Neuron/actions/runs/25576342573",
+  "project_id": 4676,
+  "sort_id": 1778270356856,
+  "analog": true
+}
