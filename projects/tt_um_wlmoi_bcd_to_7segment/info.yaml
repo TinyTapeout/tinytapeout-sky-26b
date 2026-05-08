@@ -1,0 +1,44 @@
+yaml_version: 6
+
+project:
+  title: "TTSKY26A BCD to 7-Segment Decoder"
+  author: "William Anthony"
+  discord: "wlmoi"
+  description: "Tiny Tapeout HEX-to-7-segment decoder (0-9,A,b,C,d,e,F) with blank, lamp-test, decimal-point, and active-low mode support."
+  language: "Verilog"
+  clock_hz: 50000000
+  tiles: "1x1"
+  top_module: "tt_um_wlmoi_bcd_to_7segment"
+  source_files:
+    - "project.v"
+    - "bcd_to_7seg_decoder.v"
+    - "seg_display_control.v"
+    - "seg_output_mode.v"
+
+pinout:
+  ui[0]: "HEX bit 0"
+  ui[1]: "HEX bit 1"
+  ui[2]: "HEX bit 2"
+  ui[3]: "HEX bit 3"
+  ui[4]: "Display enable"
+  ui[5]: "Blank"
+  ui[6]: "Lamp test"
+  ui[7]: "Decimal point input"
+
+  uo[0]: "Segment g"
+  uo[1]: "Segment f"
+  uo[2]: "Segment e"
+  uo[3]: "Segment d"
+  uo[4]: "Segment c"
+  uo[5]: "Segment b"
+  uo[6]: "Segment a"
+  uo[7]: "Decimal point output"
+
+  uio[0]: "Active-low mode (1=common-anode, 0=common-cathode)"
+  uio[1]: "Reserved"
+  uio[2]: "Reserved"
+  uio[3]: "Reserved"
+  uio[4]: "valid digit active"
+  uio[5]: "invalid digit active"
+  uio[6]: "display on"
+  uio[7]: "active-low mode echo"
