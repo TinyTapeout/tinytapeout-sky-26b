@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Simon Memory Game Chip"
+  author:       "Isabella López & Marlon Carriel"
+  discord:      ""
+  description:  "A simple Simon Says memory game implemented in Verilog using a RAM and FSM."
+  language:     "Verilog"
+  clock_hz:     1000000
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"
+
+  # Your top module name must start with "tt_um_".
+  top_module:  "tt_um_isalopez9_memory_game"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  source_files:
+    - "tt_um_memory_game.v"
+    - "memory_game.v"
+    - "ram.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "prog_mode"
+  ui[1]: "we"
+  ui[2]: "start"
+  ui[3]: "enter"
+  ui[4]: "player_input[0]"
+  ui[5]: "player_input[1]"
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "led_out[0]"
+  uo[1]: "led_out[1]"
+  uo[2]: "show_valid"
+  uo[3]: "correct"
+  uo[4]: "error"
+  uo[5]: "win"
+  uo[6]: "state_out[0]"
+  uo[7]: "state_out[1]"
+
+  # Bidirectional pins
+  uio[0]: "prog_data[0] / prog_addr[0] / level[0]"
+  uio[1]: "prog_data[1] / prog_addr[1] / level[1]"
+  uio[2]: "prog_data[2] / prog_addr[2] / level[2]"
+  uio[3]: "prog_data[3] / prog_addr[3] / level[3]"
+  uio[4]: "prog_data[4] / level[4]"
+  uio[5]: "prog_data[5]"
+  uio[6]: "prog_data[6]"
+  uio[7]: "prog_data[7]"
+
+# Do not change!
+yaml_version: 6
