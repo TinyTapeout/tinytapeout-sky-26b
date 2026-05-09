@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:       "2x2 Systolic Array TPU"
+  author:      "PFW Tiny Tapeout Team"
+  discord:     ""                    # optional
+  description: "A 2x2 systolic-array Tensor Processing Unit that performs signed 8-bit matrix multiplication with 16-bit accumulation, optional fused transpose, and ReLU activation. Pipelined streaming allows overlapped input/output."
+  language:    "Verilog"
+  clock_hz:    50000000              # 50 MHz
+
+  tiles: "1x2"
+
+  # Module name must start with tt_um_ and be unique (include your GitHub username)
+  top_module: "tt_um_pfw_tpu"
+
+  source_files:
+    - "tt_um_pfw_tpu.v"
+    - "systolic_array_2x2.v"
+    - "PE.v"
+    - "memory.v"
+    - "control_unit.v"
+    - "mmu_feeder.v"
+    - "delay_cell.v"
+
+# Pinout — descriptive names for the datasheet.
+pinout:
+  # Inputs — 8-bit matrix data bus
+  ui[0]: "DATA[0] matrix element bit 0"
+  ui[1]: "DATA[1] matrix element bit 1"
+  ui[2]: "DATA[2] matrix element bit 2"
+  ui[3]: "DATA[3] matrix element bit 3"
+  ui[4]: "DATA[4] matrix element bit 4"
+  ui[5]: "DATA[5] matrix element bit 5"
+  ui[6]: "DATA[6] matrix element bit 6"
+  ui[7]: "DATA[7] matrix element bit 7"
+
+  # Outputs — 8-bit result data (upper/lower halves of 16-bit products)
+  uo[0]: "OUT[0] result data bit 0"
+  uo[1]: "OUT[1] result data bit 1"
+  uo[2]: "OUT[2] result data bit 2"
+  uo[3]: "OUT[3] result data bit 3"
+  uo[4]: "OUT[4] result data bit 4"
+  uo[5]: "OUT[5] result data bit 5"
+  uo[6]: "OUT[6] result data bit 6"
+  uo[7]: "OUT[7] result data bit 7"
+
+  # Bidirectional pins — control inputs and status outputs
+  uio[0]: "LOAD_EN    (input)  enable matrix element loading"
+  uio[1]: "TRANSPOSE  (input)  fused transpose of second operand"
+  uio[2]: "ACTIVATION (input)  enable ReLU on output"
+  uio[3]: "(unused)"
+  uio[4]: "(unused)"
+  uio[5]: "STATE0     (output) FSM state bit 0"
+  uio[6]: "STATE1     (output) FSM state bit 1"
+  uio[7]: "DONE       (output) high when results are ready"
+
+# Do not change!
+yaml_version: 6
