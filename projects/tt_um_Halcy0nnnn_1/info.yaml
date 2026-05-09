@@ -28,10 +28,10 @@ pinout:
   # Inputs
   ui[0]: "tile"
   ui[1]: "color"
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
+  ui[2]: "color_index[0]"
+  ui[3]: "color_index[1]"
+  ui[4]: "color_index[2]"
+  ui[5]: "flip_top_bottom"
   ui[6]: ""
   ui[7]: ""
 
