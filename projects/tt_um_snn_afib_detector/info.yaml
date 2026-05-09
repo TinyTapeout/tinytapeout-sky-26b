@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "SNN AFib Detector — Spiking Reservoir Computing Core"
+  author:       "SanjayKrishna"           # your name here
+  discord:      "sanjaykrishna"           # your discord username (optional)
+  description:  "A spiking neural network (SNN) reservoir computing chip that detects atrial fibrillation and asystole in real time from R-peak timing pulses, using 11 LIF neurons, recurrent feedback, and 2-of-3 triple-window majority voting."
+  language:     "Verilog"
+  clock_hz:     10000000     # 10 MHz
+
+  tiles: "1x1"
+
+  # Top module name — must start with tt_um_
+  top_module: "tt_um_snn_afib_detector"
+
+  # Source files — list all Verilog files in src/
+  source_files:
+    - "tt_um_snn_afib_detector.v"
+    - "rr_features.v"
+    - "spike_encoder.v"
+    - "reservoir.v"
+    - "lif_neuron.v"
+    - "readout.v"
+
+# ── Pin descriptions ──────────────────────────────────────────────────────────
+# DO NOT add or remove pins. Fill in descriptions for pins you use.
+pinout:
+  # Inputs
+  ui[0]: "r_peak — R-peak pulse input (1 clock wide, active high)"
+  ui[1]: "w_load — Weight load enable (hold high during serial weight loading)"
+  ui[2]: "w_data — Serial weight data bit (MSB first, 33 bits total)"
+  ui[3]: "w_clk  — Serial weight clock (rising edge latches w_data)"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "afib_flag      — AFib detected (2-of-3 window majority vote, active high)"
+  uo[1]: "out_valid      — Output valid strobe (pulses high after each 16-beat slow window)"
+  uo[2]: "any_spike      — Reservoir activity monitor (any LIF neuron fired this beat)"
+  uo[3]: "fsm_state[0]   — Readout FSM state bit 0 (00=LOAD, 01=RUN, 10=OUTPUT)"
+  uo[4]: "fsm_state[1]   — Readout FSM state bit 1"
+  uo[5]: "confidence[0]  — Detection confidence LSB (3-bit: 000=normal, 111=strong AFib)"
+  uo[6]: "confidence[1]  — Detection confidence mid bit"
+  uo[7]: "confidence[2]  — Detection confidence MSB"
+
+  # Bidirectional pins
+  uio[0]: "asystole_flag — Bradycardia / asystole alert (OUTPUT, asserts after >1.6s without R-peak)"
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
