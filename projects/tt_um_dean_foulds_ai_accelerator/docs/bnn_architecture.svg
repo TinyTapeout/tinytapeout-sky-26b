@@ -1,0 +1,56 @@
+<svg width="680" height="420" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect x="40" y="30" width="600" height="360" rx="16" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A" x="340" y="58" text-anchor="middle">16-neuron BNN chip (1x2 tile, Sky130 130nm)</text>
+
+<rect x="60" y="75" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#085041" x="125" y="97" text-anchor="middle" dominant-baseline="central">Input bus</text>
+<text font-family="sans-serif" font-size="12" fill="#0F6E56" x="125" y="118" text-anchor="middle" dominant-baseline="central">ui_in[7:0]</text>
+
+<rect x="60" y="155" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#085041" x="125" y="177" text-anchor="middle" dominant-baseline="central">Control</text>
+<text font-family="sans-serif" font-size="12" fill="#0F6E56" x="125" y="198" text-anchor="middle" dominant-baseline="central">uio_in[5:0]</text>
+
+<rect x="60" y="235" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#085041" x="125" y="257" text-anchor="middle" dominant-baseline="central">Weight store</text>
+<text font-family="sans-serif" font-size="12" fill="#0F6E56" x="125" y="278" text-anchor="middle" dominant-baseline="central">16 x 8 registers</text>
+
+<rect x="60" y="315" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#085041" x="125" y="337" text-anchor="middle" dominant-baseline="central">Threshold store</text>
+<text font-family="sans-serif" font-size="12" fill="#0F6E56" x="125" y="358" text-anchor="middle" dominant-baseline="central">16 x 4 registers</text>
+
+<line x1="190" y1="103" x2="240" y2="103" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="190" y1="183" x2="240" y2="220" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="190" y1="263" x2="240" y2="220" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="190" y1="343" x2="240" y2="220" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="240" y="80" width="200" height="280" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#3C3489" x="340" y="108" text-anchor="middle" dominant-baseline="central">Neuron array</text>
+<text font-family="sans-serif" font-size="12" fill="#534AB7" x="340" y="126" text-anchor="middle" dominant-baseline="central">16 parallel neurons</text>
+
+<rect x="258" y="140" width="164" height="28" rx="4" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="12" fill="#2C2C2A" x="340" y="154" text-anchor="middle" dominant-baseline="central">Neuron 0: w[7:0], th[3:0]</text>
+<rect x="258" y="176" width="164" height="28" rx="4" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="12" fill="#2C2C2A" x="340" y="190" text-anchor="middle" dominant-baseline="central">Neuron 1: w[7:0], th[3:0]</text>
+<rect x="258" y="212" width="164" height="28" rx="4" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="12" fill="#2C2C2A" x="340" y="226" text-anchor="middle" dominant-baseline="central">Neuron 2: w[7:0], th[3:0]</text>
+<text font-family="sans-serif" font-size="12" fill="#534AB7" x="340" y="260" text-anchor="middle" dominant-baseline="central">...</text>
+<rect x="258" y="276" width="164" height="28" rx="4" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="12" fill="#2C2C2A" x="340" y="290" text-anchor="middle" dominant-baseline="central">Neuron 15: w[7:0], th[3:0]</text>
+
+<line x1="440" y1="180" x2="490" y2="140" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="440" y1="220" x2="490" y2="260" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="490" y="110" width="150" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#712B13" x="565" y="132" text-anchor="middle" dominant-baseline="central">Outputs 0-7</text>
+<text font-family="sans-serif" font-size="12" fill="#993C1D" x="565" y="153" text-anchor="middle" dominant-baseline="central">uo_out[7:0]</text>
+
+<rect x="490" y="230" width="150" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="14" font-weight="500" fill="#712B13" x="565" y="252" text-anchor="middle" dominant-baseline="central">Outputs 8-15</text>
+<text font-family="sans-serif" font-size="12" fill="#993C1D" x="565" y="273" text-anchor="middle" dominant-baseline="central">uio_out[7:0]</text>
+</svg>

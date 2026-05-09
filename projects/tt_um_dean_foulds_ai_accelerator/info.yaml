@@ -1,0 +1,40 @@
+project:
+  wokwi_id:    0
+  title: "Systolic Binary Neural Network Accelerator"
+  author:      "Dean Foulds"
+  discord:     ""
+  description: "V2 systolic 16-neuron BNN accelerator. XNOR dot product engine, hardware feature expansion, signed bias, balanced popcount tree. 8-cycle systolic compute reuses hardware for smaller silicon footprint."
+  language:    "Verilog"
+  clock_hz:    10000000
+  tiles:       "1x1"
+  top_module:  "tt_um_dean_foulds_ai_accelerator"
+  source_files:
+    - "tt_um_dean_foulds_ai_accelerator.v"
+
+pinout:
+  ui[0]: "x0 - input feature bit 0"
+  ui[1]: "x1 - input feature bit 1"
+  ui[2]: "x2 - input feature bit 2"
+  ui[3]: "x3 - input feature bit 3"
+  ui[4]: "x4 - input feature bit 4"
+  ui[5]: "x5 - input feature bit 5"
+  ui[6]: "x6 - input feature bit 6"
+  ui[7]: "x7 - input feature bit 7"
+  uo[0]: "fire0 - neuron 0 output"
+  uo[1]: "fire1 - neuron 1 output"
+  uo[2]: "fire2 - neuron 2 output"
+  uo[3]: "fire3 - neuron 3 output"
+  uo[4]: "fire4 - neuron 4 output"
+  uo[5]: "fire5 - neuron 5 output"
+  uo[6]: "fire6 - neuron 6 output"
+  uo[7]: "fire7 - neuron 7 output"
+  uio[0]: "mode - 0=load 1=infer"
+  uio[1]: "target - 0=weights 1=thresholds"
+  uio[2]: "sel0 - neuron select bit 0"
+  uio[3]: "sel1 - neuron select bit 1"
+  uio[4]: "sel2 - neuron select bit 2"
+  uio[5]: "sel3 - neuron select bit 3"
+  uio[6]: "fire8 - neuron 8 output"
+  uio[7]: "fire9 - neuron 9 output"
+
+yaml_version: 6
