@@ -1,5 +1,5 @@
-project:
-  title: "Multi-Stage Configurable Ring Oscillator"
+project: 
+  title: "IEEE Multi-Stage Configurable Ring Oscillator"
   author: "Nemalipuri Rajkamal"
   discord: ""
   description: "Analog clock generation unit with voltage-controlled MUX routing between 3, 5, and 7-stage ring oscillators on the Sky130 process."
