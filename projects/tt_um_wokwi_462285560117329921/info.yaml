@@ -1,0 +1,49 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     462285560117329921       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "BCD ID Wowki"      # Project title
+  author:       "Ian Briones Reyes"      # Your name
+  discord:      "hawki14"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Circuito convertidor de 4bit BCD a display de 7 segmentos como una pequeña modificacion del conocido IC 7448, con la diferencia de que este funciona siempre con un 0 en apagado."      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "A"
+  ui[1]: "B"
+  ui[2]: "C"
+  ui[3]: "D"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Seg A"
+  uo[1]: "Seg B"
+  uo[2]: "Seg C"
+  uo[3]: "Seg D"
+  uo[4]: "Seg E"
+  uo[5]: "Seg F"
+  uo[6]: "Seg G"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
