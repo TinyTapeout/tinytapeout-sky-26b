@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Baby CPU"
+  author:       "Ripunjay Singh, Alok Kumar Kamal"
+  discord:      "ripunjaysingh_38609" 
+  description:  "A small 8-bit CPU with 16-byte ROM/RAM and simple accumulator architecture"
+  language:     "Verilog"
+  clock_hz:     100000000
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"
+
+  # Your top module name must start with "tt_um_"
+  top_module:  "tt_um_baby_cpu"
+
+  # List your project's source files here.
+  source_files:
+    - "tt_um_baby_cpu.v"
+
+# Pinout of the project
+pinout:
+  # Inputs
+  ui[0]: "External input bit 0"
+  ui[1]: "External input bit 1"
+  ui[2]: "External input bit 2"
+  ui[3]: "External input bit 3"
+  ui[4]: "External input bit 4"
+  ui[5]: "External input bit 5"
+  ui[6]: "External input bit 6"
+  ui[7]: "External input bit 7"
+
+  # Outputs
+  uo[0]: "CPU output bit 0"
+  uo[1]: "CPU output bit 1"
+  uo[2]: "CPU output bit 2"
+  uo[3]: "CPU output bit 3"
+  uo[4]: "CPU output bit 4"
+  uo[5]: "CPU output bit 5"
+  uo[6]: "CPU output bit 6"
+  uo[7]: "CPU output bit 7"
+
+  # Bidirectional pins
+  uio[0]: "Bidirectional IO bit 0"
+  uio[1]: "Bidirectional IO bit 1"
+  uio[2]: "Bidirectional IO bit 2"
+  uio[3]: "Bidirectional IO bit 3"
+  uio[4]: "Bidirectional IO bit 4"
+  uio[5]: "Bidirectional IO bit 5"
+  uio[6]: "Bidirectional IO bit 6"
+  uio[7]: "Bidirectional IO bit 7"
+
+# Do not change!
+yaml_version: 6

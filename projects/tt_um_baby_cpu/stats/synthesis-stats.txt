@@ -1,0 +1,31 @@
+130. Printing statistics.
+
+=== tt_um_baby_cpu ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       58        - wires
+       93        - wire bits
+       21        - public wires
+       56        - public wire bits
+        8        - ports
+       43        - port bits
+       74  1219.92 cells
+        1   11.261   sky130_fd_sc_hd__a41o_2
+        1    8.758   sky130_fd_sc_hd__and2b_2
+        1    10.01   sky130_fd_sc_hd__and4_2
+        1   11.261   sky130_fd_sc_hd__and4b_2
+        1   12.512   sky130_fd_sc_hd__and4bb_2
+        8   40.038   sky130_fd_sc_hd__buf_2
+       29  761.981   sky130_fd_sc_hd__dfrtp_2
+        1    3.754   sky130_fd_sc_hd__inv_2
+       25   281.52   sky130_fd_sc_hd__mux2_1
+        1   15.014   sky130_fd_sc_hd__nand4b_2
+        1    6.256   sky130_fd_sc_hd__nor2_2
+        1    8.758   sky130_fd_sc_hd__o21ai_2
+        3   48.797   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_baby_cpu': 1219.920000
+     of which used for sequential elements: 761.980800 (62.46%)
+
