@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:       "4x4 Array Multiplier with VGA Visualization"
+  author:      "Carlos Acevedo, Brock Fuller, Akshat Verma, Vance Vojslavek, Hira Memon, Ezenwa Opara, Erik Rodriguez, Samiya Qasmi, Sahil Najmal, Matthew Hodges"           # <-- fill in your name
+  discord:     ""                    # optional
+  description: "A structural 4×4 array multiplier using 12 full adders that displays the input operands and the resulting 8-bit product as a decimal equation on a 640×480 VGA monitor through the Tiny VGA PMOD. The designers’ initials and the Purdue Fort Wayne mascot, the mastodon, are also shown on the display. Inputs are provided through bare solder pads for direct cable connections."
+  language:    "Verilog"
+  clock_hz:    25000000              # 25 MHz required for VGA
+
+  tiles: "1x2"
+
+  # Module name must start with tt_um_ and be unique (include your GitHub username)
+  top_module: "tt_um_array_mult_vga"
+
+  source_files:
+    - "tt_um_array_mult_vga.v"
+    - "hvsync_generator.v"
+    - "fa.v" 
+    - "bcd2dec_74185.v"
+    - "bin2bcd_8bit.v" 
+    - "mastodon_rom_compress.v"
+    
+
+# Pinout — descriptive names for the datasheet.
+pinout:
+  # Inputs — bare footprint pads for soldered signal cables
+  ui[0]: "A[0] multiplicand bit 0 (solder pad)"
+  ui[1]: "A[1] multiplicand bit 1 (solder pad)"
+  ui[2]: "A[2] multiplicand bit 2 (solder pad)"
+  ui[3]: "A[3] multiplicand bit 3 (solder pad)"
+  ui[4]: "B[0] multiplier   bit 0 (solder pad)"
+  ui[5]: "B[1] multiplier   bit 1 (solder pad)"
+  ui[6]: "B[2] multiplier   bit 2 (solder pad)"
+  ui[7]: "B[3] multiplier   bit 3 (solder pad)"
+
+  # Outputs — all consumed by Tiny VGA PMOD
+  uo[0]: "R1 (VGA red   bit 1)"
+  uo[1]: "G1 (VGA green bit 1)"
+  uo[2]: "B1 (VGA blue  bit 1)"
+  uo[3]: "vsync"
+  uo[4]: "R0 (VGA red   bit 0)"
+  uo[5]: "G0 (VGA green bit 0)"
+  uo[6]: "B0 (VGA blue  bit 0)"
+  uo[7]: "hsync"
+
+  # Bidirectional pins — unused (active-low direction = all inputs)
+  uio[0]: "(unused)"
+  uio[1]: "(unused)"
+  uio[2]: "(unused)"
+  uio[3]: "(unused)"
+  uio[4]: "(unused)"
+  uio[5]: "(unused)"
+  uio[6]: "(unused)"
+  uio[7]: "(unused)"
+
+# Do not change!
+yaml_version: 6
