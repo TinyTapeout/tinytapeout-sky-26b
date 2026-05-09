@@ -1,0 +1,32 @@
+121. Printing statistics.
+
+=== tt_um_ultrasage_danz ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       31        - wires
+       66        - wire bits
+       17        - public wires
+       52        - public wire bits
+        8        - ports
+       43        - port bits
+       47   385.37 cells
+        1   11.261   sky130_fd_sc_hd__a221o_2
+        4   30.029   sky130_fd_sc_hd__and2_2
+        1    7.507   sky130_fd_sc_hd__and3_2
+        1   11.261   sky130_fd_sc_hd__and4b_2
+        2    10.01   sky130_fd_sc_hd__buf_2
+       22   82.579   sky130_fd_sc_hd__conb_1
+        8  170.163   sky130_fd_sc_hd__dfxtp_2
+        2    7.507   sky130_fd_sc_hd__inv_2
+        1    8.758   sky130_fd_sc_hd__nand2b_2
+        1    6.256   sky130_fd_sc_hd__nor2_2
+        1    10.01   sky130_fd_sc_hd__nor3_2
+        1   11.261   sky130_fd_sc_hd__o311a_2
+        1    10.01   sky130_fd_sc_hd__o31a_2
+        1    8.758   sky130_fd_sc_hd__or4_2
+
+   Chip area for module '\tt_um_ultrasage_danz': 385.369600
+     of which used for sequential elements: 170.163200 (44.16%)
+
