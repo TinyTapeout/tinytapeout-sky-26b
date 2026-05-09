@@ -1,0 +1,48 @@
+# Tiny Tapeout project information
+project:
+  title:        "Bernoulli Stochastic Multiplier + LIF Neuron"
+  author:       "Evan Smith"
+  discord:      ""
+  description:  "Multiplies two 4-bit values via Bernoulli streams with conventional multiplier comparison; LIF neuron on same tile"
+  language:     "SystemVerilog"
+  clock_hz:     10000000
+  tiles:        "1x1"
+  top_module:   "tt_um_bn_lif_evan"
+  source_files:
+    - "tt_um_bn_lif_evan.sv"
+    - "linear_lif.sv"
+    - "bm_project.sv"
+    - "mult4.sv"
+    - "lfsr8.sv"
+
+pinout:
+  # Inputs
+  ui[0]: "Operand B bit 0 (LIF: input_val bit 0)"
+  ui[1]: "Operand B bit 1 (LIF: input_val bit 1)"
+  ui[2]: "Operand B bit 2 (LIF: input_val bit 2)"
+  ui[3]: "Operand B bit 3 (LIF: input_val bit 3)"
+  ui[4]: "Operand A bit 0 (LIF: input_val bit 4)"
+  ui[5]: "Operand A bit 1 (LIF: input_val bit 5)"
+  ui[6]: "Operand A bit 2 (LIF: input_val bit 6)"
+  ui[7]: "Operand A bit 3 (LIF: input_val bit 7)"
+  # Outputs
+  uo[0]: "Bernoulli count bit 0 / exact product bit 0 (LIF: spike)"
+  uo[1]: "Bernoulli count bit 1 / exact product bit 1 (LIF: membrane bit 1)"
+  uo[2]: "Bernoulli count bit 2 / exact product bit 2 (LIF: membrane bit 2)"
+  uo[3]: "Bernoulli count bit 3 / exact product bit 3 (LIF: membrane bit 3)"
+  uo[4]: "Bernoulli count bit 4 / exact product bit 4 (LIF: membrane bit 4)"
+  uo[5]: "Bernoulli count bit 5 / exact product bit 5 (LIF: membrane bit 5)"
+  uo[6]: "Bernoulli count bit 6 / exact product bit 6 (LIF: membrane bit 6)"
+  uo[7]: "Bernoulli count bit 7 / exact product bit 7 (LIF: membrane bit 7)"
+  # Bidirectional pins (all configured as inputs)
+  uio[0]: "unused"
+  uio[1]: "unused"
+  uio[2]: "LIF config reg addr bit 0"
+  uio[3]: "LIF config reg addr bit 1"
+  uio[4]: "LIF config reg addr bit 2"
+  uio[5]: "LIF config write strobe"
+  uio[6]: "Project select bit 0: 00=Bernoulli 01=LIF 10=Mult"
+  uio[7]: "Project select bit 1: 00=Bernoulli 01=LIF 10=Mult"
+
+# Do not change!
+yaml_version: 6
