@@ -1,0 +1,59 @@
+144. Printing statistics.
+
+=== tt_um_quadpulse_pwm ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      390        - wires
+      425        - wire bits
+      118        - public wires
+      153        - public wire bits
+        8        - ports
+       43        - port bits
+      406  5.4E+03 cells
+        1    10.01   sky130_fd_sc_hd__a211o_2
+        1    10.01   sky130_fd_sc_hd__a21bo_2
+        6   67.565   sky130_fd_sc_hd__a21boi_2
+       13  113.859   sky130_fd_sc_hd__a21o_2
+        7   61.309   sky130_fd_sc_hd__a21oi_2
+        4   45.043   sky130_fd_sc_hd__a221o_2
+        1   15.014   sky130_fd_sc_hd__a221oi_2
+       22  220.211   sky130_fd_sc_hd__a22o_2
+        7   61.309   sky130_fd_sc_hd__a31o_2
+        1   11.261   sky130_fd_sc_hd__a41o_2
+        9   67.565   sky130_fd_sc_hd__and2_2
+       13  113.859   sky130_fd_sc_hd__and2b_2
+       20  150.144   sky130_fd_sc_hd__and3_2
+       13  130.125   sky130_fd_sc_hd__and3b_2
+       10  100.096   sky130_fd_sc_hd__and4_2
+        1   12.512   sky130_fd_sc_hd__and4bb_2
+        5   25.024   sky130_fd_sc_hd__buf_2
+       19   71.318   sky130_fd_sc_hd__conb_1
+       76    2E+03   sky130_fd_sc_hd__dfrtp_2
+       30  788.256   sky130_fd_sc_hd__dfstp_2
+       17   63.811   sky130_fd_sc_hd__inv_2
+       33  371.606   sky130_fd_sc_hd__mux2_1
+        9   56.304   sky130_fd_sc_hd__nand2_2
+        5   43.792   sky130_fd_sc_hd__nand2b_2
+        3   30.029   sky130_fd_sc_hd__nand3_2
+        3   37.536   sky130_fd_sc_hd__nand4_2
+        6   37.536   sky130_fd_sc_hd__nor2_2
+        2   25.024   sky130_fd_sc_hd__nor3b_2
+        7   70.067   sky130_fd_sc_hd__o211a_2
+       12  105.101   sky130_fd_sc_hd__o21a_2
+        3   26.275   sky130_fd_sc_hd__o21ai_2
+       12   135.13   sky130_fd_sc_hd__o221a_2
+        3   30.029   sky130_fd_sc_hd__o22a_2
+        1   11.261   sky130_fd_sc_hd__o2bb2a_2
+        2   22.522   sky130_fd_sc_hd__o311a_2
+        2   20.019   sky130_fd_sc_hd__o31a_2
+       14   87.584   sky130_fd_sc_hd__or2_2
+        5   43.792   sky130_fd_sc_hd__or4_2
+        3   30.029   sky130_fd_sc_hd__or4b_2
+        3   48.797   sky130_fd_sc_hd__xnor2_2
+        2   32.531   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_quadpulse_pwm': 5400.179200
+     of which used for sequential elements: 2785.171200 (51.58%)
+

@@ -1,0 +1,61 @@
+# Tiny Tapeout project information
+project:
+  title:        "QuadPulse — 4-Channel Servo/Motor PWM ASIC"
+  author:       "Sarvesh S"
+  discord:      ""
+  description:  >
+    A dedicated 4-channel PWM generator ASIC for servo and DC motor
+    control in robotic systems. Eliminates software timing jitter by
+    implementing PWM generation entirely in silicon. Supports 50 Hz
+    servo control through 20 kHz motor drive. SPI interface allows
+    runtime duty cycle updates from any microcontroller. Hardware
+    emergency stop instantly silences all channels. Designed for
+    autonomous robotic swarm applications where deterministic
+    multi-channel motor control is critical.
+  language:     "Verilog"
+  clock_hz:     10000000
+
+  # How many tiles your design occupies?
+  tiles: "1x1"
+
+  # Your top module name must start with "tt_um_".
+  top_module:  "tt_um_quadpulse_pwm"
+
+  # List your project's source files here.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Emergency Stop — HIGH forces all PWM outputs to 0"
+  ui[1]: "Freq select bit 0 — 00=50Hz 01=1kHz 10=10kHz 11=20kHz"
+  ui[2]: "Freq select bit 1"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "PWM Channel 0 output (Servo 1 / Motor 1)"
+  uo[1]: "PWM Channel 1 output (Servo 2 / Motor 2)"
+  uo[2]: "PWM Channel 2 output (Servo 3 / Motor 3)"
+  uo[3]: "PWM Channel 3 output (Servo 4 / Motor 4)"
+  uo[4]: "Emergency Stop flag — HIGH when emergency stop is active"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "SPI MOSI — serial data from microcontroller to chip"
+  uio[1]: "SPI SCLK — SPI clock from microcontroller"
+  uio[2]: "SPI CS_N — chip select, active LOW"
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
