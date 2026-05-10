@@ -1,0 +1,47 @@
+# Tiny Tapeout project information
+project:
+  title: "IEEE Devil Nyan Cat VGA"
+  author: "Daniel García"
+  discord: "dani_318"
+  description: "VGA Nyan Cat with synchronized audio and a real-time color mutation toggle (Devil Mode)."
+  language: "Verilog"
+  clock_hz: 25175000
+  tiles: "1x2"
+  top_module: "tt_um_devil_nyancat" # Updated to match your code
+
+  source_files:
+    - "tt_um_devil_nyancat.v"
+    - "hvsync_generator.v"
+
+pinout:
+  # Inputs
+  ui[0]: "Devil Mode (0=Normal, 1=Devil)"
+  ui[1]: "unused"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs mapped for TinyVGA Pmod
+  uo[0]: "R1"
+  uo[1]: "G1"
+  uo[2]: "B1"
+  uo[3]: "VSYNC"
+  uo[4]: "R0"
+  uo[5]: "G0"
+  uo[6]: "B0"
+  uo[7]: "HSYNC"
+
+  # Bidirectional pins
+  uio[0]: "unused"
+  uio[1]: "unused"
+  uio[2]: "unused"
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "Audio PWM output"
+
+yaml_version: 6
