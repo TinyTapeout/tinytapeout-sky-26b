@@ -269,14 +269,14 @@ MACRO tt_um_c4m_spsram_direct
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 21.400 2.000 32.400 109.520 ;
+        RECT 30.000 2.000 41.000 109.520 ;
     END
   END VGND
   PIN VDPWR
     USE POWER ;
     PORT
       LAYER met4 ;
-        RECT 10.000 2.000 21.000 109.520 ;
+        RECT 41.400 2.000 52.400 109.520 ;
     END
   END VDPWR
   OBS
