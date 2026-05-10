@@ -1,0 +1,46 @@
+# Tiny Tapeout project information
+project:
+  title:        "Reaction game on Simon Says board"
+  author:       "Mikkel Heise Kofoed"
+  discord:      ""
+  description:  "Testing your reaction time"
+  language:     "verilog"
+  clock_hz:     1000000
+  tiles:        "1x1"
+
+  top_module:   "tt_um_reaction_game"
+
+  source_files:
+    - "tt_um_reaction_game.v"
+    - "reaction_game.v"
+
+pinout:
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: "Blue button (reaction)"
+  ui[3]: "Yellow button (start)"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  uo[0]: "Red LED"
+  uo[1]: "Green LED"
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: "Buzzer"
+  uo[5]: "Digit left"
+  uo[6]: "Digit right"
+  uo[7]: ""
+
+  uio[0]: "Segment A"
+  uio[1]: "Segment B"
+  uio[2]: "Segment C"
+  uio[3]: "Segment D"
+  uio[4]: "Segment E"
+  uio[5]: "Segment F"
+  uio[6]: "Segment G"
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6

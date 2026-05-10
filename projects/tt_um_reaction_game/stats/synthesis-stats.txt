@@ -1,0 +1,68 @@
+144. Printing statistics.
+
+=== tt_um_reaction_game ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      576        - wires
+      611        - wire bits
+      130        - public wires
+      165        - public wire bits
+        8        - ports
+       43        - port bits
+      592  7121.83 cells
+        1    10.01   sky130_fd_sc_hd__a211o_2
+        1   12.512   sky130_fd_sc_hd__a211oi_2
+        1    10.01   sky130_fd_sc_hd__a21bo_2
+        1   11.261   sky130_fd_sc_hd__a21boi_2
+       14  122.618   sky130_fd_sc_hd__a21o_2
+       31   271.51   sky130_fd_sc_hd__a21oi_2
+        3   33.782   sky130_fd_sc_hd__a221o_2
+        8   80.077   sky130_fd_sc_hd__a22o_2
+        2   25.024   sky130_fd_sc_hd__a22oi_2
+        2   22.522   sky130_fd_sc_hd__a2bb2o_2
+       14  122.618   sky130_fd_sc_hd__a31o_2
+        1   12.512   sky130_fd_sc_hd__a31oi_2
+        8   90.086   sky130_fd_sc_hd__a32o_2
+        1   11.261   sky130_fd_sc_hd__a41o_2
+       29  217.709   sky130_fd_sc_hd__and2_2
+       11   96.342   sky130_fd_sc_hd__and2b_2
+       24  180.173   sky130_fd_sc_hd__and3_2
+        2   20.019   sky130_fd_sc_hd__and3b_2
+       14  140.134   sky130_fd_sc_hd__and4_2
+        4   20.019   sky130_fd_sc_hd__buf_2
+       12   45.043   sky130_fd_sc_hd__conb_1
+      117 3.07E+03   sky130_fd_sc_hd__dfrtp_2
+        4  105.101   sky130_fd_sc_hd__dfstp_2
+       35  131.376   sky130_fd_sc_hd__inv_2
+       18  202.694   sky130_fd_sc_hd__mux2_1
+       34  212.704   sky130_fd_sc_hd__nand2_2
+        6    52.55   sky130_fd_sc_hd__nand2b_2
+        2   20.019   sky130_fd_sc_hd__nand3_2
+       56  350.336   sky130_fd_sc_hd__nor2_2
+        1    10.01   sky130_fd_sc_hd__nor3_2
+        1   12.512   sky130_fd_sc_hd__nor3b_2
+        5   50.048   sky130_fd_sc_hd__o211a_2
+        1   12.512   sky130_fd_sc_hd__o211ai_2
+       14  122.618   sky130_fd_sc_hd__o21a_2
+       10   87.584   sky130_fd_sc_hd__o21ai_2
+        5   50.048   sky130_fd_sc_hd__o21ba_2
+        4   45.043   sky130_fd_sc_hd__o221a_2
+        3   30.029   sky130_fd_sc_hd__o22a_2
+        2   25.024   sky130_fd_sc_hd__o22ai_2
+        3   33.782   sky130_fd_sc_hd__o2bb2a_2
+        1   11.261   sky130_fd_sc_hd__o311a_2
+        3   30.029   sky130_fd_sc_hd__o31a_2
+       26  162.656   sky130_fd_sc_hd__or2_2
+        6   45.043   sky130_fd_sc_hd__or3_2
+        2   17.517   sky130_fd_sc_hd__or3b_2
+       14  122.618   sky130_fd_sc_hd__or4_2
+        2   20.019   sky130_fd_sc_hd__or4b_2
+        2   25.024   sky130_fd_sc_hd__or4bb_2
+       12  195.187   sky130_fd_sc_hd__xnor2_2
+       19  309.046   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_reaction_game': 7121.830400
+     of which used for sequential elements: 3179.299200 (44.64%)
+
