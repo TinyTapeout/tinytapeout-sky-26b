@@ -1,0 +1,72 @@
+# Tiny Tapeout project information
+project:
+  title:        "CNN4IC — Convolutional Neural Network (CNN) for Image Classification on Chip (IEEE)"
+  author:       "Jacobo Morales, Hernando Diaz, Martín Calderón, Daniel Pedraza, Mateo Fernandez. Mentors: Juan S Moya, Fredy Segura, Alba Avila"      # Your name
+  discord:      "jacome10, "      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "CNN accelerator that classifies 10x10 images using two 5x5 kernels via SPI interface"
+  language:     "Verilog"
+  clock_hz:     50000000  # 50 MHz (20 ns period as set in config.json)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "6x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_CNN4IC_sky"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_CNN4IC_sky.v"
+    - "comm_mem_top.v"
+    - "cnn_proc_top.v"
+    - "spi_cnn_slave_8.v"
+    - "SC_STATEMACHINE_CNN_CTRL.v"
+    - "SC_STATEMACHINE_IMAGE_LOADER.v"
+    - "SC_STATEMACHINE_WEIGHT_LOADER.v"
+    - "cnn_top.v"
+    - "mux_cnn.v"
+    - "fragment_mux_10x10_6x6.v"
+    - "window_mux_6x6_5x5.v"
+    - "mac_parallel.v"
+    - "progressive_maxpool.v"
+    - "Register_Imag.v"
+    - "Register_Weight.v"
+    - "Master_register.v"
+    - "Register.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "SPI_CLK"
+  ui[1]: "SPI_CS_n"
+  ui[2]: "SPI_MOSI"
+  ui[3]: "CMD_Reset"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "SPI_MISO"
+  uo[1]: "comp_result"
+  uo[2]: "done"
+  uo[3]: "MR1_Load_dbg"
+  uo[4]: "MR2_Load_dbg"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
