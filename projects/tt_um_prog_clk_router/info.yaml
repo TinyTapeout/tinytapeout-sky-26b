@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Programmable Clock Router"      # Project title
+  title:        "Programmable Clock Router (IEEE)"      # Project title
   author:       "AISWARYA VM , GAUTHAM P NAIR , LAKSHMI NAIR"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "8-channel programmable clock divider using a 16-bit counter and configurable routing"      # One line description of what your project does
