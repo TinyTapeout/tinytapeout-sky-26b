@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-dip-switch-8",
+      "id": "sw1",
+      "top": -176.5,
+      "left": -94.5,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-vcc", "id": "pwr1", "top": -229.64, "left": -115.2, "attrs": {} },
+    {
+      "type": "board-tt-block-input",
+      "id": "ttin",
+      "top": -228.13,
+      "left": 4.8,
+      "attrs": { "verilogRole": "input" }
+    },
+    {
+      "type": "board-tt-block-output",
+      "id": "ttout",
+      "top": -199.33,
+      "left": 456,
+      "attrs": { "verilogRole": "output" }
+    },
+    { "type": "wokwi-gate-and-2", "id": "and1", "top": -211.2, "left": 144, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or1", "top": -259.2, "left": 307.2, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and2", "top": -268.8, "left": 172.8, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and3", "top": -163.2, "left": 144, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or2", "top": -153.6, "left": 316.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -195.6,
+      "left": 580.2,
+      "attrs": { "color": "yellow", "flip": "1" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -115.2, "left": 585, "attrs": {} }
+  ],
+  "connections": [
+    [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:7a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:6a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:5a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:4a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:1a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:2a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:3a", "red", [ "v0" ] ],
+    [ "sw1:1b", "ttin:EXTIN0", "green", [ "h0" ] ],
+    [ "sw1:2b", "ttin:EXTIN1", "green", [ "h0" ] ],
+    [ "ttin:EXTIN2", "sw1:3b", "green", [ "h0" ] ],
+    [ "ttin:EXTIN3", "sw1:4b", "green", [ "h0" ] ],
+    [ "sw1:5b", "ttin:EXTIN4", "green", [ "h0" ] ],
+    [ "ttin:EXTIN5", "sw1:6b", "green", [ "h0" ] ],
+    [ "sw1:7b", "ttin:EXTIN6", "green", [ "h0" ] ],
+    [ "sw1:8b", "ttin:EXTIN7", "green", [ "v0" ] ],
+    [ "ttin:IN0", "and1:A", "green", [ "h28.8", "v-19.2" ] ],
+    [ "and1:B", "ttin:IN1", "green", [ "h0", "v9.6" ] ],
+    [ "ttin:IN2", "and3:B", "green", [ "h19.2", "v28.8" ] ],
+    [ "and3:A", "and1:B", "green", [ "h0" ] ],
+    [ "and2:A", "and1:A", "green", [ "h0" ] ],
+    [ "and3:B", "and2:B", "green", [ "h0", "v28.8", "h115.2", "v-115.2", "h-86.4" ] ],
+    [ "and2:OUT", "or1:A", "green", [ "v0" ] ],
+    [ "and1:OUT", "or1:B", "green", [ "v-19.2", "h67.2" ] ],
+    [ "and3:OUT", "or2:B", "green", [ "v0" ] ],
+    [ "or2:A", "or1:OUT", "green", [ "h-19.2", "v-57.6", "h105.6" ] ],
+    [ "or2:OUT", "ttout:OUT4", "green", [ "v0" ] ],
+    [ "led1:A", "ttout:EXTOUT4", "green", [ "v0" ] ],
+    [ "led1:C", "gnd1:GND", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
