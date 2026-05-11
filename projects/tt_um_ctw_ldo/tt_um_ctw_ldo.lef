@@ -5475,5 +5475,5 @@ MACRO tt_um_ctw_ldo
         RECT 151.265 0.995 151.810 1.000 ;
         RECT 152.710 0.995 153.265 1.000 ;
   END
-END tt_um_LDO23t4
+END tt_um_ctw_ldo
 END LIBRARY
