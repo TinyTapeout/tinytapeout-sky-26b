@@ -1,0 +1,11 @@
+{
+  "app": "Tiny Tapeout tt10 3e79f13a",
+  "repo": "https://github.com/MILOUDIAS/IEEE_ttsky_mini_tpu_spi",
+  "commit": "55c48455ee6abe27c7a63df37a3f9cd484b8c4b0",
+  "workflow_url": "https://github.com/MILOUDIAS/IEEE_ttsky_mini_tpu_spi/actions/runs/25636053101",
+  "project_id": 4596,
+  "sort_id": 1778497733945,
+  "flow_version": "OpenLane2 2.2.9",
+  "pdk_name": "open_pdks",
+  "pdk_version": "open_pdks 0fe599b2afb6708d281543108caf8310912f54af"
+}

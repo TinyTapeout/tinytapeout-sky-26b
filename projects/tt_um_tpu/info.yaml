@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+project:
+  title: "Mini TPU v2" # Project title
+  author: "Miloudi Adel Hani and Sotehi Yacine and Yassine Hamzi and Talhi Mehdi Boudraa Nadjib and Dennis Du and Rick Gao " # Your name
+  discord: "" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description: "The systolic array for the Mini TPU v2 in Tiny Tapeout is a compact, parallel processing architecture optimized for matrix multiplications, utilizing a 3x3 array of processing elements to efficiently perform multiply-accumulate (MAC) operations., while the input and wheights can be fetched externally through SPI, built with funding from IEEE" # One line description of what your project does
+  language: "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz: 5000000 # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1" # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module: "tt_um_tpu"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tpu.v"
+    - "control.v"
+    - "memory.v"
+    - "array.v"
+    - "pe.v"
+    - "tt_um_tpu.v"
+    - "spi.v"
+    - "tpu_interface.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "mosi"
+  ui[1]: "cs"
+  ui[2]: "sclk"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "result[0]"
+  uo[1]: "result[1]"
+  uo[2]: "result[2]"
+  uo[3]: "result[3]"
+  uo[4]: "result[4]"
+  uo[5]: "result[5]"
+  uo[6]: "result[6]"
+  uo[7]: "result[7]"
+
+  # Bidirectional pins
+  uio[0]: "miso"
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
