@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Soil Moisture Irrigation Controller"      # Project title
+  title:        "IEEE Open-Silicon 2026 x NITHUB: Soil Moisture Irrigation Controller"      # Project title
   author:       "Shadia, Elijah, Oluwatomiwa, Emmanuel, Daniel, Orobosa"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  " An IEEE Division 1 Open Silicon Tapeout Initiative Project, this is a finite state machine that controls irrigation pump based on soil moisture levels detected by two comparators, with error handling for invalid states"      # One line description
