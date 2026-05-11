@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title: "Adaptive Traffic Light Controller with Emergency Override"
+  title: "IEEE Open-Silicon 2026: Adaptive Traffic Light Controller with Emergency Override"
   author: "Anthony Ebo, Abubakar Abdulfatah, Amaechina Sinclair, Taofeek Kassim, Abdulmaleek"
   discord: ""
   description: "FSM-based two-road traffic light controller with sensor-adaptive green-phase extension and hardware emergency-vehicle priority override."
