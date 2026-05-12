@@ -1,0 +1,64 @@
+# Tiny Tapeout project information
+project:
+  title: "Finite Field AES S-box"
+  author: "Prathiba"
+  description: "Composite field Lightweight S-box implementation"
+
+  language: "Verilog"
+  clock_hz: 0
+
+  tiles: "1x1"
+
+  top_module: "tt_um_prathiba_finite_sbox"
+
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_prathiba_finite_sbox.v"
+    - "SBoxIntegration.v"
+    - "isomorphic.v"
+    - "InverseIsomorphic.v"
+    - "AffineTransform.v"
+    - "Multiplier.v"
+    - "PhaseBlock.v"
+    - "SquareOrInv.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+
+pinout:
+  ui[0]: "Input bit 0"
+  ui[1]: "Input bit 1"
+  ui[2]: "Input bit 2"
+  ui[3]: "Input bit 3"
+
+
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "Output bit 0"
+  uo[1]: "Output bit 1"
+  uo[2]: "Output bit 2"
+  uo[3]: "Output bit 3"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
