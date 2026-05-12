@@ -1,0 +1,51 @@
+# Tiny Tapeout project information
+project:
+  title:        "Hamming(7,4) Encoder/Decoder"
+  author:       "Joseph Santhosh K,Noel Jose, Tinu P Mathew, Abhinav Kuruvila, Sahil K"
+  discord:      ""
+  description:  "Single-bit error correcting Hamming(7,4) encoder and decoder."
+  language:     "Verilog"
+  clock_hz:     10000000
+
+  tiles: "1x1"
+
+  top_module:  "tt_um_hamming74"
+
+  source_files:
+    - "tt_um_hamming74.v"
+
+# Pin description for datasheet / website
+pinout:
+
+  # Inputs
+  ui[0]: "DATA0"
+  ui[1]: "DATA1"
+  ui[2]: "DATA2"
+  ui[3]: "DATA3"
+  ui[4]: "CODE_BIT4"
+  ui[5]: "CODE_BIT5"
+  ui[6]: "CODE_BIT6"
+  ui[7]: "MODE (0=ENCODE,1=DECODE)"
+
+  # Outputs
+  uo[0]: "CODE0"
+  uo[1]: "CODE1"
+  uo[2]: "CODE2"
+  uo[3]: "CODE3"
+  uo[4]: "CODE4"
+  uo[5]: "CODE5"
+  uo[6]: "CODE6"
+  uo[7]: "ERROR_FLAG"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
