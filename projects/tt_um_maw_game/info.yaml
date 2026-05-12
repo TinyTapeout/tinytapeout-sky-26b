@@ -1,0 +1,87 @@
+# Tiny Tapeout project information
+project:
+  title:        "MAW Bird Shooter VGA Game"      # Project title
+  author:       "Marc-Andre"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A fully synthesized single-player bird-shooting arcade game on a Tiny Tapeout ASIC driving a 640x480 60 Hz VGA display: move a crosshair with four directional buttons and press SHOOT to hit a wandering animated bird within 10 shots, with HIT/MISS overlays, a shot counter, and win/lose screens."      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_maw_game"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "graphics_engine/graphics_engine_pkg.sv"
+    - "graphics_rom/graphics_rom_pkg.sv"
+    - "game_logic/game_logic_pkg.sv"
+    - "common_cells/btn_cdc.sv"
+    - "common_cells/btn_edge_detector.sv"
+    - "graphics_rom/ghost_sprite.sv"
+    - "graphics_rom/ghost_sprite_generated.sv"
+    - "graphics_rom/crosshair_sprite.sv"
+    - "graphics_rom/crosshair_circle.sv"
+    - "graphics_rom/shot_ui_display.sv"
+    - "graphics_rom/press_to_start_graphic.sv"
+    - "graphics_rom/hit_graphic.sv"
+    - "graphics_rom/miss_x.sv"
+    - "graphics_rom/lost_graphic.sv"
+    - "graphics_rom/won_graphic.sv"
+    - "graphics_rom/bullet.sv"
+    - "graphics_rom/reloading_graphic.sv"
+    - "graphics_rom/bird_0.sv"
+    - "graphics_rom/bird_1.sv"
+    - "graphics_rom/bird_2.sv"
+    - "graphics_rom/bird_3.sv"
+    - "graphics_rom/bird_4.sv"
+    - "graphics_rom/bird_animated.sv"
+    - "graphics_engine/render_engine.sv"
+    - "graphics_engine/vgatiming.sv"
+    - "game_logic/crosshair_control.sv"
+    - "game_logic/enemy_movement.sv"
+    - "game_logic/game_state_fsm.sv"
+    - "game_logic/prng_lfsr16.sv"
+    - "game_logic/triangle_wave_gen.sv"
+    - "project.sv"
+    - "main.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: "BTN_SHOOT (active-high, pull-down externally)"
+  ui[4]: "BTN_RIGHT (active-high, pull-down externally)"
+  ui[5]: "BTN_LEFT (active-high, pull-down externally)"
+  ui[6]: "BTN_DOWN (active-high, pull-down externally)"
+  ui[7]: "BTN_UP (active-high, pull-down externally)"
+
+  # Outputs
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: "VGA_B (Blue, 1-bit)"
+  uo[4]: "VGA_G (Green, 1-bit)"
+  uo[5]: "VGA_R (Red, 1-bit)"
+  uo[6]: "VGA_VSYNC"
+  uo[7]: "VGA_HSYNC"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
