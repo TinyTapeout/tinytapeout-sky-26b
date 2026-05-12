@@ -1,0 +1,27 @@
+107. Printing statistics.
+
+=== tt_um_thorsten_shiftregister ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      102        - wires
+      137        - wire bits
+       48        - public wires
+       83        - public wire bits
+        8        - ports
+       43        - port bits
+      118 1.74E+03 cells
+        1    10.01   sky130_fd_sc_hd__and4_2
+       23   86.333   sky130_fd_sc_hd__conb_1
+       40 1.05E+03   sky130_fd_sc_hd__dfrtp_2
+       40  450.432   sky130_fd_sc_hd__mux2_1
+        3   18.768   sky130_fd_sc_hd__nand2_2
+        1   12.512   sky130_fd_sc_hd__nor4_2
+        2   17.517   sky130_fd_sc_hd__or4_2
+        3   30.029   sky130_fd_sc_hd__or4b_2
+        5    62.56   sky130_fd_sc_hd__or4bb_2
+
+   Chip area for module '\tt_um_thorsten_shiftregister': 1739.168000
+     of which used for sequential elements: 1051.008000 (60.43%)
+
