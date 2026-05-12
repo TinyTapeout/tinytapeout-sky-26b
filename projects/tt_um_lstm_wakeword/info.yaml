@@ -1,0 +1,58 @@
+yaml_version: 6
+
+# Tiny Tapeout project information
+project:
+  title:        "TTSKY26A Neural Network - LSTM Wake Word Detector"
+  author:       "William Anthony"
+  discord:      "wlmoi"
+  description:  "8-bit quantized LSTM for real-time 'NYALA' (Light On) wake word detection. Privacy-first smart home voice controller."
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  # Tiles
+  tiles: "1x1"
+
+  # Top module name
+  top_module:  "tt_um_lstm_wakeword"
+
+  # Source files
+  source_files:
+    - "project.v"
+    - "nn_input_sync.v"
+    - "nn_lstm_cell.v"
+    - "nn_lstm_layer.v"
+    - "nn_dense_layer.v"
+    - "nn_confidence_calc.v"
+    - "nn_busy_controller.v"
+
+# Pin descriptions
+pinout:
+  # Dedicated inputs
+  ui[0]: "Audio feature bit 0 (7-bit signed)"
+  ui[1]: "Audio feature bit 1"
+  ui[2]: "Audio feature bit 2"
+  ui[3]: "Audio feature bit 3"
+  ui[4]: "Audio feature bit 4"
+  ui[5]: "Audio feature bit 5"
+  ui[6]: "Audio feature bit 6 (MSB, sign bit)"
+  ui[7]: "Data valid strobe"
+
+  # Dedicated outputs
+  uo[0]: "Trigger (wake word detected)"
+  uo[1]: "Confidence bit 0"
+  uo[2]: "Confidence bit 1"
+  uo[3]: "Confidence bit 2"
+  uo[4]: "Confidence bit 3"
+  uo[5]: "Confidence bit 4"
+  uo[6]: "Confidence bit 5 (MSB)"
+  uo[7]: "Busy flag"
+
+  # Bidirectional (inputs)
+  uio[0]: "Reset (active HIGH)"
+  uio[1]: "Debug mode (active HIGH)"
+  uio[2]: "Reserved"
+  uio[3]: "Reserved"
+  uio[4]: "Reserved"
+  uio[5]: "Reserved"
+  uio[6]: "Reserved"
+  uio[7]: "Busy echo flag (driven as output in RTL)"
