@@ -1,0 +1,42 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     462290658621740033      # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "IEEE IC Bootcamp Khalifa University"      # Project title
+  author:       "Nuzhat, Ayesha and Umamah"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This is a 3-bit reversible comparator"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  ui[0]: "A0"    
+  ui[1]: "A1"
+  ui[2]: "A2"     
+  ui[3]: "B0"     
+  ui[4]: "B1"
+  ui[5]: "B2"    
+  ui[6]: ""
+  ui[7]: ""
+  uo[0]: "seg_a"
+  uo[1]: "seg_b"
+  uo[2]: "seg_c"
+  uo[3]: "seg_d"
+  uo[4]: "seg_e"
+  uo[5]: "seg_f"
+  uo[6]: "seg_g"
+  uo[7]: "seg_dp"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+# Do not change!
+yaml_version: 6
