@@ -1,5 +1,5 @@
 project:
-  title:        "rv32i RISC-V ALU"
+  title:        "(IEEE) rv32i RISC-V ALU"
   author:       "Ahmed Mustakim — UCF EEE-5390C"
   discord:      ""
   description:  "Full 32-bit RISC-V ALU implementing ADD SUB AND OR XOR SLL SRL SRA SLT SLTU. Part of rv32imsu SoC designed in Synopsys ICC2 on sky130A at UCF."
