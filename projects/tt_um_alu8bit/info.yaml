@@ -1,0 +1,51 @@
+# Tiny Tapeout project information
+project:
+  title:        "8-bit Tiny ALU"
+  author:       "Joseph Santhosh"
+  discord:      "" 
+  description:  "8-bit arithmetic logic unit supporting arithmetic, logic, and shift operations with status flags."
+  language:     "Verilog"
+  clock_hz:     10000000
+
+  tiles: "1x1"
+
+  top_module:  "tt_um_alu8bit"
+
+  source_files:
+    - "tt_um_alu8bit.v"
+
+
+pinout:
+  # Inputs
+  ui[0]: "DATA0"
+  ui[1]: "DATA1"
+  ui[2]: "DATA2"
+  ui[3]: "DATA3"
+  ui[4]: "DATA4"
+  ui[5]: "DATA5"
+  ui[6]: "DATA6"
+  ui[7]: "DATA7"
+
+  # Outputs
+  uo[0]: "RESULT0"
+  uo[1]: "RESULT1"
+  uo[2]: "RESULT2"
+  uo[3]: "RESULT3"
+  uo[4]: "RESULT4"
+  uo[5]: "RESULT5"
+  uo[6]: "RESULT6"
+  uo[7]: "RESULT7"
+
+  # Bidirectional pins
+  uio[0]: "LOAD_A"
+  uio[1]: "LOAD_B"
+  uio[2]: "EXECUTE"
+  uio[3]: "OPCODE0"
+  uio[4]: "OPCODE1"
+  uio[5]: "OPCODE2"
+  uio[6]: "ZERO_FLAG"
+  uio[7]: "CARRY_FLAG"
+
+
+# Do not change!
+yaml_version: 6
