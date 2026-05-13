@@ -1,0 +1,52 @@
+# Tiny Tapeout project information
+project:
+  title:        "2x2 Systolic Array Matrix Multiplier"
+  author:       "Roshan Tripathy, Dr. Amit Bakshi, Ashmit Avash"
+  discord:      ""
+  description:  "2x2 signed 4-bit systolic array matrix multiplier with 9-bit accumulators, overflow detection, sign reconstruction, and manual step mode"
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  tiles: "1x1"
+
+  top_module:  "tt_um_ross_systolic"
+
+  source_files:
+    - "project.v"
+    - "systolic_2x2.v"
+    - "systolic_pe.v"
+    - "mult_4x4.v"
+
+pinout:
+  # Dedicated inputs: 8-bit matrix data bytes
+  ui[0]: "data_byte_bit0"
+  ui[1]: "data_byte_bit1"
+  ui[2]: "data_byte_bit2"
+  ui[3]: "data_byte_bit3"
+  ui[4]: "data_byte_bit4"
+  ui[5]: "data_byte_bit5"
+  ui[6]: "data_byte_bit6"
+  ui[7]: "data_byte_bit7"
+
+  # Dedicated outputs: 8-bit result data (lower bits of 9-bit accumulator)
+  uo[0]: "result_data_bit0"
+  uo[1]: "result_data_bit1"
+  uo[2]: "result_data_bit2"
+  uo[3]: "result_data_bit3"
+  uo[4]: "result_data_bit4"
+  uo[5]: "result_data_bit5"
+  uo[6]: "result_data_bit6"
+  uo[7]: "result_data_bit7"
+
+  # Bidirectional: bits 7,4,3,2 = outputs; bits 6,5,1,0 = inputs (uio_oe = 8'h9C)
+  uio[0]: "wren"           # Input:  write enable for loading ui_in into matrix
+  uio[1]: "start"          # Input:  begin computation (gated by !busy and ena)
+  uio[2]: "busy_core"      # Output: systolic array is actively computing
+  uio[3]: "out_valid"      # Output: uo_out contains valid result data
+  uio[4]: "overflow_8bit"  # Output: acc[8]^acc[7] for CURRENT result (1 = truncated)
+  uio[5]: "manual_clk"     # Input:  rising edge = advance one step (when step_mode=1)
+  uio[6]: "step_mode"      # Input:  1 = manual step mode, 0 = free-running
+  uio[7]: "acc_sign"       # Output: acc[8] sign bit for CURRENT result (9th bit)
+
+# Do not change!
+yaml_version: 6
