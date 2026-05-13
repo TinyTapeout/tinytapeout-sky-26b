@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/rcyaon/bandgap-ptat",
-  "commit": "3cfde5f3015ed95241a11cd208db8939e24e7ead",
-  "workflow_url": "https://github.com/rcyaon/bandgap-ptat/actions/runs/25711995692",
+  "commit": "dd9c1dcca8baeb4f3e93e306428404571587ab45",
+  "workflow_url": "https://github.com/rcyaon/bandgap-ptat/actions/runs/25805681334",
   "project_id": 4408,
   "sort_id": 1778523311278,
   "analog": true
