@@ -32,8 +32,8 @@
         4   45.043   sky130_fd_sc_hd__and4b_2
         5    62.56   sky130_fd_sc_hd__and4bb_2
         8   30.029   sky130_fd_sc_hd__conb_1
-      117 3.07E+03   sky130_fd_sc_hd__dfrtp_2
-       84 2.21E+03   sky130_fd_sc_hd__dfstp_2
+      106 2.79E+03   sky130_fd_sc_hd__dfrtp_2
+       95  2.5E+03   sky130_fd_sc_hd__dfstp_2
         7   26.275   sky130_fd_sc_hd__inv_2
       174 1.96E+03   sky130_fd_sc_hd__mux2_1
        29  181.424   sky130_fd_sc_hd__nand2_2
