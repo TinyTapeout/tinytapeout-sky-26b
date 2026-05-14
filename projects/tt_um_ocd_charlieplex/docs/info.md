@@ -18,22 +18,29 @@ be used to input a different display.
 
 Because LEDs in the Charlieplex array can only be addressed one at a time, the
 brightness is maximized in this implementation by turning each LED on for a
-duration proportional to the brightness.  That makes the brightness value relative
-to the number of LEDs that are on.
+duration proportional to the brightness.  That makes the overall brightness
+somewhat relative to the number of LEDs that are on.
 
 ## How to test
 
 Connect the 8 signal pins of the bidirectional I/O PMOD to the first 8 pins on one
-side of the Charlieplex array.  On reset, the display will turn on all LEDs with
-a brightness gradient from one side to the other.
+side of the Charlieplex array (see the pinout diagram, below).  On reset, the
+display will turn on all LEDs with a brightness gradient from one side to the
+other.
+
+![Pinout](charlieplex_pinout.png)
 
 The LED display can be customized by an input of data through UART.  The project has
 a 1-pin UART interface (receive only), with Rx on ui_in[0].  The baud rate is set
-to 9600 for the default 50MHz clock.  Inputs are ASCII characters.  Values '0' to '9'
-and 'A' to 'F' set the LED brightness (0 to 15), and values 'G' and higher set the
-pixel address to modify.  Every value auto-increments the pixel address by 1, so
-the display can be cleared by sending character 'G' followed by fifty-six characters
-'0'.  The UART format is 8 bits data with 1 start and 1 stop bit.
+to 9600 for the default 50MHz clock.  Inputs are ASCII characters.  Values '0' to '7'
+set the LED brightness (3-bit encoding), and values 'G' and higher set the pixel
+address to modify.  Every value auto-increments the pixel address by 1, so the
+display can be cleared by sending character 'G' followed by fifty-six characters
+'0'.  The UART format is 8 bits data with 1 start and 1 stop bit (standard).
+
+The FPGA implementation of the project (see directory fpga/), designed for an
+Arty A7 development board, has an accompanying script "usb_driver.py" which
+connects to the project through USB from a host computer.
 
 ![Example programmed images](charlie_smiley.jpg)
 
