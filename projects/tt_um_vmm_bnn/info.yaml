@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:        "Nano-Bnn-Accelerator"      # Project title
+  author:       "Giorgos Fragkoulis"      # Your name
+  discord:      "magkak0s"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A regular binary network accelerator for 1x1 tile Z2A"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_vmm_bnn"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_vmm_bnn.v"
+    - "neuron.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "data_in_0"
+  ui[1]: "data_in_1"
+  ui[2]: "data_in_2"
+  ui[3]: "data_in_3"
+  ui[4]: "data_in_4"
+  ui[5]: "data_in_5"
+  ui[6]: "data_in_6"
+  ui[7]: "data_in_7"
+
+  # Outputs
+  uo[0]: "acc_out_0"
+  uo[1]: "acc_out_1"
+  uo[2]: "acc_out_2"
+  uo[3]: "acc_out_3"
+  uo[4]: "acc_out_4"
+  uo[5]: "acc_out_5"
+  uo[6]: "acc_out_6"
+  uo[7]: "acc_out_7"
+
+  # Bidirectional pins
+  uio[0]: "load_weights"
+  uio[1]: "addr_0"
+  uio[2]: "addr_1"
+  uio[3]: "addr_2"
+  uio[4]: "compute_en"
+  uio[5]: "unused"
+  uio[6]: "acc_out_8"
+  uio[7]: "acc_out_9"
+
+# Do not change!
+yaml_version: 6
