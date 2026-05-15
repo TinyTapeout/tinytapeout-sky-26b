@@ -1,8 +1,8 @@
 {
-  "app": "Tiny Tapeout main dfa73d61",
+  "app": "Tiny Tapeout main 5a894537",
   "repo": "https://github.com/kaz4n/tt_um_kazan_rqpu",
-  "commit": "1b072cc66a1bda834eb94332dcc4f8fbe3dc16c3",
-  "workflow_url": "https://github.com/kaz4n/tt_um_kazan_rqpu/actions/runs/25252859220",
+  "commit": "0473ee9ea69df81c95352943d381853535cec918",
+  "workflow_url": "https://github.com/kaz4n/tt_um_kazan_rqpu/actions/runs/25776966901",
   "project_id": 4712,
   "sort_id": 1778323345254
 }
