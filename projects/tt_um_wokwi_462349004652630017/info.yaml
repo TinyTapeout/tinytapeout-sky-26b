@@ -1,0 +1,49 @@
+# Tiny Tapeout project information (Wokwi project)
+project:
+  wokwi_id:     462349004652630017       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "IEEE Logic Locked Reversible 2-Bit ALU"      # Project title
+  author:       "Fawaz Ahmed"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Secure 2-Bit Reversible ALU with bijective mapping and Fredkin gate logic locking"      # One line description of what your project does
+  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs: (LSB - Least Significant Bit, MSB - Most Significant Bit, Following Little Endian)
+  ui[0]: "A0 (Input A Bit 0 (LSB))"
+  ui[1]: "A1 (Input A Bit 1 (MSB))"
+  ui[2]: "B0 (Input B Bit 0 (LSB))"
+  ui[3]: "B1 (Input B Bit 1 (MSB))"
+  ui[4]: "M0 (Mode Select 0 (LSB))"
+  ui[5]: "M1 (Mode Select 1 (MSB))"
+  ui[6]: "K0 (Security Key 0: Valid is Off)"
+  ui[7]: "K1 (Security Key 1: Valid is ON)"
+
+  # Outputs (Raw ALU Math + Preserved Reversible Garbage Bits)
+  uo[0]: "R0 (Result Bit 0 - LSB)"
+  uo[1]: "R1 (Result Bit 1 - MSB)"
+  uo[2]: "RC (Carry Out)"
+  uo[3]: "M0_OUT (Preserved Mode 0)"
+  uo[4]: "M1_OUT (Preserved Mode 1)"
+  uo[5]: "A0_OUT (Preserved Input A0)"
+  uo[6]: "B0_OUT (Preserved Input B0)"
+  uo[7]: "B1_OUT (Preserved Input B1)"
+  
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
