@@ -25,17 +25,17 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "nout"
+  ui[1]: "nc1"
+  ui[2]: "vbgtop"
+  ui[3]: "vbgmid"
+  ui[4]: "vbgbot"
+  ui[5]: "enbgrbot"
+  ui[6]: "enbgrmid"
+  ui[7]: "enbgrtop"
 
   # Outputs
-  uo[0]: ""
+  uo[0]: "enbbgrtop"
   uo[1]: ""
   uo[2]: ""
   uo[3]: ""
@@ -55,7 +55,7 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: "vref"
+  ua[0]: "VREF_TT"
   ua[1]: ""
   ua[2]: ""
   ua[3]: ""
