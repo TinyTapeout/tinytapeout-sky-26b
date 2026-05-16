@@ -1,0 +1,55 @@
+# Tiny Tapeout project information
+project:
+  title:        "Onchip-UIS 8-bit ALU with Status Flags"      # Project title
+  author:       "Nicolas Orcasitas"      # Your name
+  discord:      "zhord0326"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A 8-bit ALU with registered inputs, 8 arithmetic/logic operations, and 8 configurable status flags."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_ALU_Porca"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_ALU_Porca.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "A[0] (Input)"
+  ui[1]: "A[1] (Input)"
+  ui[2]: "A[2] (Input)"
+  ui[3]: "A[3] (Input)"
+  ui[4]: "B[0] (Input)"
+  ui[5]: "B[1] (Input)"
+  ui[6]: "B[2] (Input)"
+  ui[7]: "B[3] (Input)"
+
+  # Outputs
+  uo[0]: "ALU_Out[0]"
+  uo[1]: "ALU_Out[1]"
+  uo[2]: "ALU_Out[2]"
+  uo[3]: "ALU_Out[3]"
+  uo[4]: "ALU_Out[4]"
+  uo[5]: "ALU_Out[5]"
+  uo[6]: "ALU_Out[6]"
+  uo[7]: "ALU_Out[7]"
+
+  # Bidirectional pins
+  uio[0]: "ALU_Control[0] (In)"
+  uio[1]: "ALU_Control[1] (In)"
+  uio[2]: "ALU_Control[2] (In)"
+  uio[3]: "Enable_Reg (In)"
+  uio[4]: "Flag_Control[0] (In)"
+  uio[5]: "Flag_Control[1] (In)"
+  uio[6]: "Flag_Control[2] (In)"
+  uio[7]: "Status_Flag (Out)"
+
+# Do not change!
+yaml_version: 6
