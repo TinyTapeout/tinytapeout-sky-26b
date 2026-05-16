@@ -1,0 +1,28 @@
+123. Printing statistics.
+
+=== tt_um_oreoluwa_water_level ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       16        - wires
+       51        - wire bits
+       12        - public wires
+       47        - public wire bits
+        8        - ports
+       43        - port bits
+       32  207.699 cells
+        1    10.01   sky130_fd_sc_hd__a22o_2
+        1    7.507   sky130_fd_sc_hd__and2_2
+        2   17.517   sky130_fd_sc_hd__and2b_2
+        2    10.01   sky130_fd_sc_hd__buf_2
+       20   75.072   sky130_fd_sc_hd__conb_1
+        2    52.55   sky130_fd_sc_hd__dfrtp_2
+        1    3.754   sky130_fd_sc_hd__inv_2
+        1    8.758   sky130_fd_sc_hd__nand2b_2
+        1    10.01   sky130_fd_sc_hd__o31a_2
+        1   12.512   sky130_fd_sc_hd__or4bb_2
+
+   Chip area for module '\tt_um_oreoluwa_water_level': 207.699200
+     of which used for sequential elements: 52.550400 (25.30%)
+

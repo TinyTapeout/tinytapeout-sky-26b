@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:      
+  title:        "IEEE Open-silicon 2026 x NITHUB: Fluid Level Detector and Controller"
+  author:       "Ore-Oluwa Oluwatosin, Akeem Jr Odebiyi, Victor Awofegha, Ogunlowo Oluwasegunfunmi, Saka Suliat"
+  discord:      ""
+  description:  "IEEE Division 1 Open Silicon Initiative Tapeout Project, this is a 4-state FSM that drives a water pump from two level sensors, with an impossible-state error flag."
+  language:     "Verilog"
+  clock_hz:     100000          # 100 kHz; the controller is purely sequential and works at any reasonable rate
+
+  # 1x1 is plenty for a 4-state FSM
+  tiles: "1x1"
+
+  # Top module name MUST start with tt_um_
+  top_module:  "tt_um_oreoluwa_water_level"
+
+  # Source files (one per line, all under ./src)
+  source_files:
+    - "project.v"
+
+# Pinout for datasheet / website
+pinout:
+  # Inputs
+  ui[0]: "s0_low (low-level sensor)"
+  ui[1]: "s1_high (high-level sensor)"
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "pump_out"
+  uo[1]: "error_flag"
+  uo[2]: "state[0]"
+  uo[3]: "state[1]"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins (unused)
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
