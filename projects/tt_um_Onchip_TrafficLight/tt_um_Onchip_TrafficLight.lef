@@ -345,7 +345,6 @@ MACRO tt_um_Onchip_TrafficLight
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 91.390 110.520 91.690 111.520 ;
@@ -354,7 +353,6 @@ MACRO tt_um_Onchip_TrafficLight
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 88.630 110.520 88.930 111.520 ;
@@ -363,6 +361,7 @@ MACRO tt_um_Onchip_TrafficLight
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 85.870 110.520 86.170 111.520 ;
@@ -387,6 +386,7 @@ MACRO tt_um_Onchip_TrafficLight
   PIN uo_out[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 77.590 110.520 77.890 111.520 ;
@@ -408,7 +408,7 @@ MACRO tt_um_Onchip_TrafficLight
       LAYER met1 ;
         RECT 2.760 2.480 158.240 109.040 ;
       LAYER met2 ;
-        RECT 18.310 2.535 155.840 110.005 ;
+        RECT 18.310 2.535 154.460 110.005 ;
       LAYER met3 ;
         RECT 18.290 2.555 145.295 109.985 ;
       LAYER met4 ;
@@ -454,13 +454,13 @@ MACRO tt_um_Onchip_TrafficLight
         RECT 139.010 110.120 140.670 110.520 ;
         RECT 141.770 110.120 143.430 110.520 ;
         RECT 30.655 109.440 144.145 110.120 ;
-        RECT 30.655 89.255 56.750 109.440 ;
-        RECT 59.150 89.255 60.050 109.440 ;
-        RECT 62.450 89.255 95.620 109.440 ;
-        RECT 98.020 89.255 98.920 109.440 ;
-        RECT 101.320 89.255 134.490 109.440 ;
-        RECT 136.890 89.255 137.790 109.440 ;
-        RECT 140.190 89.255 144.145 109.440 ;
+        RECT 30.655 96.735 56.750 109.440 ;
+        RECT 59.150 96.735 60.050 109.440 ;
+        RECT 62.450 96.735 95.620 109.440 ;
+        RECT 98.020 96.735 98.920 109.440 ;
+        RECT 101.320 96.735 134.490 109.440 ;
+        RECT 136.890 96.735 137.790 109.440 ;
+        RECT 140.190 96.735 144.145 109.440 ;
   END
 END tt_um_Onchip_TrafficLight
 END LIBRARY
