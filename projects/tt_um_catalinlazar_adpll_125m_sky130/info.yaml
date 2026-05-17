@@ -1,0 +1,46 @@
+yaml_version: 6
+
+project:
+  title: "127-stage Coarse-Tapped ADPLL"
+  description: "A lower-frequency All-Digital PLL featuring a 127-stage tapped structural ring oscillator targeting 125MHz midpoint locking loops on SkyWater 130nm."
+  author: "Catalin Lazar"
+  github_username: "catalinlazar"
+  version: "1.0"
+  license: "Apache-2.0"
+  language: "Verilog"
+  tiles: "1x1"
+  clock_hz: 50000000
+
+  # In version 6, these must be nested INSIDE the project block
+  top_module: "tt_um_catalinlazar_adpll_125m_sky130"
+  source_files:
+    - "tt_um_catalinlazar_adpll_125m_sky130.v"
+    - "sync_divider.v"
+
+pinout:
+  ui[0]: "ref_clk"
+  ui[1]: "clk_sel"
+  ui[2]: "rst_n"
+  ui[3]: "tap_sel"
+  ui[4]: "div_sel[0]"
+  ui[5]: "div_sel[1]"
+  ui[6]: "div_sel[2]"
+  ui[7]: "div_sel[3]"
+
+  uo[0]: "clk_out"
+  uo[1]: "dco_clk_raw"
+  uo[2]: "status"
+  uo[3]: "unused_uo3"
+  uo[4]: "unused_uo4"
+  uo[5]: "unused_uo5"
+  uo[6]: "unused_uo6"
+  uo[7]: "unused_uo7"
+
+  uio[0]: "unused_uio0"
+  uio[1]: "unused_uio1"
+  uio[2]: "unused_uio2"
+  uio[3]: "unused_uio3"
+  uio[4]: "unused_uio4"
+  uio[5]: "unused_uio5"
+  uio[6]: "unused_uio6"
+  uio[7]: "unused_uio7"
