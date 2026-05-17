@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "SPI Memory Test"      # Project title
+  author:       "James Ashie Kotey"      # Your name
+  discord:      "Enjimneering"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "SPI RAM reader with VGA timing output"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25000000      # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"   # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_enjimneering_spi_mem"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_enjimneering_spi_mem.v"
+    - "spi_mem_ctrl.v"
+    - "vga_sync.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "MODE (0=SPI, 1=VGA)"
+  ui[1]: "SPI_START"
+  ui[2]: "SPI_LAST"
+  ui[3]: "SPI_RST "
+  ui[4]: "ADDR_HI[0] / VGA_RST"
+  ui[5]: "ADDR_HI[1]"
+  ui[6]: "ADDR_HI[2]"
+  ui[7]: "ADDR_HI[3]"
+
+  # Outputs
+  uo[0]: "SPI_DATA[0] / VGA_R1"
+  uo[1]: "SPI_DATA[1] / VGA_G1"
+  uo[2]: "SPI_DATA[2] / VGA_B1"
+  uo[3]: "SPI_DATA[3] / VGA_VSYNC"
+  uo[4]: "SPI_DATA[4] / VGA_R0"
+  uo[5]: "SPI_DATA[5] / VGA_G0"
+  uo[6]: "SPI_DATA[6] / VGA_B0"
+  uo[7]: "SPI_DATA[7] / VGA_HSYNC"
+
+  # Bidirectional pins
+  uio[0]: "SPI_CS_N"
+  uio[1]: "SPI_SCK"
+  uio[2]: "SPI_MOSI"
+  uio[3]: "SPI_MISO"
+  uio[4]: "SPI_DATA[6]"
+  uio[5]: "SPI_DATA[7]"
+  uio[6]: "SPI_VALID"
+  uio[7]: "SPI_BUSY"
+
+# Do not change!
+yaml_version: 6
