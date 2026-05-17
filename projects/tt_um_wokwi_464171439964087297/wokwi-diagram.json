@@ -11,1910 +11,283 @@
       "rotate": 90,
       "attrs": {}
     },
+    { "type": "wokwi-gate-not", "id": "not1", "top": 48, "left": 48, "attrs": {} },
     {
       "type": "wokwi-clock-generator",
       "id": "clock1",
       "top": -355.2,
       "left": -115.2,
-      "attrs": {
-        "frequency": "10000"
-      }
+      "attrs": { "frequency": "10000" }
     },
-    {
-      "type": "wokwi-gnd",
-      "id": "pwr2",
-      "top": 0,
-      "left": 1957.8,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-vcc",
-      "id": "pwr1",
-      "top": -229.64,
-      "left": -115.2,
-      "attrs": {}
-    },
+    { "type": "wokwi-gnd", "id": "pwr2", "top": -86.4, "left": 873, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "pwr1", "top": -229.64, "left": -115.2, "attrs": {} },
     {
       "type": "wokwi-7segment",
       "id": "sevseg1",
-      "top": -158.22,
-      "left": 1934.68,
-      "attrs": {
-        "common": "cathode"
-      }
+      "top": -192.84,
+      "left": 859.48,
+      "attrs": { "common": "cathode" }
     },
     {
       "type": "wokwi-slide-switch",
       "id": "sw2",
       "top": -370,
       "left": -35.3,
-      "attrs": {
-        "value": "1"
-      }
+      "attrs": { "value": "1" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn1",
       "top": -349,
       "left": 19.2,
-      "attrs": {
-        "color": "grey",
-        "label": "Step",
-        "bounce": "0",
-        "key": "s"
-      }
+      "attrs": { "color": "grey", "label": "Step", "bounce": "0", "key": "s" }
     },
-    {
-      "type": "wokwi-vcc",
-      "id": "pwr3",
-      "top": -373.64,
-      "left": 105.6,
-      "attrs": {}
-    },
+    { "type": "wokwi-vcc", "id": "pwr3", "top": -373.64, "left": 105.6, "attrs": {} },
     {
       "type": "board-tt-block-input",
       "id": "ttin",
       "top": -228.13,
       "left": 4.8,
-      "attrs": {
-        "verilogRole": "input"
-      }
+      "attrs": { "verilogRole": "input" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn2",
       "top": -301,
       "left": -134.4,
-      "attrs": {
-        "color": "grey",
-        "label": "RESET",
-        "bounce": "0",
-        "key": "r"
-      }
+      "attrs": { "color": "grey", "label": "RESET", "bounce": "0", "key": "r" }
     },
-    {
-      "type": "wokwi-gnd",
-      "id": "gnd1",
-      "top": -259.2,
-      "left": -163.8,
-      "attrs": {}
-    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -259.2, "left": -163.8, "attrs": {} },
     {
       "type": "board-tt-block-output",
       "id": "ttout",
-      "top": -189.73,
-      "left": 1742.4,
-      "attrs": {
-        "verilogRole": "output"
-      }
+      "top": -218.53,
+      "left": 667.2,
+      "attrs": { "verilogRole": "output" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio0",
+      "top": 29.82,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "0" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio1",
+      "top": 97.02,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "1" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio2",
+      "top": 164.22,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "2" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio3",
+      "top": 231.42,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "3" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio4",
+      "top": 298.62,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "4" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio5",
+      "top": 365.82,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "5" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio6",
+      "top": 433.02,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "6" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio7",
+      "top": 500.22,
+      "left": 196.8,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "7" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r2",
       "top": -293.65,
       "left": -211.2,
-      "attrs": {
-        "value": "1000"
-      }
-    },
-    {
-      "type": "wokwi-vcc",
-      "id": "pwr5",
-      "top": -325.64,
-      "left": -230.4,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-not",
-      "id": "not_A",
-      "top": -40,
-      "left": 260,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-not",
-      "id": "not_B",
-      "top": -40,
-      "left": 340,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-not",
-      "id": "not_C",
-      "top": -40,
-      "left": 420,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-not",
-      "id": "not_D",
-      "top": -40,
-      "left": 500,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_0",
-      "top": 80,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_1",
-      "top": 135,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_2",
-      "top": 190,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_3",
-      "top": 245,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_4_a",
-      "top": 300,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_4_b",
-      "top": 315,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_5_a",
-      "top": 355,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_a_5_b",
-      "top": 370,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_a_0",
-      "top": 150,
-      "left": 900,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_a_1",
-      "top": 205,
-      "left": 1040,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_a_2",
-      "top": 260,
-      "left": 1180,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_a_3",
-      "top": 315,
-      "left": 1320,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_a_4",
-      "top": 370,
-      "left": 1460,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_0",
-      "top": 460,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_1",
-      "top": 515,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_2_a",
-      "top": 570,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_2_b",
-      "top": 585,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_3_a",
-      "top": 625,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_3_b",
-      "top": 640,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_4_a",
-      "top": 680,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_b_4_b",
-      "top": 695,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_b_0",
-      "top": 530,
-      "left": 900,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_b_1",
-      "top": 585,
-      "left": 1040,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_b_2",
-      "top": 640,
-      "left": 1180,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_b_3",
-      "top": 695,
-      "left": 1320,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_c_0",
-      "top": 840,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_c_1",
-      "top": 895,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_c_2",
-      "top": 950,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_c_3",
-      "top": 1005,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_c_4",
-      "top": 1060,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_c_0",
-      "top": 910,
-      "left": 900,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_c_1",
-      "top": 965,
-      "left": 1040,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_c_2",
-      "top": 1020,
-      "left": 1180,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_c_3",
-      "top": 1075,
-      "left": 1320,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_0",
-      "top": 1220,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_1_a",
-      "top": 1275,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_1_b",
-      "top": 1290,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_2_a",
-      "top": 1330,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_2_b",
-      "top": 1345,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_3_a",
-      "top": 1385,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_3_b",
-      "top": 1400,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_4_a",
-      "top": 1440,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_d_4_b",
-      "top": 1455,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_d_0",
-      "top": 1290,
-      "left": 900,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_d_1",
-      "top": 1345,
-      "left": 1040,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_d_2",
-      "top": 1400,
-      "left": 1180,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_d_3",
-      "top": 1455,
-      "left": 1320,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_e_0",
-      "top": 1600,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_e_1",
-      "top": 1655,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_e_2",
-      "top": 1710,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_e_3",
-      "top": 1765,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_e_0",
-      "top": 1670,
-      "left": 900,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_e_1",
-      "top": 1725,
-      "left": 1040,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_e_2",
-      "top": 1780,
-      "left": 1180,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_f_0",
-      "top": 1980,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_f_1",
-      "top": 2035,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_f_2",
-      "top": 2090,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_f_3",
-      "top": 2145,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_f_4_a",
-      "top": 2200,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_f_4_b",
-      "top": 2215,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_f_0",
-      "top": 2050,
-      "left": 900,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_f_1",
-      "top": 2105,
-      "left": 1040,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_f_2",
-      "top": 2160,
-      "left": 1180,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_f_3",
-      "top": 2215,
-      "left": 1320,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_g_0",
-      "top": 2360,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_g_1",
-      "top": 2415,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_g_2",
-      "top": 2470,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_g_3",
-      "top": 2525,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_g_4_a",
-      "top": 2580,
-      "left": 640,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-and-2",
-      "id": "and_g_4_b",
-      "top": 2595,
-      "left": 760,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_g_0",
-      "top": 2430,
-      "left": 900,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_g_1",
-      "top": 2485,
-      "left": 1040,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_g_2",
-      "top": 2540,
-      "left": 1180,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gate-or-2",
-      "id": "or_g_3",
-      "top": 2595,
-      "left": 1320,
-      "attrs": {}
-    }
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-vcc", "id": "pwr5", "top": -325.64, "left": -230.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not2", "top": 115.2, "left": 48, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not3", "top": 182.4, "left": 48, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not4", "top": 249.6, "left": 48, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not5", "top": 316.8, "left": 48, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not6", "top": 384, "left": 48, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not7", "top": 451.2, "left": 48, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not8", "top": 518.4, "left": 48, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop1", "top": 38.4, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop2", "top": 105.6, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop3", "top": 172.8, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop4", "top": 240, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop5", "top": 307.2, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop6", "top": 374.4, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop7", "top": 441.6, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop8", "top": 508.8, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop9", "top": 38.4, "left": 480, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop10", "top": 105.6, "left": 480, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop11", "top": 172.8, "left": 480, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop12", "top": 240, "left": 480, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop13", "top": 307.2, "left": 480, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop14", "top": 374.4, "left": 480, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop15", "top": 441.6, "left": 480, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop16", "top": 508.8, "left": 480, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not9", "top": 48, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not10", "top": 48, "left": -182.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not11", "top": 115.2, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not12", "top": 115.2, "left": -182.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not13", "top": 182.4, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not14", "top": 182.4, "left": -182.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not15", "top": 249.6, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not16", "top": 249.6, "left": -182.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not17", "top": 316.8, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not18", "top": 316.8, "left": -182.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not19", "top": 384, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not20", "top": 384, "left": -182.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not21", "top": 451.2, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not22", "top": 451.2, "left": -182.4, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not23", "top": 518.4, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-gate-not", "id": "not24", "top": 518.4, "left": -182.4, "attrs": {} }
   ],
   "connections": [
-    [
-      "pwr1:VCC",
-      "sw1:8a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "pwr1:VCC",
-      "sw1:7a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "pwr1:VCC",
-      "sw1:6a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "pwr1:VCC",
-      "sw1:5a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "pwr1:VCC",
-      "sw1:4a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "pwr1:VCC",
-      "sw1:1a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "pwr1:VCC",
-      "sw1:2a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "pwr1:VCC",
-      "sw1:3a",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "ttout:EXTOUT0",
-      "sevseg1:A",
-      "green",
-      [
-        "h21.01",
-        "v-28.8",
-        "h96"
-      ]
-    ],
-    [
-      "ttout:EXTOUT1",
-      "sevseg1:B",
-      "green",
-      [
-        "h11.41",
-        "v-48",
-        "h122.99",
-        "v41.34"
-      ]
-    ],
+    [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:7a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:6a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:5a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:4a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:1a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:2a", "red", [ "v0" ] ],
+    [ "pwr1:VCC", "sw1:3a", "red", [ "v0" ] ],
+    [ "ttout:EXTOUT0", "sevseg1:A", "green", [ "h21.01", "v-28.8", "h96" ] ],
+    [ "ttout:EXTOUT1", "sevseg1:B", "green", [ "h11.41", "v-48", "h122.99", "v41.34" ] ],
     [
       "ttout:EXTOUT2",
       "sevseg1:C",
       "green",
-      [
-        "h30.61",
-        "v-38.4",
-        "h115.2",
-        "v105.6",
-        "h-28.8"
-      ]
-    ],
-    [
-      "ttout:EXTOUT3",
-      "sevseg1:D",
-      "green",
-      [
-        "h57.6",
-        "v57.6",
-        "h48"
-      ]
-    ],
-    [
-      "sevseg1:E",
-      "ttout:EXTOUT4",
-      "green",
-      [
-        "v9.6",
-        "h-48",
-        "v-38.4"
-      ]
-    ],
-    [
-      "ttout:EXTOUT5",
-      "sevseg1:F",
-      "green",
-      [
-        "h69.01",
-        "v-57.6",
-        "h28.8"
-      ]
-    ],
-    [
-      "ttout:EXTOUT6",
-      "sevseg1:G",
-      "green",
-      [
-        "h78.61",
-        "v-57.6"
-      ]
-    ],
-    [
-      "ttout:EXTOUT7",
-      "sevseg1:DP",
-      "green",
-      [
-        "v28.8",
-        "h136.21"
-      ]
-    ],
-    [
-      "pwr2:GND",
-      "sevseg1:COM.1",
-      "black",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "sw2:1",
-      "clock1:CLK",
-      "blue",
-      [
-        "h-19.2",
-        "v-57.6"
-      ]
-    ],
-    [
-      "sw1:1b",
-      "ttin:EXTIN0",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "sw1:2b",
-      "ttin:EXTIN1",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "ttin:EXTIN2",
-      "sw1:3b",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "ttin:EXTIN3",
-      "sw1:4b",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "sw1:5b",
-      "ttin:EXTIN4",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "ttin:EXTIN5",
-      "sw1:6b",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "sw1:7b",
-      "ttin:EXTIN6",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "sw1:8b",
-      "ttin:EXTIN7",
-      "green",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "sw2:2",
-      "ttin:EXTCLK",
-      "blue",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "btn1:1.l",
-      "sw2:3",
-      "blue",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "pwr3:VCC",
-      "btn1:2.r",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "btn2:2.l",
-      "gnd1:GND",
-      "black",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "ttin:EXTRST_N",
-      "btn2:1.r",
-      "orange",
-      [
-        "h-38.4",
-        "v-96"
-      ]
-    ],
-    [
-      "btn2:1.l",
-      "r2:2",
-      "green",
-      [
-        "h0"
-      ]
-    ],
-    [
-      "pwr5:VCC",
-      "r2:1",
-      "red",
-      [
-        "v0"
-      ]
-    ],
-    [
-      "ttin:IN3",
-      "not_A:IN",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "not_B:IN",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "not_C:IN",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "not_D:IN",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_a_0:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_a_0:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_a_1:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_a_1:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_a_2:A",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_a_2:B",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_a_3:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_a_3:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_a_4_a:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_a_4_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_a_4_a:OUT",
-      "and_a_4_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_a_4_b:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_a_5_a:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_a_5_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_a_5_a:OUT",
-      "and_a_5_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_a_5_b:B",
-      "green",
-      []
-    ],
-    [
-      "and_a_0:OUT",
-      "or_a_0:A",
-      "green",
-      []
-    ],
-    [
-      "and_a_1:OUT",
-      "or_a_0:B",
-      "green",
-      []
-    ],
-    [
-      "or_a_0:OUT",
-      "or_a_1:A",
-      "green",
-      []
-    ],
-    [
-      "and_a_2:OUT",
-      "or_a_1:B",
-      "green",
-      []
-    ],
-    [
-      "or_a_1:OUT",
-      "or_a_2:A",
-      "green",
-      []
-    ],
-    [
-      "and_a_3:OUT",
-      "or_a_2:B",
-      "green",
-      []
-    ],
-    [
-      "or_a_2:OUT",
-      "or_a_3:A",
-      "green",
-      []
-    ],
-    [
-      "and_a_4_b:OUT",
-      "or_a_3:B",
-      "green",
-      []
-    ],
-    [
-      "or_a_3:OUT",
-      "or_a_4:A",
-      "green",
-      []
-    ],
-    [
-      "and_a_5_b:OUT",
-      "or_a_4:B",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_b_0:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_b_0:B",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_b_1:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_b_1:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_b_2_a:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_b_2_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_b_2_a:OUT",
-      "and_b_2_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_b_2_b:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_b_3_a:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_b_3_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_b_3_a:OUT",
-      "and_b_3_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_b_3_b:B",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_b_4_a:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_b_4_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_b_4_a:OUT",
-      "and_b_4_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_b_4_b:B",
-      "green",
-      []
-    ],
-    [
-      "and_b_0:OUT",
-      "or_b_0:A",
-      "green",
-      []
-    ],
-    [
-      "and_b_1:OUT",
-      "or_b_0:B",
-      "green",
-      []
-    ],
-    [
-      "or_b_0:OUT",
-      "or_b_1:A",
-      "green",
-      []
-    ],
-    [
-      "and_b_2_b:OUT",
-      "or_b_1:B",
-      "green",
-      []
-    ],
-    [
-      "or_b_1:OUT",
-      "or_b_2:A",
-      "green",
-      []
-    ],
-    [
-      "and_b_3_b:OUT",
-      "or_b_2:B",
-      "green",
-      []
-    ],
-    [
-      "or_b_2:OUT",
-      "or_b_3:A",
-      "green",
-      []
-    ],
-    [
-      "and_b_4_b:OUT",
-      "or_b_3:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_c_0:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_c_0:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_c_1:A",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_c_1:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_c_2:A",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_c_2:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_c_3:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_c_3:B",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_c_4:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_c_4:B",
-      "green",
-      []
-    ],
-    [
-      "and_c_0:OUT",
-      "or_c_0:A",
-      "green",
-      []
-    ],
-    [
-      "and_c_1:OUT",
-      "or_c_0:B",
-      "green",
-      []
-    ],
-    [
-      "or_c_0:OUT",
-      "or_c_1:A",
-      "green",
-      []
-    ],
-    [
-      "and_c_2:OUT",
-      "or_c_1:B",
-      "green",
-      []
-    ],
-    [
-      "or_c_1:OUT",
-      "or_c_2:A",
-      "green",
-      []
-    ],
-    [
-      "and_c_3:OUT",
-      "or_c_2:B",
-      "green",
-      []
-    ],
-    [
-      "or_c_2:OUT",
-      "or_c_3:A",
-      "green",
-      []
-    ],
-    [
-      "and_c_4:OUT",
-      "or_c_3:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_d_0:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_d_0:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_d_1_a:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_d_1_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_d_1_a:OUT",
-      "and_d_1_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_d_1_b:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_d_2_a:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_d_2_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_d_2_a:OUT",
-      "and_d_2_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_d_2_b:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_d_3_a:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_d_3_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_d_3_a:OUT",
-      "and_d_3_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_d_3_b:B",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_d_4_a:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_d_4_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_d_4_a:OUT",
-      "and_d_4_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_d_4_b:B",
-      "green",
-      []
-    ],
-    [
-      "and_d_0:OUT",
-      "or_d_0:A",
-      "green",
-      []
-    ],
-    [
-      "and_d_1_b:OUT",
-      "or_d_0:B",
-      "green",
-      []
-    ],
-    [
-      "or_d_0:OUT",
-      "or_d_1:A",
-      "green",
-      []
-    ],
-    [
-      "and_d_2_b:OUT",
-      "or_d_1:B",
-      "green",
-      []
-    ],
-    [
-      "or_d_1:OUT",
-      "or_d_2:A",
-      "green",
-      []
-    ],
-    [
-      "and_d_3_b:OUT",
-      "or_d_2:B",
-      "green",
-      []
-    ],
-    [
-      "or_d_2:OUT",
-      "or_d_3:A",
-      "green",
-      []
-    ],
-    [
-      "and_d_4_b:OUT",
-      "or_d_3:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_e_0:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_e_0:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_e_1:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_e_1:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_e_2:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_e_2:B",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_e_3:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_e_3:B",
-      "green",
-      []
-    ],
-    [
-      "and_e_0:OUT",
-      "or_e_0:A",
-      "green",
-      []
-    ],
-    [
-      "and_e_1:OUT",
-      "or_e_0:B",
-      "green",
-      []
-    ],
-    [
-      "or_e_0:OUT",
-      "or_e_1:A",
-      "green",
-      []
-    ],
-    [
-      "and_e_2:OUT",
-      "or_e_1:B",
-      "green",
-      []
-    ],
-    [
-      "or_e_1:OUT",
-      "or_e_2:A",
-      "green",
-      []
-    ],
-    [
-      "and_e_3:OUT",
-      "or_e_2:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_f_0:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_f_0:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_f_1:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_f_1:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_f_2:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_f_2:B",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_f_3:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_f_3:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_f_4_a:A",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_f_4_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_f_4_a:OUT",
-      "and_f_4_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_f_4_b:B",
-      "green",
-      []
-    ],
-    [
-      "and_f_0:OUT",
-      "or_f_0:A",
-      "green",
-      []
-    ],
-    [
-      "and_f_1:OUT",
-      "or_f_0:B",
-      "green",
-      []
-    ],
-    [
-      "or_f_0:OUT",
-      "or_f_1:A",
-      "green",
-      []
-    ],
-    [
-      "and_f_2:OUT",
-      "or_f_1:B",
-      "green",
-      []
-    ],
-    [
-      "or_f_1:OUT",
-      "or_f_2:A",
-      "green",
-      []
-    ],
-    [
-      "and_f_3:OUT",
-      "or_f_2:B",
-      "green",
-      []
-    ],
-    [
-      "or_f_2:OUT",
-      "or_f_3:A",
-      "green",
-      []
-    ],
-    [
-      "and_f_4_b:OUT",
-      "or_f_3:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_g_0:A",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN0",
-      "and_g_0:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN3",
-      "and_g_1:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_g_1:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_g_2:A",
-      "green",
-      []
-    ],
-    [
-      "not_B:OUT",
-      "and_g_2:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN1",
-      "and_g_3:A",
-      "green",
-      []
-    ],
-    [
-      "not_D:OUT",
-      "and_g_3:B",
-      "green",
-      []
-    ],
-    [
-      "ttin:IN2",
-      "and_g_4_a:A",
-      "green",
-      []
-    ],
-    [
-      "not_A:OUT",
-      "and_g_4_a:B",
-      "green",
-      []
-    ],
-    [
-      "and_g_4_a:OUT",
-      "and_g_4_b:A",
-      "green",
-      []
-    ],
-    [
-      "not_C:OUT",
-      "and_g_4_b:B",
-      "green",
-      []
-    ],
-    [
-      "and_g_0:OUT",
-      "or_g_0:A",
-      "green",
-      []
-    ],
-    [
-      "and_g_1:OUT",
-      "or_g_0:B",
-      "green",
-      []
-    ],
-    [
-      "or_g_0:OUT",
-      "or_g_1:A",
-      "green",
-      []
-    ],
-    [
-      "and_g_2:OUT",
-      "or_g_1:B",
-      "green",
-      []
-    ],
-    [
-      "or_g_1:OUT",
-      "or_g_2:A",
-      "green",
-      []
-    ],
-    [
-      "and_g_3:OUT",
-      "or_g_2:B",
-      "green",
-      []
-    ],
-    [
-      "or_g_2:OUT",
-      "or_g_3:A",
-      "green",
-      []
-    ],
-    [
-      "and_g_4_b:OUT",
-      "or_g_3:B",
-      "green",
-      []
-    ],
-    [
-      "or_a_4:OUT",
-      "ttout:OUT0",
-      "purple",
-      []
-    ],
-    [
-      "or_b_3:OUT",
-      "ttout:OUT1",
-      "purple",
-      []
-    ],
-    [
-      "or_c_3:OUT",
-      "ttout:OUT2",
-      "purple",
-      []
-    ],
-    [
-      "or_d_3:OUT",
-      "ttout:OUT3",
-      "purple",
-      []
-    ],
-    [
-      "or_e_2:OUT",
-      "ttout:OUT4",
-      "purple",
-      []
-    ],
-    [
-      "or_f_3:OUT",
-      "ttout:OUT5",
-      "purple",
-      []
-    ],
-    [
-      "or_g_3:OUT",
-      "ttout:OUT6",
-      "purple",
-      []
-    ],
-    [
-      "pwr2:GND",
-      "ttout:OUT7",
-      "black",
-      []
-    ]
+      [ "h30.61", "v-38.4", "h115.2", "v105.6", "h-28.8" ]
+    ],
+    [ "ttout:EXTOUT3", "sevseg1:D", "green", [ "h57.6", "v57.6", "h48" ] ],
+    [ "sevseg1:E", "ttout:EXTOUT4", "green", [ "v9.6", "h-48", "v-38.4" ] ],
+    [ "ttout:EXTOUT5", "sevseg1:F", "green", [ "h69.01", "v-57.6", "h28.8" ] ],
+    [ "ttout:EXTOUT6", "sevseg1:G", "green", [ "h78.61", "v-57.6" ] ],
+    [ "ttout:EXTOUT7", "sevseg1:DP", "green", [ "v28.8", "h136.21" ] ],
+    [ "pwr2:GND", "sevseg1:COM.1", "black", [ "v0" ] ],
+    [ "sw2:1", "clock1:CLK", "blue", [ "h-19.2", "v-57.6" ] ],
+    [ "sw1:1b", "ttin:EXTIN0", "green", [ "h0" ] ],
+    [ "sw1:2b", "ttin:EXTIN1", "green", [ "h0" ] ],
+    [ "ttin:EXTIN2", "sw1:3b", "green", [ "h0" ] ],
+    [ "ttin:EXTIN3", "sw1:4b", "green", [ "h0" ] ],
+    [ "sw1:5b", "ttin:EXTIN4", "green", [ "h0" ] ],
+    [ "ttin:EXTIN5", "sw1:6b", "green", [ "h0" ] ],
+    [ "sw1:7b", "ttin:EXTIN6", "green", [ "h0" ] ],
+    [ "sw1:8b", "ttin:EXTIN7", "green", [ "v0" ] ],
+    [ "sw2:2", "ttin:EXTCLK", "blue", [ "v0" ] ],
+    [ "btn1:1.l", "sw2:3", "blue", [ "h0" ] ],
+    [ "pwr3:VCC", "btn1:2.r", "red", [ "v0" ] ],
+    [ "btn2:2.l", "gnd1:GND", "black", [ "h0" ] ],
+    [ "ttin:EXTRST_N", "btn2:1.r", "orange", [ "h-38.4", "v-96" ] ],
+    [ "btn2:1.l", "r2:2", "green", [ "h0" ] ],
+    [ "pwr5:VCC", "r2:1", "red", [ "v0" ] ],
+    [ "ttio0:OUT", "not1:OUT", "green", [ "h-48", "v38.4" ] ],
+    [ "ttio0:OE", "ttin:IN0", "green", [ "h-38.4", "v-240" ] ],
+    [ "not2:OUT", "ttio1:OUT", "green", [ "h9.6", "v-19.2" ] ],
+    [ "ttio1:OE", "ttin:IN0", "green", [ "h-38.4", "v-307.2" ] ],
+    [ "not3:OUT", "ttio2:OUT", "green", [ "h9.6", "v-19.2" ] ],
+    [ "ttio3:OUT", "not4:OUT", "green", [ "h-48", "v19.2" ] ],
+    [ "not5:OUT", "ttio4:OUT", "green", [ "h9.6", "v-19.2" ] ],
+    [ "not6:OUT", "ttio5:OUT", "green", [ "h9.6", "v-19.2" ] ],
+    [ "ttio6:OUT", "not7:OUT", "green", [ "h-48", "v19.2" ] ],
+    [ "ttio7:OUT", "not8:OUT", "green", [ "h-48", "v19.2" ] ],
+    [ "ttin:IN0", "ttio2:OE", "green", [ "h57.6", "v374.4" ] ],
+    [ "ttin:IN0", "ttio3:OE", "green", [ "h57.6", "v441.6" ] ],
+    [ "ttin:IN0", "ttio4:OE", "green", [ "h57.6", "v508.8" ] ],
+    [ "ttin:IN0", "ttio5:OE", "green", [ "h57.6", "v576" ] ],
+    [ "ttin:IN0", "ttio6:OE", "green", [ "h57.6", "v643.2" ] ],
+    [ "ttin:IN0", "ttio7:OE", "green", [ "h57.6", "v710.4" ] ],
+    [ "ttio0:IN", "flop1:D", "green", [ "h-19.2", "v-19.2", "h134.4", "v28.8" ] ],
+    [ "ttio1:IN", "flop2:D", "green", [ "h-19.2", "v-19.2", "h134.4", "v28.8" ] ],
+    [ "flop3:D", "ttio2:IN", "green", [ "h-28.8", "v-28.8", "h-134.4", "v19.2" ] ],
+    [ "flop4:D", "ttio3:IN", "green", [ "h-28.8", "v-28.8", "h-134.4", "v19.2" ] ],
+    [ "flop5:D", "ttio4:IN", "green", [ "h-28.8", "v-28.8", "h-134.4", "v19.2" ] ],
+    [ "flop6:D", "ttio5:IN", "green", [ "h-28.8", "v-28.8", "h-134.4", "v19.2" ] ],
+    [ "flop7:D", "ttio6:IN", "green", [ "h-28.8", "v-28.8", "h-134.4", "v19.2" ] ],
+    [ "flop8:D", "ttio7:IN", "green", [ "h-28.8", "v-28.8", "h-134.4", "v19.2" ] ],
+    [ "ttin:CLK", "flop1:CLK", "green", [ "h220.8", "v268.8" ] ],
+    [ "ttin:CLK", "flop2:CLK", "green", [ "h220.8", "v336" ] ],
+    [ "ttin:CLK", "flop3:CLK", "green", [ "h220.8", "v403.2" ] ],
+    [ "ttin:CLK", "flop4:CLK", "green", [ "h220.8", "v470.4" ] ],
+    [ "ttin:CLK", "flop5:CLK", "green", [ "h220.8", "v537.6" ] ],
+    [ "ttin:CLK", "flop6:CLK", "green", [ "h220.8", "v604.8" ] ],
+    [ "ttin:CLK", "flop7:CLK", "green", [ "h220.8", "v672" ] ],
+    [ "ttin:CLK", "flop8:CLK", "green", [ "h220.8", "v739.2" ] ],
+    [ "flop1:Q", "flop9:D", "green", [ "v0" ] ],
+    [ "flop2:Q", "flop10:D", "green", [ "v0" ] ],
+    [ "flop3:Q", "flop11:D", "green", [ "v0" ] ],
+    [ "flop4:Q", "flop12:D", "green", [ "v0" ] ],
+    [ "flop5:Q", "flop13:D", "green", [ "v0" ] ],
+    [ "flop6:Q", "flop14:D", "green", [ "v0" ] ],
+    [ "flop7:Q", "flop15:D", "green", [ "v0" ] ],
+    [ "flop8:Q", "flop16:D", "green", [ "v0" ] ],
+    [ "ttin:CLK", "flop9:CLK", "green", [ "h364.8", "v268.8" ] ],
+    [ "ttin:CLK", "flop10:CLK", "green", [ "h364.8", "v336" ] ],
+    [ "ttin:CLK", "flop11:CLK", "green", [ "h364.8", "v403.2" ] ],
+    [ "ttin:CLK", "flop12:CLK", "green", [ "h364.8", "v470.4" ] ],
+    [ "ttin:CLK", "flop13:CLK", "green", [ "h364.8", "v537.6" ] ],
+    [ "ttin:CLK", "flop14:CLK", "green", [ "h364.8", "v604.8" ] ],
+    [ "ttin:CLK", "flop15:CLK", "green", [ "h364.8", "v672" ] ],
+    [ "ttin:CLK", "flop16:CLK", "green", [ "h364.8", "v739.2" ] ],
+    [ "flop9:Q", "ttout:OUT0", "green", [ "h9.6", "v-240" ] ],
+    [ "flop10:Q", "ttout:OUT1", "green", [ "h19.2", "v-297.6" ] ],
+    [ "flop11:Q", "ttout:OUT2", "green", [ "h28.8", "v-355.2" ] ],
+    [ "flop12:Q", "ttout:OUT3", "green", [ "h38.4", "v-412.8" ] ],
+    [ "flop13:Q", "ttout:OUT4", "green", [ "h48", "v-470.4" ] ],
+    [ "flop14:Q", "ttout:OUT5", "green", [ "h57.6", "v-528" ] ],
+    [ "flop15:Q", "ttout:OUT6", "green", [ "h67.2", "v-585.6" ] ],
+    [ "flop16:Q", "ttout:OUT7", "green", [ "h76.8", "v-643.2" ] ],
+    [ "ttio0:IN", "not10:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "not10:OUT", "not9:IN", "green", [ "v0" ] ],
+    [ "not9:OUT", "not1:IN", "green", [ "v0" ] ],
+    [ "ttio1:IN", "not12:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "ttio2:IN", "not14:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "ttio3:IN", "not16:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "ttio4:IN", "not18:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "ttio5:IN", "not20:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "ttio6:IN", "not22:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "ttio7:IN", "not24:IN", "green", [ "h-393.6", "v28.8" ] ],
+    [ "not12:OUT", "not11:IN", "green", [ "v0" ] ],
+    [ "not11:OUT", "not2:IN", "green", [ "v0" ] ],
+    [ "not14:OUT", "not13:IN", "green", [ "v0" ] ],
+    [ "not13:OUT", "not3:IN", "green", [ "v0" ] ],
+    [ "not16:OUT", "not15:IN", "green", [ "v0" ] ],
+    [ "not15:OUT", "not4:IN", "green", [ "v0" ] ],
+    [ "not18:OUT", "not17:IN", "green", [ "v0" ] ],
+    [ "not17:OUT", "not5:IN", "green", [ "v0" ] ],
+    [ "not20:OUT", "not19:IN", "green", [ "v0" ] ],
+    [ "not19:OUT", "not6:IN", "green", [ "v0" ] ],
+    [ "not22:OUT", "not21:IN", "green", [ "v0" ] ],
+    [ "not21:OUT", "not7:IN", "green", [ "v0" ] ],
+    [ "not24:OUT", "not23:IN", "green", [ "v0" ] ],
+    [ "not23:OUT", "not8:IN", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
