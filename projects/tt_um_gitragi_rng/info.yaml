@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "Logic-Locked 5-Bit RNGy"      # Project title
+  author:       "Ragib"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A 5-bit LFSR-based random number generator with key-based logic locking, bounded output, and a 7-segment display for the rightmost decimal digit."
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     1000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_gitragi_rng"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "MAX_0"
+  ui[1]: "MAX_1"
+  ui[2]: "MAX_2"
+  ui[3]: "MAX_3"
+  ui[4]: "MAX_4"
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "SEG_A"
+  uo[1]: "SEG_B"
+  uo[2]: "SEG_C"
+  uo[3]: "SEG_D"
+  uo[4]: "SEG_E"
+  uo[5]: "SEG_F"
+  uo[6]: "SEG_G"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "RNG_0"
+  uio[1]: "RNG_1"
+  uio[2]: "RNG_2"
+  uio[3]: "RNG_3"
+  uio[4]: "RNG_4"
+  uio[5]: "KEY_0"
+  uio[6]: "KEY_1"
+  uio[7]: "SAMPLE"
+
+# Do not change!
+yaml_version: 6
