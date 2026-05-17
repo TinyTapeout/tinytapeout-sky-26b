@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
 project:
-  title:        "EML Serial Coprocessor"      # Project title
+  title:        "EML Gate"      # Project title
   author:       "Taouinar Abdelbasset & Sidahmed Hamdad"      # Your name
   discord:      "651881618373476362"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Compact serial EML primitive (exp(x)-ln(y)) for host-offloaded function evaluation"      # One line description of what your project does
+  description:  "Q6.14 fixed-point EML operator eml(x,y)=exp(x)-ln(y) with SPI interface"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -27,9 +27,9 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "ser_in"
-  ui[1]: "shift_en"
-  ui[2]: "start"
+  ui[0]: "mosi"
+  ui[1]: "sclk"
+  ui[2]: "cs_n"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
@@ -37,12 +37,12 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "ser_out"
+  uo[0]: "miso"
   uo[1]: "busy"
   uo[2]: "done"
   uo[3]: "error"
-  uo[4]: "rx_full"
-  uo[5]: "tx_pending"
+  uo[4]: ""
+  uo[5]: ""
   uo[6]: ""
   uo[7]: ""
 
