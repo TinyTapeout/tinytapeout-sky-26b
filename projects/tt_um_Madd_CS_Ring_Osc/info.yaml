@@ -35,7 +35,7 @@ pinout:
   ui[7]: "DAC_bit7"
 
   # Outputs
-  uo[0]: ""
+  uo[0]: "OSC_OUT_DIV"
   uo[1]: ""
   uo[2]: ""
   uo[3]: ""
@@ -55,8 +55,8 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: "Vctrl"
-  ua[1]: "Osc_out"
+  ua[0]: "VCTRL"
+  ua[1]: "OSC_OUT"
   ua[2]: ""
   ua[3]: ""
   ua[4]: ""

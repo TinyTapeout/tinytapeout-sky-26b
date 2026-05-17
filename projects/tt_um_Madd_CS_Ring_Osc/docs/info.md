@@ -13,7 +13,7 @@ Ring oscillator frequency can be changed by either varying Vctrl or leaving it o
 
 ## How to test
 
-Vary voltage of Vctrl pin and measure frequency of output. Change bits of DAC and measure frequency output
+Vary voltage of Vctrl pin and measure frequency of output. Change bits of DAC and measure frequency output. OSC_OUT_DIV is OSC_OUT divided by 64 and can (hopefully) be read by Arduino
 
 ## External hardware
 
