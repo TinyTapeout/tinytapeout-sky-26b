@@ -9,13 +9,13 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-clocks dividers conected together
+clocks dividers conected together and random stuff try to decode the outpu
 
 ## How to test
 
-in1 in2 are the input of the mux 
+in1 in2 are the input of the mux and other ins change the random seed 
 
-out s0 to s8 a 4b output of the counter
+out s0 to s3 a 4b output of the counter and s4-s9 random seed gen
 
 ## External hardware
 
