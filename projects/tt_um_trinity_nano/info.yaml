@@ -1,0 +1,113 @@
+# Tiny Tapeout project information — TRI-1 Phi Anchor
+# https://tinytapeout.com/specs/info_yaml/
+#
+# R-SI-1 verified: zero `*` operators in synthesisable RTL.
+yaml_version: 6
+
+project:
+  title:        "TRI-1 Phi — Trinity φ-anchor 1×1 Lucas POST + CLARA Gap-4"
+  author:       "Dmitrii Vasilev"
+  discord:      "ghashtag"
+  description:  >
+    Smallest SKU of the TRI-1 Triad (φ-anchor / e-engine / γ-surface) — a
+    single-tile Trinity GF16(2^4) ternary dot4 MAC with enhanced safety.
+    On reset the chip drives the canonical dot4(1.0,2.0,3.0,4.0) = 0x47C0
+    directly onto {uio_out, uo_out}, matching the same constant emitted by
+    e-engine (tt-trinity-euler) and γ-surface (tt-trinity-gamma). This is the
+    cross-die anchor for the TG-TRIAD-X ledger (PhD Theorem 36.1).
+    Enhanced modules: phi_anchor_post (Lucas L₂..L₇ POST proving φ²+φ⁻²=3),
+    lucas_rom (addressable L_n host probe), hwrng_lfsr (die-unique nonce),
+    restraint_ctrl (CLARA Gap-4 bounded rationality), sacred_constants_rom
+    (75 PhD constants), crown47_rom (Trinity constants), friend/foe handshake.
+    v1.0.0: GF4-GF256 formats, quantizers (Int4/Int8/NF4/FP8/Posit16),
+    sacred opcodes (0xDF, 0xE1-0xED), power modules (AVS-96, FBB, Purkinje).
+    R-SI-1: zero `*` operators in synthesisable RTL.
+    Anchor: phi^2 + phi^-2 = 3. DOI: 10.5281/zenodo.19227877.
+    TOPS/W: 75 baseline, 405 with AVS-96 (5.4× boost).
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  # TinyTapeout tile area sizing — 1×1 is the minimum and the right size
+  # for a single GF16 tile + canonical default datapath.
+  tiles:        "1x1"
+
+  top_module:   "tt_um_trinity_nano"
+
+  source_files:
+    - "tt_um_trinity_nano.v"
+    - "gf16_mul.v"
+    - "gf16_add.v"
+    - "gf16_dot4.v"
+    - "trinity_gf16_tile.v"
+    - "trinity_friend_foe.v"
+    - "sacred_constants_rom.v"
+    - "crown47_rom.v"
+    - "crown47_rom_8bit.v"
+    - "phi_anchor_post.v"
+    - "lucas_rom.v"
+    - "hwrng_lfsr.v"
+    - "restraint_ctrl.v"
+    # v1.0.0 GF formats
+    - "gf_formats.v"
+    - "gf4_add.v"
+    - "gf8_add.v"
+    - "gf12_add.v"
+    - "gf20_add.v"
+    - "gf24_add.v"
+    - "gf32_add.v"
+    - "gf64_add.v"
+    - "gf128_add.v"
+    - "gf256_add.v"
+    # v1.0.0 quantizers
+    - "int4_quantizer.v"
+    - "int8_quantizer.v"
+    - "nf4_quantizer.v"
+    - "fp8_e4m3_quantizer.v"
+    - "fp8_e5m2_quantizer.v"
+    - "posit16_quantizer.v"
+    # v1.0.0 power modules
+    - "avs_controller_96.v"
+    - "tri_mant_mul.v"
+    - "fbb_active_path.v"
+    - "purkinje_thermal_gate.v"
+    # v1.0.0 sacred opcodes (0xDF, 0xE1-0xED)
+    - "lane_l_precheck.v"
+    - "sparse_skip.v"
+    - "lut_npu_81_entry.v"
+    - "subth_clk.v"
+    - "holo_mux_x4.v"
+    - "dfs_gate.v"
+    - "sparse_mask.v"
+    - "stoch_round.v"
+    - "null_pe.v"
+    - "spec_exit.v"
+    - "drowsy_ret.v"
+    # v1.0.0 converters
+    - "gf16_to_fp16.v"
+    - "gf16_to_posit16.v"
+
+pinout:
+  ui[0]: "load_mode (0=canonical/POST status, 1=packet path)"
+  ui[1]: "lucas_idx[0] — Lucas ROM L_n address (0=L2..5=L7)"
+  ui[2]: "lucas_idx[1]"
+  ui[3]: "lucas_idx[2]"
+  ui[4]: "rng_ena — advance HWRNG LFSR each clock"
+  ui[5]: "restraint_mode — CLARA Gap-4 active"
+  ui[6]: "compute_strobe (rising edge issues COMPUTE)"
+  ui[7]: "load_lane_strobe (rising edge advances lane)"
+  uo[0]: "result[0] (canonical 0x47C0 by default)"
+  uo[1]: "result[1]"
+  uo[2]: "result[2]"
+  uo[3]: "result[3]"
+  uo[4]: "result[4]"
+  uo[5]: "result[5]"
+  uo[6]: "result[6]"
+  uo[7]: "result[7]"
+  uio[0]: "result[8]"
+  uio[1]: "result[9]"
+  uio[2]: "result[10]"
+  uio[3]: "result[11]"
+  uio[4]: "result[12]"
+  uio[5]: "result[13]"
+  uio[6]: "result[14]"
+  uio[7]: "result[15]"
