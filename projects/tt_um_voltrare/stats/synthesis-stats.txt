@@ -1,0 +1,46 @@
+138. Printing statistics.
+
+=== tt_um_voltrare ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      101        - wires
+      136        - wire bits
+       31        - public wires
+       66        - public wire bits
+        8        - ports
+       43        - port bits
+      117  1.2E+03 cells
+        5   43.792   sky130_fd_sc_hd__a21o_2
+        5   43.792   sky130_fd_sc_hd__a21oi_2
+        8   80.077   sky130_fd_sc_hd__a22o_2
+        1   15.014   sky130_fd_sc_hd__a311oi_2
+        5   43.792   sky130_fd_sc_hd__a31o_2
+        1   12.512   sky130_fd_sc_hd__a31oi_2
+        2   15.014   sky130_fd_sc_hd__and2_2
+        2   17.517   sky130_fd_sc_hd__and2b_2
+        4   30.029   sky130_fd_sc_hd__and3_2
+        2   20.019   sky130_fd_sc_hd__and3b_2
+        3   30.029   sky130_fd_sc_hd__and4_2
+        2    10.01   sky130_fd_sc_hd__buf_2
+       22   82.579   sky130_fd_sc_hd__conb_1
+       23  489.219   sky130_fd_sc_hd__dfxtp_2
+        2    7.507   sky130_fd_sc_hd__inv_2
+        3   33.782   sky130_fd_sc_hd__mux2_1
+        6   37.536   sky130_fd_sc_hd__nand2_2
+        1   12.512   sky130_fd_sc_hd__nand4_2
+        3   18.768   sky130_fd_sc_hd__nor2_2
+        3   30.029   sky130_fd_sc_hd__nor3_2
+        2   20.019   sky130_fd_sc_hd__o211a_2
+        1   12.512   sky130_fd_sc_hd__o211ai_2
+        3   26.275   sky130_fd_sc_hd__o21a_2
+        1    8.758   sky130_fd_sc_hd__o21ai_2
+        1   11.261   sky130_fd_sc_hd__o21bai_2
+        1   11.261   sky130_fd_sc_hd__o32a_2
+        4   25.024   sky130_fd_sc_hd__or2_2
+        1    8.758   sky130_fd_sc_hd__or3b_2
+
+   Chip area for module '\tt_um_voltrare': 1197.398400
+     of which used for sequential elements: 489.219200 (40.86%)
+
