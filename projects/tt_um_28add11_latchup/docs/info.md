@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-I adapted this prng (https://github.com/edrosten/8bit_rng) for hardware (really adapted isn't the right word it translated over basically 1:1) and used the first layer on the checkers demo to demonstrate it, in both color and dither pattern.
+It uses a fibbonacchi PRNG to determine grass colors and cloud height, and adapts the algorithm from the rings demo for the cloud. Should be a nice grass field.
 
 ## How to test
 
-It's vga I think it needs the pmod? Need to check
+Hook it up to the tinyVGA PMOD and you're off to the races!
 
 ## External hardware
 
-probably vga pmod but idk!!!!
+TinyVGA PMOD and monitor
