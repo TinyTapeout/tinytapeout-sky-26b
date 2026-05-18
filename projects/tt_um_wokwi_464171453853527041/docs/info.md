@@ -8,13 +8,13 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-
-This is my description of the project (will change later).
+There's a small riddle in order to display the letters 't4m' in the display.
+You have to enter the right digits in order to see the letter.
 
 ## How to test
 
-Testing explanation will be entered later.
+In order to test it, enter different 3-digits on the dip switches.
 
 ## External hardware
 
-External hardware section will be entered later.
+External hardware is not needed, except for the development board.
