@@ -1,0 +1,197 @@
+# Tiny Tapeout project information — TRI-1 MAX-TRUE NEUROMORPHIC FLAGSHIP
+# https://tinytapeout.com/specs/info_yaml/
+#
+# L-DPC22-K S-13 DUAL-LIB ZONING HINT (feat/v15/k-dual-lib)
+# Primary standard-cell library: sky130_fd_sc_hd
+# Leakage-reduction target library: sky130_fd_sc_hdll
+# Low-activity blocks targeted for hdll zoning:
+#   lucas_rom* (POST chain x7), crc32_receipt, blake3_anchor, gf16_mul
+# Expected static leakage saving: ~30% (5-10x lower per-cell leakage on hdll
+# vs hd variant; mixed-mode zoning expected to reduce ~30% at block level).
+# See docs/L-DPC22-K-DUAL-LIB.md for full specification.
+# Reference: https://skywater-pdk.readthedocs.io/en/main/contents/libraries/foundry-provided.html
+# G-13 gate: mixed hd+hdll closes timing if WNS>=0; rollback to pure hd if WNS<0.
+# R-SI-1 verified: Lane K is config/docs only - zero changes to src/*.v
+yaml_version: 6
+
+project:
+  title:        "TRI-1 Gamma — MAX-TRUE NEUROMORPHIC FLAGSHIP 32-tile 8-column"
+  author:       "Dmitrii Vasilev"
+  discord:      "ghashtag"
+  description:  >
+    MAX-TRUE NEUROMORPHIC FLAGSHIP SKU of the TRI-1 Triad (TTSKY26b).
+    32 tiles = 8x4 TT footprint. Architecture: 8 cortical columns
+    (cortical_column.v — LIF leaky-integrate-and-fire dynamics with 8-bit
+    membrane potential, BitNet b1.58 ternary MLP hidden layer, GF16 dot4
+    input projection, sparse PE accumulator; ~500 cells/column = ~4100 total)
+    + 20-PE GF16 mesh (1x trinity_quad_mesh 16 PE + 1x trinity_mesh_2x2 4 PE)
+    + 24 SUPER-CROWN modules (phi_anchor_post, lucas_rom x7, vsa_matmul_8x8,
+    vsa_matmul_16x16, bitnet_encoder, bpb_counter, blake3_anchor,
+    multi_tile_receipt, crc32_receipt, alu9_decoder, ring27_memory, hwrng_lfsr,
+    phi_pll_div, wb_status_reg, wishbone_full, trinity_master_fsm,
+    trinity_mesh_2x2, gf16_dot4, plus 6 PhD-anchored monitors:
+    cassini_post, plrm_counter, bpb_lower_bound_guard, nca_entropy_monitor,
+    strobe_seed_guard, phi_distance_oracle)
+    + D2D holo mesh 4-port N/E/S/W router (d2d_holo_mesh.v — adapted from
+    tt-trinity-holo TTSKY26c lineage; uio[3:0]=TX, uio[7:4]=RX inputs;
+    LAYER-FROZEN gate on w_tx per PhD Theorem 36.1 R18)
+    + full Crown47 ROM (crown47_rom + crown47_rom_8bit)
+    + TRI NET friend/foe handshake (GAMMA anchor 8'h93)
+    + FHRR holo_lut_pe (VSA binding, Glava 32).
+    v1.0.0 enhancements: GF4/GF8/GF12/GF16/GF20/GF24/GF32/GF64/GF128/GF256 formats,
+    quantizers (Int4/Int8/NF4/FP8_E4M3/FP8_E5M2/Posit16), sacred opcodes
+    (0xDF LUT_LOOKUP, 0xE1 SPARSE_SKIP, 0xE3 LUT_NPU, 0xE5 SUBTH_CLK,
+    0xE6 HOLO_MUX_X4, 0xE7 DFS_GATE, 0xE8 SPARSE_SKIP2, 0xE9 STOCH_ROUND,
+    0xEA NULL_PE, 0xEB SPEC_EXIT, 0xEC DROWSY_RET), power modules
+    (AVS-48/96, FBB, Purkinje thermal). TOPS/W: 75 baseline, 405 with AVS-96.
+    TG-TRIAD-X canonical anchor 0x47C0 on {uio_out,uo_out} at reset
+    (PhD Theorem 36.1, docs/phd/chapters/flos_70.tex).
+    R-SI-1: zero NEW * operators (legacy gf16_mul grandfathered per
+    TRI_NET_SHUTTLE_TRIAD.md Rule 2 / tt-trinity-gf16#4).
+    Anchor: phi^2 + phi^-2 = 3. DOI: 10.5281/zenodo.19227877.
+    tt-trinity-holo D2D lineage (TTSKY26c, 1x2, r_marker_rom.v).
+    S-13 dual-lib: sky130_fd_sc_hd primary + sky130_fd_sc_hdll for
+    low-activity blocks. See docs/L-DPC22-K-DUAL-LIB.md.
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  # 8x4 TT tiles = 32 tiles = 0.704 mm2 Sky130A (MAX footprint).
+  # Cell budget at 60% util ceiling = ~48000 cells.
+  # Estimated: ~4100 (neuromorphic) + ~30000 (existing) = ~34100 total.
+  # Valid sky130A tile sizes: 1x1,1x2,2x2,3x2,4x2,6x2,8x2,4x4,6x4,8x4.
+  # See https://github.com/TinyTapeout/tt-support-tools/blob/main/tech/sky130A/tile_sizes.yaml
+  tiles:        "8x4"
+
+  top_module:   "tt_um_trinity_max_true"
+
+  source_files:
+    - "tt_um_trinity_max_true.v"
+    - "cortical_column.v"
+    - "trinity_cortex_8col.v"
+    - "d2d_holo_mesh.v"
+    - "trinity_max_true_20pe.v"
+    - "trinity_quad_mesh.v"
+    - "trinity_mesh_2x2.v"
+    - "trinity_router_2x2.v"
+    - "trinity_gf16_tile.v"
+    - "trinity_master_fsm.v"
+    - "gf16_mul.v"
+    - "gf16_add.v"
+    - "gf16_dot4.v"
+    - "gf16_dot8.v"
+    - "gf16_dot4_sparse.v"
+    - "gf16_popcount.v"
+    - "gf16_popcount16.v"
+    - "gf16_mesh_2x2_top.v"
+    - "phi_anchor_post.v"
+    - "lucas_rom.v"
+    - "vsa_matmul_8x8.v"
+    - "vsa_matmul_16x16.v"
+    - "bitnet_encoder.v"
+    - "bpb_counter.v"
+    - "blake3_anchor.v"
+    - "multi_tile_receipt.v"
+    - "crc32_receipt.v"
+    - "alu9_decoder.v"
+    - "ring27_memory.v"
+    - "hwrng_lfsr.v"
+    - "phi_pll_div.v"
+    - "wb_status_reg.v"
+    - "wishbone_full.v"
+    - "trinity_friend_foe.v"
+    - "cassini_post.v"
+    - "plrm_counter.v"
+    - "bpb_lower_bound_guard.v"
+    - "nca_entropy_monitor.v"
+    - "strobe_seed_guard.v"
+    - "phi_distance_oracle.v"
+    - "holo_lut_pe.v"
+    - "crown47_rom.v"
+    - "crown47_rom_8bit.v"
+    # DARPA CLARA AI Safety Gaps (10)
+    - "redteam_filter.v"
+    - "k3_alu.v"
+    - "datalog_engine_mini.v"
+    - "restraint_ctrl.v"
+    - "explainability_unit.v"
+    - "asp_solver_mini.v"
+    - "composition_kernel.v"
+    - "proof_trace_writer.v"
+    - "sat_solver_mini.v"
+    - "audit_log_ring_buffer.v"
+    # v1.0.0: GF formats (GF4-GF256)
+    - "gf_formats.v"
+    - "gf4_add.v"
+    - "gf4_mul.v"
+    - "gf8_add.v"
+    - "gf8_mul.v"
+    - "gf12_add.v"
+    - "gf12_mul.v"
+    - "gf20_add.v"
+    - "gf20_mul.v"
+    - "gf24_add.v"
+    - "gf24_mul.v"
+    - "gf32_add.v"
+    - "gf32_mul.v"
+    - "gf64_add.v"
+    - "gf64_mul.v"
+    - "gf128_add.v"
+    - "gf128_mul.v"
+    - "gf256_add.v"
+    - "gf256_mul.v"
+    # v1.0.0 quantizers (Int4/Int8/NF4/FP8_E4M3/FP8_E5M2/Posit16)
+    - "int4_quantizer.v"
+    - "int8_quantizer.v"
+    - "nf4_quantizer.v"
+    - "fp8_e4m3_quantizer.v"
+    - "fp8_e5m2_quantizer.v"
+    - "posit16_quantizer.v"
+    # v1.0.0 power modules (AVS-48/96, FBB, Purkinje thermal)
+    - "avs_controller_48.v"
+    - "avs_controller_96.v"
+    - "avs_reconf.v"
+    - "tri_mant_mul.v"
+    - "fbb_active_path.v"
+    - "purkinje_thermal_gate.v"
+    # v1.0.0 sacred opcodes (0xDF, 0xE1-0xED)
+    - "lane_l_precheck.v"     # OP_LUT_LOOKUP 0xDF
+    - "sparse_skip.v"         # OP_SPARSE_SKIP 0xE1
+    - "lut_npu_81_entry.v"    # OP_LUT_NPU 0xE3
+    - "subth_clk.v"           # OP_SUBTH_CLK 0xE5
+    - "holo_mux_x4.v"         # OP_HOLO_MUX_X4 0xE6
+    - "dfs_gate.v"            # OP_DFS_GATE 0xE7
+    - "sparse_mask.v"         # OP_SPARSE_SKIP2 0xE8
+    - "stoch_round.v"         # OP_STOCH_ROUND 0xE9
+    - "null_pe.v"             # OP_NULL_PE 0xEA
+    - "spec_exit.v"           # OP_SPEC_EXIT 0xEB
+    - "drowsy_ret.v"          # OP_DROWSY_RET 0xEC
+    # v1.0.0 converters
+    - "gf16_to_fp16.v"
+    - "gf16_to_posit16.v"
+    - "gf32_to_fp32.v"
+
+pinout:
+  ui[0]: "load_mode (0=canonical 0x47C0 default, 1=packet path + status_byte)"
+  ui[1]: "lucas_idx[0]"
+  ui[2]: "lucas_idx[1]"
+  ui[3]: "lucas_idx[2]"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "crown_addr[6:0] MSB (with ui[5:0])"
+  ui[7]: "unused"
+  uo[0]: "result[0] (canonical 0x47C0 default; mesh result_lo[0] after FSM)"
+  uo[1]: "result[1]"
+  uo[2]: "result[2]"
+  uo[3]: "result[3]"
+  uo[4]: "result[4]"
+  uo[5]: "result[5]"
+  uo[6]: "result[6]"
+  uo[7]: "result[7]"
+  uio[0]: "D2D n_tx — North TX (output): spike_count[3] activity bit"
+  uio[1]: "D2D e_tx — East TX (output): spike_count[0] activity bit"
+  uio[2]: "D2D s_tx — South TX (output): GF16 route tag bit"
+  uio[3]: "D2D w_tx — West TX SYNC strobe (output, LAYER-FROZEN gated per PhD Thm 36.1 R18)"
+  uio[4]: "D2D n_rx — North RX (input from peer die)"
+  uio[5]: "D2D e_rx — East RX (input from peer die)"
+  uio[6]: "D2D s_rx — South RX (input from peer die)"
+  uio[7]: "D2D w_rx (input from peer die) / crown_mode enable when high + load_mode=0"
