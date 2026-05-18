@@ -1,0 +1,209 @@
+# Tiny Tapeout project information — TRI-1 Euler Engine
+# https://tinytapeout.com/specs/info_yaml/
+#
+# R-SI-1 verified: zero `*` operators in synthesisable RTL.
+yaml_version: 6
+
+project:
+  title:        "TRI-1 Euler — Trinity e-engine 8×2 SUPER-CROWN + 10 CLARA Gaps"
+  author:       "Dmitrii Vasilev · Trinity Stack"
+  discord:      "t27_dev"
+  description:  |
+    TRI-1 Euler is the e-engine SKU (Trinity TRI-NET sacred-constant triplet:
+    phi-anchor / e-engine / gamma-surface) of the TRI-1 Triad submitted to
+    TTSKY26b (siblings: tt-trinity-phi 1x1 anchor, tt-trinity-gamma 8x4 surface).
+
+    8x2 tiles = 16 GF16 cells + full SUPER-CROWN modules + 10 DARPA CLARA
+    AI safety gaps + D2D holo mesh.
+
+    v1.0.0: GF4-GF256 formats, quantizers (Int4/Int8/NF4/FP8/Posit16),
+    sacred opcodes (0xDF, 0xE1-0xED), power modules (AVS-96, FBB, Purkinje).
+    TOPS/W: 75 baseline, 405 with AVS-96 (5.4× boost).
+
+    SUPER-CROWN modules (18):
+      - phi_anchor_post + lucas_rom (proves phi^2 + phi^-2 = 3 via Lucas)
+      - vsa_matmul_8x8 + vsa_matmul_16x16 (ternary VSA, JEPA-T tier)
+      - bitnet_encoder (BitNet b1.58 ternary MLP)
+      - bpb_counter (on-chip cross-entropy/BPB)
+      - blake3_anchor + multi_tile_receipt + crc32_receipt (G4 DePIN signing)
+      - alu9_decoder (9-instruction Trinity ternary ALU, t27 ISA)
+      - ring27_memory (27-cell 3^3 ternary memory, Coptic)
+      - hwrng_lfsr (die-unique nonce)
+      - phi_pll_div (phi-PLL fractional divider)
+      - wishbone_full + wb_status_reg (host interface)
+      - trinity_master_fsm (packet master)
+      - gf16_dot4/8/sparse (ternary arithmetic)
+      - gf16_popcount (population count)
+
+    DARPA CLARA AI Safety Gaps (10):
+      - Gap-1 redteam_filter (adversarial detection)
+      - Gap-2 k3_alu (Kleene K3 ternary ALU, TA1.1)
+      - Gap-3 datalog_engine_mini (forward-chain Datalog)
+      - Gap-4 restraint_ctrl (bounded rationality, TA1.4)
+      - Gap-5 explainability_unit (proof-trace emitter, TA1.2)
+      - Gap-6 asp_solver_mini (ASP solver with NAF)
+      - Gap-7 composition_kernel (orchestrator Gap-3/4/5)
+      - Gap-8 proof_trace_writer (on-chip audit receipt)
+      - Gap-9 sat_solver_mini (DPLL SAT solver)
+      - Gap-10 audit_log_ring_buffer (64-entry event log)
+
+    D2D Network:
+      - d2d_holo_mesh (4-port N/E/S/W router, LAYER-FROZEN gate per PhD Thm 36.1 R18)
+
+    Anchor: phi^2 + phi^-2 = 3 (Trinity algebraic identity).
+    DOI: 10.5281/zenodo.19227877.
+    FPGA-validated at 323 MHz on XC7A100T; silicon target 50 MHz @ SKY130A.
+
+    Ten chip-market differentiators (no competitor has all ten — Hailo-8,
+    MediaTek D9400 NPU890, QC Cloud AI 100 Ultra, Axelera Metis M.2,
+    Google Coral Edge TPU all miss at least two):
+      (1) native ternary {-1,0,+1} MAC silicon;
+      (2) on-chip BLAKE3 receipt signer (G4 DePIN);
+      (3) POST self-test via phi^2 + phi^-2 = 3 Lucas chain;
+      (4) 0 DSP / 0 new `*` in synthesisable RTL (R-SI-1);
+      (5) BitNet b1.58-style ternary MLP encoder on-chip;
+      (6) RING27 27-cell ternary memory (3^3);
+      (7) Trinity 9-instruction ternary ALU (t27 ISA preview);
+      (8) on-chip BPB / cross-entropy counter;
+      (9) Apache-2.0 + fully open PDK (SKY130A);
+      (10) DOI-anchored + Coq-verified provenance — t27/trios-coq carries
+           297 Qed and 141 Admitted at submission (the older "84 theorems"
+           figure is folklore predating the 2026-05-12 consolidation and is
+           explicitly retired here).
+
+    Anchor: phi^2 + phi^-2 = 3 (Trinity algebraic identity).
+    DOI: 10.5281/zenodo.19227877.
+    PhD chapter: trios docs/phd/chapters/flos_70.tex (Ch. 36 TRI-1 Triad,
+    Theorem 36.1 TG-TRIAD-X — cross-die ledger determinism).
+    Provenance: trinity-fpga#19 (FPGA EPIC), trinity-fpga#49 (L-DPC7
+    TRI-1 Triad EPIC), trios assertions/igla_assertions.json (R-SI
+    compliance), tt-trinity-gf16 docs/architecture/TRI_NET_SHUTTLE_TRIAD.md
+    (canonical Triad architecture spec).
+    Defense: 2026-06-15.
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  tiles: "8x2"  # bumped 2x2 -> 8x2 in PR #8 (Wave-26b SUPER-CROWN) to accommodate full Trinity SoC mini: 4 GF16 tiles + mesh + master FSM + 6 CROWN POST modules + 16x16 ternary matmul + BitNet encoder + BPB counter + BLAKE3 anchor + multi-tile RECEIPT + ALU-9 decoder + RING27 memory + phi-PLL + Wishbone-lite full. Target ~16000 gates @ 60% density on SKY130.
+
+  top_module:  "tt_um_ghtag_trinity_gf16"
+
+  source_files:
+    - "tt_um_ghtag_trinity_gf16.v"
+    - "gf16_mul.v"
+    - "gf16_add.v"
+    - "gf16_dot4.v"
+    - "gf16_dot8.v"
+    - "gf16_dot4_sparse.v"
+    - "trinity_gf16_tile.v"
+    - "trinity_router_2x2.v"
+    - "trinity_mesh_2x2.v"
+    - "trinity_master_fsm.v"
+    - "phi_anchor_post.v"
+    - "lucas_rom.v"
+    - "gf16_popcount.v"
+    - "gf16_popcount16.v"
+    - "vsa_matmul_8x8.v"
+    - "crc32_receipt.v"
+    - "hwrng_lfsr.v"
+    - "wb_status_reg.v"
+    - "vsa_matmul_16x16.v"
+    - "bitnet_encoder.v"
+    - "bpb_counter.v"
+    - "blake3_anchor.v"
+    - "multi_tile_receipt.v"
+    - "alu9_decoder.v"
+    - "ring27_memory.v"
+    - "phi_pll_div.v"
+    - "wishbone_full.v"
+    - "gf16_mesh_2x2_top.v"
+    - "trinity_friend_foe.v"
+    - "trinity_instr_rom.v"
+    - "trinity_micro_seq.v"
+    - "crown47_rom.v"
+    - "crown47_rom_8bit.v"
+    # DARPA CLARA AI Safety Gaps (10)
+    - "redteam_filter.v"
+    - "k3_alu.v"
+    - "datalog_engine_mini.v"
+    - "restraint_ctrl.v"
+    - "explainability_unit.v"
+    - "asp_solver_mini.v"
+    - "composition_kernel.v"
+    - "proof_trace_writer.v"
+    - "sat_solver_mini.v"
+    - "audit_log_ring_buffer.v"
+    # D2D Network
+    - "d2d_holo_mesh.v"
+    # PhD-Anchored Monitors (6)
+    - "bpb_lower_bound_guard.v"
+    - "cassini_post.v"
+    - "nca_entropy_monitor.v"
+    - "phi_distance_oracle.v"
+    - "plrm_counter.v"
+    - "strobe_seed_guard.v"
+    # v1.0.0 GF formats (GF4-GF256)
+    - "gf_formats.v"
+    - "gf4_add.v"
+    - "gf8_add.v"
+    - "gf12_add.v"
+    - "gf20_add.v"
+    - "gf24_add.v"
+    - "gf32_add.v"
+    - "gf64_add.v"
+    - "gf128_add.v"
+    - "gf256_add.v"
+    # v1.0.0 quantizers (Int4/Int8/NF4/FP8/Posit16)
+    - "int4_quantizer.v"
+    - "int8_quantizer.v"
+    - "nf4_quantizer.v"
+    - "fp8_e4m3_quantizer.v"
+    - "fp8_e5m2_quantizer.v"
+    - "posit16_quantizer.v"
+    # v1.0.0 power modules (AVS-96, FBB, Purkinje)
+    - "avs_controller_96.v"
+    - "tri_mant_mul.v"
+    - "fbb_active_path.v"
+    - "purkinje_thermal_gate.v"
+    # v1.0.0 sacred opcodes (0xDF, 0xE1-0xED)
+    - "lane_l_precheck.v"
+    - "sparse_skip.v"
+    - "lut_npu_81_entry.v"
+    - "subth_clk.v"
+    - "holo_mux_x4.v"
+    - "dfs_gate.v"
+    - "sparse_mask.v"
+    - "stoch_round.v"
+    - "null_pe.v"
+    - "spec_exit.v"
+    - "drowsy_ret.v"
+    # v1.0.0 converters
+    - "gf16_to_fp16.v"
+    - "gf16_to_posit16.v"
+
+pinout:
+  ui[0]: "load_mode"
+  ui[1]: "data_bit_0"
+  ui[2]: "data_bit_1"
+  ui[3]: "data_bit_2"
+  ui[4]: "data_bit_3"
+  ui[5]: "data_bit_4"
+  ui[6]: "data_bit_5"
+  ui[7]: "data_bit_6"
+
+  uo[0]: "result_bit_0"
+  uo[1]: "result_bit_1"
+  uo[2]: "result_bit_2"
+  uo[3]: "result_bit_3"
+  uo[4]: "result_bit_4"
+  uo[5]: "result_bit_5"
+  uo[6]: "result_bit_6"
+  uo[7]: "result_bit_7"
+
+  uio[0]: "result_high_bit_0"
+  uio[1]: "result_high_bit_1"
+  uio[2]: "result_high_bit_2"
+  uio[3]: "result_high_bit_3"
+  uio[4]: "result_high_bit_4"
+  uio[5]: "result_high_bit_5"
+  uio[6]: "result_high_bit_6"
+  uio[7]: "result_high_bit_7"
