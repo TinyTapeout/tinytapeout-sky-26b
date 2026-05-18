@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "EML Gate"      # Project title
+  title:        "IEE EML Gate"      # Project title
   author:       "Taouinar Abdelbasset & Sidahmed Hamdad"      # Your name
   discord:      "651881618373476362"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Q6.14 fixed-point EML operator eml(x,y)=exp(x)-ln(y) with SPI interface"      # One line description of what your project does
