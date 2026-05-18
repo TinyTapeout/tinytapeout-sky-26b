@@ -87,6 +87,9 @@ project:
     # v1.0.0 converters
     - "gf16_to_fp16.v"
     - "gf16_to_posit16.v"
+    # TRI-10 mesh-lite (TTSKY26b v1.1.0)
+    - "phi_d2d_lite.v"
+    - "phi_mesh_bridge.v"
 
 pinout:
   ui[0]: "load_mode (0=canonical/POST status, 1=packet path)"
