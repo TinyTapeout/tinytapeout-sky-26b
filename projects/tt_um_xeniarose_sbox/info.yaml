@@ -1,0 +1,58 @@
+# Tiny Tapeout project information
+project:
+  title:        "AES S-Box / PRESENT"      # Project title
+  author:       "xeniarose"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "AES forward S-Box circuits, and also PRESENT"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10_000_000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_xeniarose_sbox"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "aes_sbox.v"
+    - "present.v"
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "Address pin 0"
+  ui[1]: "Address pin 1"
+  ui[2]: "Address pin 2"
+  ui[3]: "Address pin 3"
+  ui[4]: "Address pin 4"
+  ui[5]: "Address pin 5"
+  ui[6]: "Read/write mode"
+  ui[7]: "I/O latch"
+
+  # Outputs
+  uo[0]: "Ready"
+  uo[1]: "Write enabled"
+  uo[2]: "Trigger"
+  uo[3]: "None"
+  uo[4]: "None"
+  uo[5]: "None"
+  uo[6]: "None"
+  uo[7]: "None"
+
+  # Bidirectional pins
+  uio[0]: "Data pin 0"
+  uio[1]: "Data pin 1"
+  uio[2]: "Data pin 2"
+  uio[3]: "Data pin 3"
+  uio[4]: "Data pin 4"
+  uio[5]: "Data pin 5"
+  uio[6]: "Data pin 6"
+  uio[7]: "Data pin 7"
+
+# Do not change!
+yaml_version: 6
