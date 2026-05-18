@@ -1,0 +1,84 @@
+147. Printing statistics.
+
+=== tt_um_vga_sharc_demo ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     3556        - wires
+     3591        - wire bits
+      135        - public wires
+      170        - public wire bits
+        8        - ports
+       43        - port bits
+     3572 3.37E+04 cells
+        8  100.096   sky130_fd_sc_hd__a2111o_2
+        2   30.029   sky130_fd_sc_hd__a2111oi_2
+      121 1.21E+03   sky130_fd_sc_hd__a211o_2
+       12  150.144   sky130_fd_sc_hd__a211oi_2
+       16  160.154   sky130_fd_sc_hd__a21bo_2
+       14  157.651   sky130_fd_sc_hd__a21boi_2
+      184 1.61E+03   sky130_fd_sc_hd__a21o_2
+      164 1.44E+03   sky130_fd_sc_hd__a21oi_2
+       66  743.213   sky130_fd_sc_hd__a221o_2
+        1   15.014   sky130_fd_sc_hd__a221oi_2
+       44  440.422   sky130_fd_sc_hd__a22o_2
+        3   37.536   sky130_fd_sc_hd__a22oi_2
+       23  258.998   sky130_fd_sc_hd__a2bb2o_2
+       47  529.258   sky130_fd_sc_hd__a311o_2
+        3   45.043   sky130_fd_sc_hd__a311oi_2
+      138 1.21E+03   sky130_fd_sc_hd__a31o_2
+        3   37.536   sky130_fd_sc_hd__a31oi_2
+       22  247.738   sky130_fd_sc_hd__a32o_2
+        8   90.086   sky130_fd_sc_hd__a41o_2
+        1   16.266   sky130_fd_sc_hd__a41oi_2
+      104  780.749   sky130_fd_sc_hd__and2_2
+       86  753.222   sky130_fd_sc_hd__and2b_2
+       80  600.576   sky130_fd_sc_hd__and3_2
+       14  140.134   sky130_fd_sc_hd__and3b_2
+        9   90.086   sky130_fd_sc_hd__and4_2
+        2   22.522   sky130_fd_sc_hd__and4b_2
+        1   12.512   sky130_fd_sc_hd__and4bb_2
+        2    10.01   sky130_fd_sc_hd__buf_2
+       16   60.058   sky130_fd_sc_hd__conb_1
+      139 2.96E+03   sky130_fd_sc_hd__dfxtp_2
+       80  300.288   sky130_fd_sc_hd__inv_2
+      117 1.32E+03   sky130_fd_sc_hd__mux2_1
+      355  2220.88   sky130_fd_sc_hd__nand2_2
+       54  472.954   sky130_fd_sc_hd__nand2b_2
+       10  100.096   sky130_fd_sc_hd__nand3_2
+        3   37.536   sky130_fd_sc_hd__nand4_2
+      368  2.3E+03   sky130_fd_sc_hd__nor2_2
+       16  160.154   sky130_fd_sc_hd__nor3_2
+        1   12.512   sky130_fd_sc_hd__nor3b_2
+        1   15.014   sky130_fd_sc_hd__nor4b_2
+        6   75.072   sky130_fd_sc_hd__o2111a_2
+        3   45.043   sky130_fd_sc_hd__o2111ai_2
+      144 1.44E+03   sky130_fd_sc_hd__o211a_2
+        7   87.584   sky130_fd_sc_hd__o211ai_2
+       94   823.29   sky130_fd_sc_hd__o21a_2
+       99  867.082   sky130_fd_sc_hd__o21ai_2
+       27  270.259   sky130_fd_sc_hd__o21ba_2
+        8   90.086   sky130_fd_sc_hd__o21bai_2
+       79  889.603   sky130_fd_sc_hd__o221a_2
+        5   75.072   sky130_fd_sc_hd__o221ai_2
+       31  310.298   sky130_fd_sc_hd__o22a_2
+        4   50.048   sky130_fd_sc_hd__o22ai_2
+       26  292.781   sky130_fd_sc_hd__o2bb2a_2
+       44  495.475   sky130_fd_sc_hd__o311a_2
+       53  530.509   sky130_fd_sc_hd__o31a_2
+        2   25.024   sky130_fd_sc_hd__o31ai_2
+       16  180.173   sky130_fd_sc_hd__o32a_2
+        3   37.536   sky130_fd_sc_hd__o41a_2
+        3   48.797   sky130_fd_sc_hd__o41ai_2
+      222 1.39E+03   sky130_fd_sc_hd__or2_2
+       64  480.461   sky130_fd_sc_hd__or3_2
+       30  262.752   sky130_fd_sc_hd__or3b_2
+       22  192.685   sky130_fd_sc_hd__or4_2
+        7   70.067   sky130_fd_sc_hd__or4b_2
+      174 2.83E+03   sky130_fd_sc_hd__xnor2_2
+       61  992.202   sky130_fd_sc_hd__xor2_2
+
+   Chip area for module '\tt_um_vga_sharc_demo': 33744.864000
+     of which used for sequential elements: 2956.585600 (8.76%)
+
