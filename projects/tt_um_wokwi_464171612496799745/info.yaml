@@ -4,7 +4,7 @@ project:
   title: "Tiny Tapeout Exercise" # Project title
   author: "Brett Gibson" # Your name
   discord: "" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description: "Work in progress" # One line description of what your project does
+  description: "Simple 4-bit adder" # One line description of what your project does
   language: "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz: 0 # Clock frequency in Hz (or 0 if not applicable)
 
@@ -15,21 +15,21 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "REG0_0"
+  ui[1]: "REG0_1"
+  ui[2]: "REG0_2"
+  ui[3]: "REG0_3"
+  ui[4]: "REG1_0"
+  ui[5]: "REG1_1"
+  ui[6]: "REG1_2"
+  ui[7]: "REG1_3"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
+  uo[0]: "RESULT_0"
+  uo[1]: "RESULT_1"
+  uo[2]: "RESULT_2"
+  uo[3]: "RESULT_3"
+  uo[4]: "RESULT_4"
   uo[5]: ""
   uo[6]: ""
   uo[7]: ""
