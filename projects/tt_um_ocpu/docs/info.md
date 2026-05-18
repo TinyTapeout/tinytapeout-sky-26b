@@ -6,6 +6,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## desc
 quick and dirty repo at the LatchUp Conference, will refurbish repo for a proper submission.
+python test\run.py --chip
 
 ## datapath architecture
 the ocpu features a single-core architectural approach utilizing a multi-level fsm hierarchy to manage execution:
