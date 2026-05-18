@@ -111,6 +111,7 @@ project:
     - "bpb_counter.v"
     - "blake3_anchor.v"
     - "multi_tile_receipt.v"
+    - "tri_token_accumulator.v"
     - "alu9_decoder.v"
     - "ring27_memory.v"
     - "phi_pll_div.v"
