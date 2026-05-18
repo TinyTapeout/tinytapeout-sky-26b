@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "Onchip-UIS Ro_Aging"      # Project title
-  author:       "Ramon Sarmiento and Jorge Angarita and Jeison Acevedo"      # Your name
+  title:        "Onchip-UIS Ring Oscillators for Aging"      # Project title
+  author:       "Ramon Sarmiento and Jorge Angarita and Jeison Acevedo and Daniel Barrios and Nicolas Orcasitas and Juan S. Moya"      # Your name
   discord:      "zhord0326"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Ro for Aging analysis"      # One line description of what your project does
+  description:  "13-stage Ring Oscillator for aging analysis (BTI/HCI)"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
