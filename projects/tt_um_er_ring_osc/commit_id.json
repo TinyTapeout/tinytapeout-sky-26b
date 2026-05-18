@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/erijnbeek/tt_ring_osc",
-  "commit": "088e109a2dcc34d16ea22c4449c98afbde41ebe3",
-  "workflow_url": "https://github.com/erijnbeek/tt_ring_osc/actions/runs/25789974639",
+  "commit": "addc0d1d30eb1fb7fd623653adf8943ab0f421ef",
+  "workflow_url": "https://github.com/erijnbeek/tt_ring_osc/actions/runs/26022514668",
   "project_id": 4532,
   "sort_id": 1778664319622,
   "analog": true
