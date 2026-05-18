@@ -8,18 +8,10 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-
-This is a 8-bit, 8-taps Finite Impulse Response (FIR) Filter. Inputs and outputs are 8-bit parallel interface. Filter coefficients can be loaded in fixed point Q1.7 format, when the `mode` pin is asserted high.
-
-The design will generate clocks to external ADC and DAC ICs. 
+This is a simple uart module transmitting at 115200 baud rate.
 
 ## How to test
-
-This project has been verified using an FPGA. An external ADC and DAC IC with 8 bit parallel interface is needed. A microcontroller is needed to load the coefficients before starting the filter operation.
+Present the data in 8 bit parallel at `ui[7:0]` and assert `tx_send` pin. The module will start transmitting the data at `TX` pin
 
 ## External hardware
 
-ADC08100 Datasheet:
-https://www.ti.com/lit/ds/symlink/adc08100.pdf?ts=1774533804655 
-
-AD9708 Datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/ad9708.pdf 

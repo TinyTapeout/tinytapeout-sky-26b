@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "UART SPI ASCII Art"      # Project title
+  title:        "IEEE_UART_TX_Module"      # Project title
   author:       "LIM ZING"      # Your name
   discord:      "zzzzzing"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Display ASCII art via UART reading from SPI ram"      # One line description of what your project does
+  description:  "Simple uart TX module"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -17,36 +17,36 @@ project:
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "uart_spi_ascii_art.v"
+    - "uart_tx.v"
     - "tt_um_voltrare.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "d0_in"
-  ui[1]: "d1_in"
-  ui[2]: "d2_in"
-  ui[3]: "d3_in"
-  ui[4]: "d4_in"
-  ui[5]: "d5_in"
-  ui[6]: "d6_in"
-  ui[7]: "d7_in"
+  ui[0]: "tx_data_in_0"
+  ui[1]: "tx_data_in_1"
+  ui[2]: "tx_data_in_2"
+  ui[3]: "tx_data_in_3"
+  ui[4]: "tx_data_in_4"
+  ui[5]: "tx_data_in_5"
+  ui[6]: "tx_data_in_6"
+  ui[7]: "tx_data_in_7"
 
   # Outputs
-  uo[0]: "d0_out"
-  uo[1]: "d1_out"
-  uo[2]: "d2_out"
-  uo[3]: "d3_out"
-  uo[4]: "d4_out"
-  uo[5]: "d5_out"
-  uo[6]: "d6_out"
-  uo[7]: "d7_out"
+  uo[0]: "TX"
+  uo[1]: "tx_busy"
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "adc_clk (output)"
-  uio[1]: "dac_clk (output)"
-  uio[2]: "mode (input)"
+  uio[0]: "tx_send"
+  uio[1]: ""
+  uio[2]: ""
   uio[3]: ""
   uio[4]: ""
   uio[5]: ""
