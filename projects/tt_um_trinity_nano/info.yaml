@@ -47,6 +47,8 @@ project:
     - "lucas_rom.v"
     - "hwrng_lfsr.v"
     - "restraint_ctrl.v"
+    # DePIN $TRI token accumulator
+    - "tri_token_accumulator.v"
     # v1.0.0 GF formats
     - "gf_formats.v"
     - "gf4_add.v"
