@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
+MACRO tt_um_gurtej_randhawa1_pulsemon8
   CLASS BLOCK ;
-  FOREIGN tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout ;
+  FOREIGN tt_um_gurtej_randhawa1_pulsemon8 ;
   ORIGIN 0.000 0.000 ;
   SIZE 161.000 BY 111.520 ;
   PIN VGND
@@ -130,6 +130,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 121.750 110.520 122.050 111.520 ;
@@ -138,6 +139,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN ui_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 118.990 110.520 119.290 111.520 ;
@@ -178,6 +180,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 105.190 110.520 105.490 111.520 ;
@@ -186,6 +189,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 102.430 110.520 102.730 111.520 ;
@@ -194,6 +198,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met4 ;
         RECT 99.670 110.520 99.970 111.520 ;
@@ -202,6 +207,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 96.910 110.520 97.210 111.520 ;
@@ -274,6 +280,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 72.070 110.520 72.370 111.520 ;
@@ -282,6 +289,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 69.310 110.520 69.610 111.520 ;
@@ -290,6 +298,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 66.550 110.520 66.850 111.520 ;
@@ -298,6 +307,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uio_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 63.790 110.520 64.090 111.520 ;
@@ -338,6 +348,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 1.867500 ;
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
@@ -347,6 +358,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 2.358000 ;
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
@@ -356,6 +368,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 1.489500 ;
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
@@ -365,6 +378,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 1.275000 ;
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
@@ -374,6 +388,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 2.484000 ;
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
@@ -383,7 +398,8 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.462000 ;
+    ANTENNAGATEAREA 1.489500 ;
+    ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
         RECT 80.350 110.520 80.650 111.520 ;
@@ -392,6 +408,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 1.401000 ;
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
@@ -401,6 +418,7 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
   PIN uo_out[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 1.611000 ;
     ANTENNADIFFAREA 0.445500 ;
     PORT
       LAYER met4 ;
@@ -413,11 +431,11 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
       LAYER li1 ;
         RECT 2.760 2.635 158.240 108.885 ;
       LAYER met1 ;
-        RECT 2.760 2.480 158.240 109.440 ;
+        RECT 2.760 2.480 158.240 109.040 ;
       LAYER met2 ;
-        RECT 15.740 2.535 154.000 110.685 ;
+        RECT 18.310 2.535 145.260 110.685 ;
       LAYER met3 ;
-        RECT 18.290 2.555 148.055 110.665 ;
+        RECT 18.290 2.555 144.170 110.665 ;
       LAYER met4 ;
         RECT 31.370 110.120 33.030 110.665 ;
         RECT 34.130 110.120 35.790 110.665 ;
@@ -461,14 +479,14 @@ MACRO tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
         RECT 139.010 110.120 140.670 110.665 ;
         RECT 141.770 110.120 143.430 110.665 ;
         RECT 30.655 109.440 144.145 110.120 ;
-        RECT 30.655 93.335 56.750 109.440 ;
-        RECT 59.150 93.335 60.050 109.440 ;
-        RECT 62.450 93.335 95.620 109.440 ;
-        RECT 98.020 93.335 98.920 109.440 ;
-        RECT 101.320 93.335 134.490 109.440 ;
-        RECT 136.890 93.335 137.790 109.440 ;
-        RECT 140.190 93.335 144.145 109.440 ;
+        RECT 30.655 94.695 56.750 109.440 ;
+        RECT 59.150 94.695 60.050 109.440 ;
+        RECT 62.450 94.695 95.620 109.440 ;
+        RECT 98.020 94.695 98.920 109.440 ;
+        RECT 101.320 94.695 134.490 109.440 ;
+        RECT 136.890 94.695 137.790 109.440 ;
+        RECT 140.190 94.695 144.145 109.440 ;
   END
-END tt_um_vga_gurtej_randhawa1_Gurtej_Eshaan_Tapeout
+END tt_um_gurtej_randhawa1_pulsemon8
 END LIBRARY
 
