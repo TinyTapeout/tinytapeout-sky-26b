@@ -9,14 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-R/W flip-flops and diff amps for sensing differential input voltages
+To be completed prior to final submission
 
 ## How to test
 
-Write to flops and measure analog diff amp outputs
+To be completed prior to final submission
 
 ## External hardware
 
-External hardware used in your project (e.g. PMOD, LED display, etc):
-
-TT PCB, signal generator, oscilloscope, and multimeter
+Signal generator, oscilloscope, multimeter
