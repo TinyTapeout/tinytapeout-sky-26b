@@ -1,0 +1,45 @@
+# Tiny Tapeout project information
+project:
+  title: "AoC Hardcaml Coprocessor"
+  author: "hackin7"
+  discord: ""
+  description: "Advent of Code day-1 style position coprocessor (Hardcaml), with byte-serial TT wrapper"
+  language: "Verilog"
+  clock_hz: 50000000
+
+  tiles: "1x1"
+  top_module: "tt_um_hackin7_coprocessor"
+
+  source_files:
+    - "project.v"
+    - "coprocessor.v"
+
+pinout:
+  ui[0]: "BYTE_STROBE"
+  ui[1]: "COMPUTE"
+  ui[2]: "CONTROL0"
+  ui[3]: "CONTROL1"
+  ui[4]: "CONTROL2"
+  ui[5]: "CONTROL3"
+  ui[6]: "CONTROL4"
+  ui[7]: ""
+
+  uo[0]: "RESULT_VALID"
+  uo[1]: "RESULT0"
+  uo[2]: "RESULT1"
+  uo[3]: "RESULT2"
+  uo[4]: "RESULT3"
+  uo[5]: "RESULT4"
+  uo[6]: "RESULT5"
+  uo[7]: "RESULT6"
+
+  uio[0]: "DATA0"
+  uio[1]: "DATA1"
+  uio[2]: "DATA2"
+  uio[3]: "DATA3"
+  uio[4]: "DATA4"
+  uio[5]: "DATA5"
+  uio[6]: "DATA6"
+  uio[7]: "DATA7"
+
+yaml_version: 6
