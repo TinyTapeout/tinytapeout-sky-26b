@@ -16,40 +16,42 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:
+    - "iram_regfile.v"
+    - "ocpu_core.v"
     - "project.v"
-    - "hvsync_generator.v"
+    - "ospi_memory.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
+  ui[0]: "OSPI SCK"
+  ui[1]: "OSPI CS_N"
+  ui[2]: "page_done (FPGA-to-CPU)"
+  ui[3]: "page_loading (FPGA-to-CPU)"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: "R1"
-  uo[1]: "G1"
-  uo[2]: "B1"
-  uo[3]: "VSync"
-  uo[4]: "R0"
-  uo[5]: "G0"
-  uo[6]: "B0"
-  uo[7]: "HSync"
+  uo[0]: "page_interrupt"
+  uo[1]: "page_loading echo"
+  uo[2]: "is_halted"
+  uo[3]: "data_req"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "OSPI IO[0]"
+  uio[1]: "OSPI IO[1]"
+  uio[2]: "OSPI IO[2]"
+  uio[3]: "OSPI IO[3]"
+  uio[4]: "OSPI IO[4]"
+  uio[5]: "OSPI IO[5]"
+  uio[6]: "OSPI IO[6]"
+  uio[7]: "OSPI IO[7]"
 
 # Do not change!
 yaml_version: 6
