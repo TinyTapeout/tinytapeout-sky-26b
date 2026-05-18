@@ -16,15 +16,15 @@
       "id": "clock1",
       "top": -355.2,
       "left": -115.2,
-      "attrs": { "frequency": "10000" }
+      "attrs": { "frequency": "2" }
     },
-    { "type": "wokwi-gnd", "id": "pwr2", "top": -67.2, "left": 786.6, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "pwr2", "top": -67.2, "left": 1439.4, "attrs": {} },
     { "type": "wokwi-vcc", "id": "pwr1", "top": -229.64, "left": -115.2, "attrs": {} },
     {
       "type": "wokwi-7segment",
       "id": "sevseg1",
       "top": -173.64,
-      "left": 773.08,
+      "left": 1425.88,
       "attrs": { "common": "cathode" }
     },
     {
@@ -61,7 +61,7 @@
       "type": "board-tt-block-output",
       "id": "ttout",
       "top": -208.93,
-      "left": 580.8,
+      "left": 1233.6,
       "attrs": { "verilogRole": "output" }
     },
     {
@@ -97,9 +97,17 @@
       "type": "wokwi-text",
       "id": "text5",
       "top": -259.2,
-      "left": 595.2,
+      "left": 1248,
       "attrs": { "text": "4. Watch the outputs changing" }
-    }
+    },
+    { "type": "wokwi-flip-flop-d", "id": "flop1", "top": -172.8, "left": 288, "attrs": {} },
+    { "type": "wokwi-flip-flop-d", "id": "flop2", "top": -153.6, "left": 403.2, "attrs": {} },
+    { "type": "wokwi-gate-and-2", "id": "and1", "top": -432, "left": 556.8, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or1", "top": -86.4, "left": 691.2, "attrs": {} },
+    { "type": "wokwi-gate-nor-2", "id": "nor2", "top": -460.8, "left": 748.8, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or2", "top": -384, "left": 931.2, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or3", "top": -297.6, "left": 931.2, "attrs": {} },
+    { "type": "wokwi-gate-or-2", "id": "or4", "top": -230.4, "left": 931.2, "attrs": {} }
   ],
   "connections": [
     [ "pwr1:VCC", "sw1:8a", "red", [ "v0" ] ],
@@ -140,14 +148,29 @@
     [ "ttin:EXTRST_N", "btn2:1.r", "orange", [ "h-38.4", "v-96" ] ],
     [ "btn2:1.l", "r2:2", "green", [ "h0" ] ],
     [ "pwr5:VCC", "r2:1", "red", [ "v0" ] ],
-    [ "ttin:IN0", "ttout:OUT0", "green", [ "h0" ] ],
-    [ "ttin:IN1", "ttout:OUT1", "green", [ "h0" ] ],
-    [ "ttin:IN2", "ttout:OUT2", "green", [ "h0" ] ],
-    [ "ttin:IN3", "ttout:OUT3", "green", [ "h0" ] ],
-    [ "ttin:IN4", "ttout:OUT4", "green", [ "h0" ] ],
-    [ "ttin:IN5", "ttout:OUT5", "green", [ "h0" ] ],
-    [ "ttin:IN6", "ttout:OUT6", "green", [ "h0" ] ],
-    [ "ttin:IN7", "ttout:OUT7", "green", [ "h0" ] ]
+    [ "ttin:CLK", "flop1:CLK", "green", [ "h105.6", "v57.6" ] ],
+    [ "flop1:NOTQ", "flop2:D", "green", [ "h0" ] ],
+    [ "ttin:CLK", "flop2:CLK", "green", [ "h67.2", "v134.4" ] ],
+    [ "flop2:Q", "flop1:D", "green", [ "v-211.2", "h-240" ] ],
+    [ "flop1:Q", "and1:A", "green", [ "v0" ] ],
+    [ "flop2:NOTQ", "and1:B", "green", [ "h0" ] ],
+    [ "and1:OUT", "ttout:OUT3", "green", [ "v0" ] ],
+    [ "flop2:Q", "ttout:OUT0", "gold", [ "v0" ] ],
+    [ "and1:OUT", "or1:B", "green", [ "v0" ] ],
+    [ "flop2:Q", "or1:A", "green", [ "v0" ] ],
+    [ "or1:OUT", "ttout:OUT4", "green", [ "v0" ] ],
+    [ "flop2:Q", "nor2:B", "red", [ "h240", "v-288" ] ],
+    [ "flop1:Q", "nor2:A", "red", [ "h48", "v-288" ] ],
+    [ "nor2:OUT", "or2:A", "red", [ "v0" ] ],
+    [ "and1:OUT", "or2:B", "red", [ "h163.2", "v57.6" ] ],
+    [ "or2:OUT", "ttout:OUT6", "green", [ "h172.8", "v240" ] ],
+    [ "nor2:OUT", "or3:A", "red", [ "v0" ] ],
+    [ "and1:OUT", "or3:B", "red", [ "v0" ] ],
+    [ "or3:OUT", "ttout:OUT5", "green", [ "h134.4", "v144" ] ],
+    [ "nor2:OUT", "ttout:OUT1", "red", [ "v0" ] ],
+    [ "nor2:OUT", "or4:A", "red", [ "v0" ] ],
+    [ "flop2:Q", "or4:B", "green", [ "v0" ] ],
+    [ "or4:OUT", "ttout:OUT2", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
