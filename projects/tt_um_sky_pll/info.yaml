@@ -1,0 +1,56 @@
+# Tiny Tapeout project information
+project:
+  title:        "SKY PLL test project"      # Project title
+  author:       "Paul Campbell"      # Your name
+  discord:      "imoonbaseotago"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A test tile for a TT PLL 50-250MHz"      # One line description of what your project does
+  language:     "Verilog/GDS" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_sky_pll"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "pll.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "count_0  pll divider"
+  ui[1]: "count_1"
+  ui[2]: "count_2"
+  ui[3]: "count_3"
+  ui[4]: "pre_0 reference divider"
+  ui[5]: "pre_1"
+  ui[6]: "pre_2"
+  ui[7]: "pre_3"
+
+  # Outputs
+  uo[0]: "raw clock out"
+  uo[1]: "reset out"
+  uo[2]: "clk/2 out"
+  uo[3]: "clk/4 out"
+  uo[4]: "clk/8 out"
+  uo[5]: "clk/16 out"
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
