@@ -1,8 +1,8 @@
 {
-  "app": "Tiny Tapeout main a6c7030a",
+  "app": "Tiny Tapeout main 5a894537",
   "repo": "https://github.com/UNIC-CASS-2025-uniandes/CNN4IC_sky130",
-  "commit": "536f9357aaf2ff2ab52c350a8a234d772518f80e",
-  "workflow_url": "https://github.com/UNIC-CASS-2025-uniandes/CNN4IC_sky130/actions/runs/25614310393",
+  "commit": "dc11b2d864242e94d04b5e2b1b2220929f9b6e93",
+  "workflow_url": "https://github.com/UNIC-CASS-2025-uniandes/CNN4IC_sky130/actions/runs/25998827255",
   "project_id": 4696,
   "sort_id": 1778429011624
 }
